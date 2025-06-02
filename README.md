@@ -66,13 +66,13 @@ The structure is as follows:
 ```bash
 execution_X/
 ├── 📁 profile_coverage/     # Coverage achieved by generated profiles
-├── 📁 profile_logs/         # Raw execution logs from Taskyto
+├── 📁 profile_logs/         # Raw execution logs from Taskyto during Sensei execution
 ├── 📁 profiles/             # Generated user profiles (YAML format)
 ├── 📁 sensei_output/        # Profile execution results
 │   ├── 📁 conversation_outputs/  # Individual conversation transcripts
 │   └── 📁 reports/              # Execution statistics and cost reports
 ├── 📁 tracer_coverage/      # Coverage achieved by TRACER exploration
-├── 📁 tracer_logs/          # Raw execution logs from Taskyto
+├── 📁 tracer_logs/          # Raw execution logs from Taskyto during TRACER execution
 └── workflow_graph.pdf       # Visual representation of discovered workflow
 ```
 
