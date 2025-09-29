@@ -15,7 +15,11 @@ This repository contains the evaluation results for the [TRACER](https://github.
 - Evaluated through mutation testing
 - Metrics: Mutation score, killed vs. alive mutants
 
-### Chatbot Subjects
+**RQ3: How accurately does TRACER model the functionalities of real-world, deployed chatbots?**
+- Evaluated by measuring precision on deployed chatbots.
+- Metrics: Precision
+
+### Taskyto Chatbots
 
 | Chatbot | Modules | YAML LoC | Python LoC | Domain |
 |---------|---------|----------|------------|---------|
@@ -161,3 +165,20 @@ Overall mutation score of 84.6% across all chatbots, demonstrating the effective
 - Photography: 76.9%
 - Pizza-order: 75%
 - Veterinary: 91.7%
+
+### RQ3: Accuracy of Modeling Deployed Chatbot
+
+For this experiment we run TRACER against real-world deployed chatbots and measured the preicision of the functionalities inferred.
+This was achieved by manually checking that the functionalities were valid (i.e., the chatbot really offered them),
+and by checking that there were no duplicates.
+
+| Chatbot         | # Func. (TRACER) | TP (Verified) | FP (Incorrect/Duplicate) | Precision (%) |
+| --------------- | ---------------- | ------------- | ------------------------ | ------------- |
+| Ada-UAM         | 22               | 22            | 0                        | 100.0         |
+| Gallo de Morón  | 29               | 27            | 2                        | 93.1          |
+| Madrid te Cuida | 91               | 88            | 3                        | 96.7          |
+| Gestri          | 27               | 27            | 0                        | 100.0         |
+| Arucas          | 41               | 37            | 4                        | 90.2          |
+| **Total**       | **210**          | **201**       | **9**                    | **96.0**      |
+
+Out of all the False Positives (FP) only one was due to a hallucinated functionality, the rest were semantic duplicates.
