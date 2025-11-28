@@ -1,0 +1,58 @@
+test_name: Información sobre Tarifas y Títulos
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en adquirir títulos de transporte y tarifas adecuadas para su viaje.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Estás planeando un viaje a la ciudad y necesitas información sobre los títulos de transporte para moverte fácilmente durante tu estancia.
+  - Te gustaría asegurarte de que eliges la opción más adecuada y económica para tus planes, además de conocer el estado del transporte público.
+  - También prefieres comunicarte en un idioma que te resulte más cómodo para entender todos los detalles necesarios.
+  goals:
+  - Solicitar información sobre la compra de la Tarjeta Multi, incluyendo su costo y dónde comprarla.
+  - Pedir detalles sobre el Título Turístico, especificando sus opciones de duración y zonas aplicables.
+  - Seleccionar mi idioma preferido para la comunicación con el chatbot.
+  - Consultar el estado actual de la red de Metro para conocer si hay incidencias.
+  - Solicitar un enlace al sitio web principal para obtener información adicional sobre tarifas y títulos.
+chatbot:
+  is_starter: false
+  fallback: 'Este canal está habilitado para ofrecer información de servicio y atención al cliente de Metro de Madrid. Para otros asuntos, por favor, consulta nuestra web oficial: 🌐 www.metromadrid.es ¿Puedo ayudarte en algo más? 👇'
+  output:
+  - tarjeta_multi_costo:
+      type: money
+      description: Costo de la Tarjeta Multi
+  - tarjeta_multi_compra_lugar:
+      type: string
+      description: Lugares para comprar la Tarjeta Multi
+  - titulo_turistico_duracion:
+      type: string
+      description: Opciones de duración del Título Turístico
+  - titulo_turistico_zonas:
+      type: string
+      description: Zonas aplicables del Título Turístico
+  - titulo_turistico_opciones_edad:
+      type: string
+      description: Opciones según la edad del usuario
+  - idioma_preferido:
+      type: string
+      description: Idioma preferido del usuario
+  - idioma_opciones:
+      type: string
+      description: Opciones de idioma disponibles
+  - estado_red_metro:
+      type: string
+      description: Estado actual de la red de Metro
+  - enlace_sitio_web:
+      type: string
+      description: Enlace al sitio web principal
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 28
+  interaction_style:
+  - single question

@@ -1,0 +1,54 @@
+test_name: Solicitud de Información sobre Servicios Municipales
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en obtener información sobre los servicios que ofrece el Ayuntamiento de Arucas y cómo acceder a ellos.
+  context:
+  - Estás considerando mudarte a Arucas y te interesa conocer los servicios que ofrece el Ayuntamiento para asegurarte de que se adapten a tus necesidades.
+  - Además, tienes un interés particular en los servicios ambientales y deseas saber cómo acceder a ellos para contribuir a la sostenibilidad de la comunidad.
+  - Por último, necesitas información sobre cómo gestionar tus datos personales en el portal del Ayuntamiento para establecer un vínculo más cercano con los servicios disponibles.
+  goals:
+  - Preguntar qué servicios ofrece el Ayuntamiento de Arucas.
+  - Solicitar información sobre los servicios ambientales disponibles.
+  - Pedir el enlace directo para acceder a la información sobre los servicios de medio ambiente.
+  - Consulta cómo iniciar el proceso de solicitud para la comunicación previa de obras.
+  - Solicitar cómo cambiar mis datos personales accediendo a 'MI CUENTA'.
+chatbot:
+  is_starter: false
+  fallback: ¿Disculpa?
+  output:
+  - available_service_options:
+      type: string
+      description: Servicios ofrecidos por el Ayuntamiento
+  - environment_service_links:
+      type: string
+      description: Enlaces para servicios ambientales
+  - application_methods:
+      type: string
+      description: Métodos para solicitar comunicaciones previas
+  - required_documents:
+      type: string
+      description: Documentos necesarios para la solicitud
+  - payment_information:
+      type: string
+      description: Información sobre el pago de ICIO
+  - mi_cuenta_instructions:
+      type: string
+      description: Instrucciones para acceder a 'MI CUENTA'
+  - available_tramites:
+      type: string
+      description: Visión general de trámites tributarios
+  - tax_procedures_links:
+      type: string
+      description: Enlaces de procedimientos tributarios disponibles
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

@@ -1,0 +1,174 @@
+[
+  {
+    "name": "prompt_for_service_information_request",
+    "description": "Requests the user to specify the type of service information they are interested in regarding the municipality of Arucas and its Ayuntamiento.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_service_options",
+        "description": "Information about Urbanismo and Normativa Urbanística provided."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_environment_service_information_link",
+    "description": "Provides the user with a direct link to access information about environmental services offered by the Ayuntamiento of Arucas.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "environment_service_links",
+        "description": "Links related to environmental services, including a direct link to the environmental services information page and additional detailed service information."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_initial_guidance_on_application_process",
+    "description": "Informs the user on how to start the application for prior communication on construction works, outlining various ways to make the application.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "application_methods",
+        "description": "Various methods to apply, including in-person at the Office of Citizen Attention, online through the electronic headquarters, or by phone"
+      },
+      {
+        "category": "required_documents",
+        "description": "List of documents needed to submit along with the application"
+      },
+      {
+        "category": "payment_information",
+        "description": "Details about ICIO payment and its percentage."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Application Process",
+    "children": []
+  },
+  {
+    "name": "suggest_browser_for_electronic_tramiting",
+    "description": "Recommends using Google Chrome for a smoother experience when submitting the application electronically.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Technical Recommendations",
+    "children": []
+  },
+  {
+    "name": "provide_contact_details_for_assistance",
+    "description": "Offers contact numbers for making appointments and for inquiries regarding the payment of ICIO.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "appointment_contact",
+        "description": "Phone number for booking an appointment"
+      },
+      {
+        "category": "payment_contact",
+        "description": "Phone number for tax office inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "provide_documents_information",
+    "description": "Informs the user about where to find all the necessary documents for submitting an application, specifically pointing to the Bulletín Oficial de la Provincia de las Palmas (BOP) and the transparency portal section 'Empleo en el sector público.'",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "output_options",
+        "description": "documents_sources: Documentation sources include BOP and Portal de Transparencia."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Document Information",
+    "children": []
+  },
+  {
+    "name": "provide_login_instructions",
+    "description": "Provides instructions on how to change personal data by logging into the system and accessing 'MI CUENTA.'",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_payment_instructions_for_ICIO",
+    "description": "Provides instructions on how to pay ICIO tax, including details on payment methods and contact information for inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "payment_instructions",
+        "description": "Instructions and details for paying the ICIO tax, including information on available payment methods and access to the Virtual Tax Office for payment processing."
+      },
+      {
+        "category": "payment_methods",
+        "description": "Information on the available payment methods for processing payments."
+      },
+      {
+        "category": "payment_contact_information",
+        "description": "Contact details, including a contact number for inquiries about payments and payment procedures."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment Information",
+    "children": []
+  },
+  {
+    "name": "provide_office_virtual_tributaria_link",
+    "description": "Provides the link to the Oficina Virtual Tributaria for online tax payment and related services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_virtual_tributaria_link",
+        "description": "URL to the Oficina Virtual Tributaria"
+      },
+      {
+        "category": "available_tramites_pdf_link",
+        "description": "URL to the PDF listing available tax procedures"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Online Services",
+    "children": []
+  },
+  {
+    "name": "provide_contact_information",
+    "description": "Provides the user with contact information, including phone numbers and email address for office inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_phone_numbers",
+        "description": "List of phone numbers for contacting the Oficina de Recaudación, including: 928623307, 928622481, 928623129, 618362165, 618419152."
+      },
+      {
+        "category": "contact_email",
+        "description": "Email address for inquiries regarding contact and support, specifically: recaudacion@arucas.org."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "provide_available_tramites_information",
+    "description": "Offers information on various tax procedures available through the Oficina Virtual Tributaria and provides relevant links and descriptions for access.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_tramites",
+        "description": "Provides a comprehensive overview of different tax procedures, including those that require a certificate for processing, along with a link to a PDF and a web page containing the list of available tax procedures."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  }
+]

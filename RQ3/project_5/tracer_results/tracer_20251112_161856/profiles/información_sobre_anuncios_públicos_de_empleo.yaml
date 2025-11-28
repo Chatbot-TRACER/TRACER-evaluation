@@ -1,0 +1,47 @@
+test_name: Información sobre Anuncios Públicos de Empleo
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario buscando información sobre oposiciones y anuncios de empleo público en el Ayuntamiento de Arucas
+  context:
+  - Estás en búsqueda de oportunidades laborales en el sector público y deseas informarte sobre las oposiciones y anuncios más recientes del Ayuntamiento de Arucas.
+  - Como parte de tu preparación, necesitas consultar fuentes oficiales para asegurarte de que tienes toda la información actualizada.
+  - Además, buscas acceder a los enlaces relevantes para facilitar tu búsqueda y garantizar que no te pierdas de ninguna oportunidad.
+  goals:
+  - Solicitar información sobre los anuncios de oposición disponibles en el Ayuntamiento de Arucas.
+  - Pedir el enlace al Boletín Oficial de la Provincia de Las Palmas para consultar los anuncios de empleo público.
+  - Consultar sobre dónde puedo encontrar anuncios de empleo en el sector público y solicitar reiteración de la información.
+  - Pedir el enlace a la sección de anuncios de empleo del sector público en el Portal de Transparencia.
+chatbot:
+  is_starter: false
+  fallback: Ups, no he entendido a que te refieres.
+  output:
+  - anuncios_oposicion:
+      type: string
+      description: Anuncios de oposición disponibles en Arucas
+  - enlace_bop:
+      type: string
+      description: Enlace al Boletín Oficial de Las Palmas
+  - informar_donde_encontrar_anuncios:
+      type: string
+      description: Lugar para encontrar anuncios de empleo público
+  - reiterar_informacion_anuncios:
+      type: string
+      description: Solicitud de reiteración de información sobre oposiciones
+  - enlace_portal_transparencia:
+      type: string
+      description: Enlace a sección de anuncios del Portal de Transparencia
+  - consulta_anuncios_empleo:
+      type: string
+      description: Consulta sobre anuncios de empleo en sector público
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

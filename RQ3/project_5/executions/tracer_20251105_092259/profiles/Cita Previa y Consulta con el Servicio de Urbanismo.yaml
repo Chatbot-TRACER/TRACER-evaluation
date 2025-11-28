@@ -1,0 +1,70 @@
+test_name: Cita Previa y Consulta con el Servicio de Urbanismo
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca programar citas para consultas relacionadas con urbanismo y servicios asociados.
+  context:
+  - 'personality: personalities/conversational-user'
+  - Estás planeando realizar algunas modificaciones en tu propiedad y necesitas información sobre el proceso de consultas urbanísticas.
+  - Buscas programar una cita con el departamento de urbanismo para obtener orientación específica sobre los tipos de permisos necesarios.
+  - Además, te gustaría conocer los recursos disponibles, como videos explicativos, que te ayuden a entender mejor cómo gestionar tu solicitud.
+  goals:
+  - Solicitar información sobre cómo presentar una solicitud de comunicación previa.
+  - Pedir una lista de los departamentos disponibles para programar citas.
+  - Seleccionar el departamento de urbanismo para programar una cita.
+  - Preguntar acerca de los tipos de citas que se pueden solicitar con el departamento de urbanismo.
+  - Solicitar el enlace del video que explica cómo programar una cita.
+chatbot:
+  is_starter: false
+  fallback: ¿Decías?
+  output:
+  - request_type:
+      type: string
+      description: Tipo de solicitud realizada
+  - department_name:
+      type: string
+      description: Nombre del departamento seleccionado
+  - appointment_types:
+      type: string
+      description: Tipos de citas disponibles
+  - video_link:
+      type: string
+      description: Enlace al video de instrucciones
+  - appointment_count:
+      type: int
+      description: Número de citas programadas
+  - availability_status:
+      type: string
+      description: Estado de disponibilidad para citas
+  - contact_methods:
+      type: string
+      description: Métodos de contacto disponibles
+  - communication_request:
+      type: string
+      description: Solicitud de comunicación previa
+  - scheduling_channel:
+      type: string
+      description: Canal de programación de citas
+  - scheduled_time:
+      type: time
+      description: Hora programada para la cita
+  - scheduled_date:
+      type: date
+      description: Fecha para la cita programada
+  - processing_fee:
+      type: money
+      description: Costo administrativo de la cita
+  - user_message:
+      type: string
+      description: Mensaje ingresado por el usuario
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

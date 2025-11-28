@@ -1,0 +1,52 @@
+test_name: Opciones de Comedores y Acompañamientos
+llm:
+  temperature: 0.4
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca opciones de acompañamiento y complementos saludables para sus comidas.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Te has propuesto llevar una alimentación más saludable y estás buscando opciones de acompañamientos que complementen tus comidas.
+  - Hoy planeas preparar platos con legumbres, así que estás interesado en guarniciones que vayan bien con ensaladas y hamburguesas vegetales.
+  - Además, te gustaría explorar recetas creativas que puedan incluir ingredientes como garbanzos y lentejas para variar tus comidas.
+  goals:
+  - Pedir recomendaciones de guarniciones que combinan bien con la ensalada de garbanzos y mango.
+  - Solicitar platos que acompañen bien a las hamburguesas de garbanzos.
+  - Pedir detalles sobre la receta para hacer tacos de garbanzos, incluyendo ingredientes e instrucciones.
+  - Solicitar sugerencias para variaciones en recetas de hamburguesas, incluyendo sustituciones de ingredientes.
+  - Preguntar sobre la receta para hacer hamburguesas de lentejas, delineando los ingredientes y pasos de cocción.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - side_dish_recommendations:
+      type: string
+      description: Lista de guarniciones sugeridas
+  - accompaniment_options:
+      type: string
+      description: Listado de platos y salsas recomendadas
+  - tacos_recipe_ingredients:
+      type: string
+      description: Lista de ingredientes para tacos
+  - tacos_recipe_instructions:
+      type: string
+      description: Instrucciones de cocción paso a paso
+  - recipe_ingredients:
+      type: string
+      description: Lista de ingredientes para hamburguesas de lentejas
+  - recipe_steps:
+      type: string
+      description: Instrucciones paso a paso para hamburguesas de lentejas
+  - variation_ideas:
+      type: string
+      description: Lista de sustituciones de ingredientes
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 24
+  interaction_style:
+  - single question

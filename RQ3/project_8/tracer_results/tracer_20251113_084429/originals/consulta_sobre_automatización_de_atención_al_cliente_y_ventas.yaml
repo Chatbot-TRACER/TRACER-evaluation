@@ -1,0 +1,79 @@
+test_name: Consulta sobre Automatización de Atención al Cliente y Ventas
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en conocer las capacidades de automatización de atención al cliente y ventas mediante la plataforma Botslovers.
+  context:
+  - 'personality: personalities/rude-user'
+  - Estás explorando soluciones para mejorar la atención al cliente y aumentar las ventas de tu negocio a través de la automatización.
+  - Te interesa específicamente cómo la plataforma Botslovers puede ofrecerte herramientas efectivas para lograr estos objetivos y optimizar recursos.
+  - Quieres asegurarte de que las integraciones y capacidades de la plataforma se alineen con las necesidades actuales de tu empresa.
+  goals:
+  - Preguntar qué servicios ofrece la plataforma de Botslovers para la automatización de atención al cliente y ventas.
+  - Solicitar información sobre las capacidades de atención al cliente automatizadas disponibles en WhatsApp.
+  - Pedir ejemplos de cómo la plataforma ha ayudado a empresas a reducir costos operativos mediante la automatización.
+  - Consultar sobre las integraciones que se pueden realizar con la plataforma de Botslovers.
+  - Solicitar detalles sobre cómo funcionan las notificaciones proactivas a través de WhatsApp.
+chatbot:
+  is_starter: false
+  fallback: Parece que tu mensaje no se entendió o es un error. Si tienes alguna pregunta sobre la plataforma de Botslovers o deseas saber más sobre cómo podemos ayudarte con la inteligencia artificial generativa, por favor, házmelo saber. Estoy aquí para ayudarte. 😊 Pero puedes hacer clic en el siguiente botón para obtener ayuda 👇
+  output:
+  - services_overview:
+      type: string
+      description: Servicios de automatización disponibles
+  - whatsapp_capabilities:
+      type: string
+      description: Capacidades de atención al cliente en WhatsApp
+  - cost_reduction_examples:
+      type: string
+      description: Ejemplos de reducción de costos operativos
+  - integrations_info:
+      type: string
+      description: Información sobre integraciones de la plataforma
+  - proactive_notifications:
+      type: string
+      description: Funcionamiento de notificaciones proactivas en WhatsApp
+  - platform_name:
+      type: string
+      description: Nombre de la plataforma utilizada
+  - customer_support_options:
+      type: string
+      description: Opciones de soporte al cliente automatizado
+  - technology_details:
+      type: string
+      description: Tecnología utilizada en la automatización
+  - user_query_management:
+      type: string
+      description: Gestión de consultas de usuarios
+  - efficiency_benefits:
+      type: string
+      description: Beneficios de eficiencia en la automatización
+  - personalization_features:
+      type: string
+      description: Características de personalización disponibles
+  - operational_costs:
+      type: money
+      description: Costos operativos reducidos a través de automatización
+  - generative_ai_use:
+      type: string
+      description: Uso de IA generativa en automatización
+  - user_engagement:
+      type: string
+      description: Compromiso del usuario a través de la automatización
+  - whatsapp_api_difference:
+      type: string
+      description: Diferencias entre WhatsApp API y WhatsApp para Negocios
+  - proactive_capabilities:
+      type: string
+      description: Capacidades proactivas del sistema
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

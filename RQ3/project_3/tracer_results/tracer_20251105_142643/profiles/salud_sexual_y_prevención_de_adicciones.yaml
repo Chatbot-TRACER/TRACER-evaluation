@@ -1,0 +1,75 @@
+test_name: Salud Sexual y Prevención de Adicciones
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario en busca de información sobre salud sexual, infecciones de transmisión sexual y prevención de adicciones.
+  context:
+  - Te sientes preocupado por tu salud sexual y deseas obtener información clara y precisa sobre infecciones de transmisión sexual y cómo prevenir adicciones.
+  - Recientemente, has escuchado de un amigo sobre la importancia de hacerse pruebas y conocer los síntomas de diversas infecciones, lo que te ha motivado a informarte mejor al respecto.
+  - Además, te gustaría encontrar recursos y grupos de apoyo que puedan ayudarte en caso de un diagnóstico positivo de ITS.
+  goals:
+  - Solicitar la lista de infecciones de transmisión sexual más comunes.
+  - Pedir información sobre los síntomas de la infección por VIH en diferentes etapas.
+  - Preguntar sobre el tratamiento disponible para la sífilis.
+  - Solicitar recomendaciones para pruebas específicas que se deben realizar para detectar infecciones de transmisión sexual.
+  - Pedir información sobre los recursos y grupos de apoyo disponibles para personas con un diagnóstico positivo de ITS.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - its_list:
+      type: string
+      description: Lista de infecciones de transmisión sexual
+  - vih_symptoms_phase:
+      type: string
+      description: Síntomas de VIH en diferentes etapas
+  - syphilis_treatment:
+      type: string
+      description: Opciones de tratamiento para la sífilis
+  - testing_recommendations:
+      type: string
+      description: Recomendaciones de pruebas para ITS
+  - support_resources:
+      type: string
+      description: Recursos y grupos de apoyo para ITS
+  - hcv_information:
+      type: string
+      description: Información sobre la hepatitis C
+  - prevention_guidelines:
+      type: string
+      description: Pautas de prevención de adicciones
+  - genital_herpes_treatment:
+      type: string
+      description: Tratamiento para herpes genital
+  - gonorrhea_treatment:
+      type: string
+      description: Tratamiento recomendado para gonorrea
+  - syphilis_prevention:
+      type: string
+      description: Recomendaciones para prevenir sífilis
+  - gonorrhea_prevention:
+      type: string
+      description: Recomendaciones para prevenir gonorrea
+  - vph_information:
+      type: string
+      description: Información sobre virus del papiloma humano
+  - hbv_information:
+      type: string
+      description: Información sobre hepatitis B
+  - their_impact:
+      type: string
+      description: Efectos de las ITS en la salud
+  - testing_availability:
+      type: string
+      description: Disponibilidad de pruebas para ITS
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

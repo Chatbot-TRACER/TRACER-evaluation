@@ -1,0 +1,208 @@
+[
+  {
+    "name": "prompt_for_privacy_policy_acceptance",
+    "description": "Requests the user to accept the privacy policy before proceeding with assistance.",
+    "parameters": [
+      {
+        "name": "privacy_acceptance",
+        "description": "User's acceptance of the privacy policy.",
+        "options": [
+          "Acepto",
+          "No acepto"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Authentication",
+    "children": [
+      {
+        "name": "present_assistance_queries",
+        "description": "Presents a list of available queries or assistance options the chatbot can provide for user inquiries, allowing the user to select their desired option.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "assistance_options",
+            "description": "Options for assistance including checking next trains, recommending fares, transport card information, directions to stations, checking network status, installation status, and other inquiries."
+          }
+        ],
+        "parent_names": [
+          "prompt_for_privacy_policy_acceptance"
+        ],
+        "suggested_category": "Customer Support",
+        "children": [
+          {
+            "name": "provide_current_network_status",
+            "description": "Informs the user about the current status of the transport network, including details of incidents affecting specific lines and the operational status of all transport lines.",
+            "parameters": [],
+            "outputs": [
+              {
+                "category": "network_incidents",
+                "description": "Details of current incidents affecting specific transport lines, including ongoing network incidents and the operational status of affected services."
+              },
+              {
+                "category": "operational_status",
+                "description": "Confirmation of operational status for the rest of the transport lines."
+              }
+            ],
+            "parent_names": [
+              "present_assistance_queries"
+            ],
+            "suggested_category": "Network Information",
+            "children": []
+          },
+          {
+            "name": "prompt_for_station_selection",
+            "description": "Requests the user to specify the name of their current station for navigation assistance and relevant information.",
+            "parameters": [
+              {
+                "name": "station_name",
+                "description": "Represents the name of the user's current station or location for directions.",
+                "options": []
+              }
+            ],
+            "outputs": [],
+            "parent_names": [
+              "present_assistance_queries"
+            ],
+            "suggested_category": "Navigation Assistance",
+            "children": [
+              {
+                "name": "present_train_line_options",
+                "description": "Presents the available train or metro lines at a specified station for the user to choose from.",
+                "parameters": [
+                  {
+                    "name": "station_name",
+                    "description": "The name of the station whose line options are being inquired about.",
+                    "options": []
+                  }
+                ],
+                "outputs": [
+                  {
+                    "category": "available_train_lines",
+                    "description": "List of available train lines at the specified station, including help for Line 1, Line 2, Line 3, Line 4, Line 5, and Line 10."
+                  },
+                  {
+                    "category": "connection_details",
+                    "description": "Details about connections available at the station."
+                  }
+                ],
+                "parent_names": [
+                  "prompt_for_station_selection"
+                ],
+                "suggested_category": "Train Information",
+                "children": [
+                  {
+                    "name": "present_upcoming_trains_info",
+                    "description": "Presents information about the next upcoming trains at a specified station, including line numbers, directions, and arrival times.",
+                    "parameters": [
+                      {
+                        "name": "station_name",
+                        "description": "The name of the station provided by the user where upcoming trains are to be checked.",
+                        "options": []
+                      },
+                      {
+                        "name": "selected_line",
+                        "description": "The specific metro line the user wants to check for upcoming trains.",
+                        "options": [
+                          "LINE_10",
+                          "LINE_4",
+                          "LINE_5",
+                          "all_lines"
+                        ]
+                      }
+                    ],
+                    "outputs": [
+                      {
+                        "category": "upcoming_trains",
+                        "description": "Details of the next trains arriving at the station, including line numbers, directions, arrival times, and waiting times."
+                      }
+                    ],
+                    "parent_names": [
+                      "present_train_line_options"
+                    ],
+                    "suggested_category": "Train Information",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "provide_multi_card_purchase_information",
+    "description": "The chatbot provides information on purchasing the Multi Card, including its cost and where to buy it.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "purchase_info",
+        "description": "The Multi Card costs 2.50 euros and can be bought at metro stations' automatic machines or authorized sales points."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Purchase Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_language_selection",
+    "description": "The chatbot asks the user to select their preferred language for communication.",
+    "parameters": [
+      {
+        "name": "language_option",
+        "description": "The user's preferred language for communication.",
+        "options": [
+          "Español",
+          "Inglés"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "category": "language_options",
+        "description": "English, Spanish"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "User Preferences",
+    "children": []
+  },
+  {
+    "name": "provide_tourist_title_info",
+    "description": "Gives detailed information about the Título Turístico, including its duration options and applicable zones.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "title_validity",
+        "description": "Description of the validity periods for the Título Turístico"
+      },
+      {
+        "category": "title_age_options",
+        "description": "Descriptions of the normal and infant titles available based on user age"
+      },
+      {
+        "category": "title_zone_applicability",
+        "description": "Information on how the title applies to different zones"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tourist Information",
+    "children": []
+  },
+  {
+    "name": "guide_to_additional_information",
+    "description": "The chatbot informs the user that it is a customer service channel and offers a link to the main website for additional information.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "external_resource_link",
+        "description": "www.metromadrid.es"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "External Resources",
+    "children": []
+  }
+]

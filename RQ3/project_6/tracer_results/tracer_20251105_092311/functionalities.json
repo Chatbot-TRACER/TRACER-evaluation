@@ -1,0 +1,151 @@
+[
+  {
+    "name": "inquire_service_availability",
+    "description": "The chatbot responds to the user's inquiry about available services and indicates that the question will be forwarded to the staff.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_payments_information",
+    "description": "The chatbot provides detailed instructions on how to find payment information for taxes through the Virtual Tax Office and other resources.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Payments & Taxes",
+    "children": []
+  },
+  {
+    "name": "provide_tax_payment_information",
+    "description": "Provides details regarding the mandatory nature of tax payments as required by law.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Payments & Taxes",
+    "children": []
+  },
+  {
+    "name": "provide_office_location_info",
+    "description": "Informs the user about options for requesting a payment installment plan and offers a link to the geographical situation of different tax management offices.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_location_details",
+        "description": "Information on various tax management offices and their hours."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Office Location Information",
+    "children": []
+  },
+  {
+    "name": "provide_virtual_tax_office_access",
+    "description": "Instructs the user on how to access the Virtual Tax Office, including relevant information about tax management services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_tax_types",
+        "description": "Information about the types of taxes managed or collected."
+      },
+      {
+        "category": "virtual_tax_office_access",
+        "description": "Instructions for accessing the Virtual Tax Office."
+      },
+      {
+        "category": "tax_help_line",
+        "description": "Phone number for assistance with tax management services."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Virtual Tax Office Access",
+    "children": []
+  },
+  {
+    "name": "provide_office_information",
+    "description": "Informs the user about various offices of the Tax Management Service, including their operating hours and geographical locations.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_location_information",
+        "description": "URL and information about various tax management offices, including their geographical locations and operating hours."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Office Location Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_about_obligatory_taxes",
+    "description": "The chatbot provides options for accessing information about the types of obligatory taxes managed or collected by the Diputación.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "calendar_information",
+        "description": "Details on when taxes and fees are due"
+      },
+      {
+        "category": "contact_information",
+        "description": "Phone number and hours for customer service assistance"
+      },
+      {
+        "category": "access_methods",
+        "description": "Information on using the Virtual Tax Office with and without a digital certificate."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Taxes Information",
+    "children": []
+  },
+  {
+    "name": "list_tax_procedures_catalog",
+    "description": "Provides a link to the catalog of tax procedures available for the user to consult, although the user request was not directly fulfilled with the catalog link.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_procedures_catalog_link",
+        "description": "URL of the tax procedures catalog for user reference."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Procedures",
+    "children": []
+  },
+  {
+    "name": "provide_tax_calendar_information",
+    "description": "Provides users with information and resources to access the tax calendar, including access methods and contact information for tax support.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_payment_access_methods",
+        "description": "Information on accessing tax payment dates through the Oficina Virtual Tributaria and by phone, including options for accessing the tax calendar with or without a digital certificate."
+      },
+      {
+        "category": "tax_support_contact_information",
+        "description": "Phone number for tax-related inquiries and assistance (963 00 05 00) available Monday to Friday from 8:30 AM to 2:30 PM."
+      },
+      {
+        "category": "tax_calendar_link",
+        "description": "Direct link to the tax calendar page."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Calendar Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_geographical_office_consultation",
+    "description": "Repeatedly prompts the user to consult the geographical offices of the Tax Management Service, providing a button for access and a link to their schedules.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_information_link",
+        "description": "Provides a link to the geographical offices and their schedules, including their hours of operation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Office Location Information",
+    "children": []
+  }
+]

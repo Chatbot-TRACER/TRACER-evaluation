@@ -1,0 +1,177 @@
+[
+  {
+    "name": "present_link_to_website",
+    "description": "Provides a link to the official website of the Ayuntamiento de Morón de la Frontera.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "website_link",
+        "description": "URL of the Ayuntamiento's official website."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "present_link_to_corporation_info",
+    "description": "Provides a link to the information about the municipal corporation of Morón de la Frontera.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "corporation_info_link",
+        "description": "URL for the municipal corporation information page."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_tax_payment_schedule",
+    "description": "Provides the user with information about the specific deadlines for tax payments for municipal taxes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_payment_schedule",
+        "description": "Specific deadlines for tax payments per year."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Information",
+    "children": []
+  },
+  {
+    "name": "provide_government_info",
+    "description": "Provides information about the current governing body of the Ayuntamiento and the political groups represented.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "governing_body_info",
+        "description": "Information about the current governing body, including details about the ruling party and represented political groups."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "list_services_and_job_offers",
+    "description": "Provides information about available services and job offers from the Ayuntamiento de Morón de la Frontera, including details on job requirements, selection procedures, and relevant service offerings.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_job_offers",
+        "description": "Details about job offers available, including information on job requirements, selection procedures, and links to job offers on the Ayuntamiento's website."
+      },
+      {
+        "category": "available_services",
+        "description": "Details of services available from the Ayuntamiento de Morón de la Frontera."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Job & Services Information",
+    "children": []
+  },
+  {
+    "name": "provide_service_assistance",
+    "description": "Introduces the chatbot as a civic service representative and prompts the user for their service-related inquiry.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "provide_contact_information",
+    "description": "Offers details about how to contact the Ayuntamiento for in-person and phone assistance, including operating hours.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "provide_access_to_electronic_headquarters",
+    "description": "Provides the user with access to the electronic headquarters of the Ayuntamiento, including a URL link for municipal services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "electronic_headquarters_link",
+        "description": "URL for the electronic headquarters of the Ayuntamiento."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Access",
+    "children": []
+  },
+  {
+    "name": "provide_sac_hours",
+    "description": "The chatbot provides standard hours for in-person citizen services and telephone assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_hours_info",
+        "description": "Details about regular and seasonal service hours for in-person and telephone services."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  },
+  {
+    "name": "present_cita_options",
+    "description": "The chatbot offers specific options to request an appointment with various departments.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cita_options",
+        "description": "Cita con el alcalde, Cita con Urbanismo, Cita con el SAC"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Appointment Options",
+    "children": []
+  },
+  {
+    "name": "provide_alcalde_appointment_info",
+    "description": "The chatbot explains how to request an appointment with the alcalde via the electronic headquarters or in person.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Appointments",
+    "children": []
+  },
+  {
+    "name": "provide_identification_info",
+    "description": "The chatbot provides a link for electronic identification required for accessing the electronic headquarters.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "identification_link",
+        "description": "URL to the identification portal"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Identification",
+    "children": []
+  },
+  {
+    "name": "present_service_options",
+    "description": "The chatbot provides a list of available service options offered by the Ayuntamiento and how to access them.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_types",
+        "description": "Types of services offered such as in-person assistance, electronic service, and telephone assistance."
+      },
+      {
+        "category": "service_options",
+        "description": "Available service options including appointment with the SAC, service hours, and the phone number of the Town Hall."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Options",
+    "children": []
+  }
+]

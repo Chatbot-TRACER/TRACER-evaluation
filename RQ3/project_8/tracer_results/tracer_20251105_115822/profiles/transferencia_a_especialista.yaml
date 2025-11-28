@@ -1,0 +1,70 @@
+test_name: Transferencia a Especialista
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que necesita asistencia adicional y está en proceso de ser transferido a un especialista.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Necesitas asistencia adicional para resolver un problema técnico que no has podido solucionar por tu cuenta.
+  - Has intentado varias soluciones sin éxito y ahora consideras que un especialista podría ofrecerte el apoyo necesario.
+  - Estás dispuesto a proporcionar tu información de contacto para facilitar la transferencia y seguir el proceso de asistencia.
+  goals:
+  - Indicar que necesito asistencia adicional y solicitar una transferencia a un especialista.
+  - Proporcionar mi dirección de correo electrónico para la asistencia adicional.
+  - Confirmar mi dirección de correo electrónico como {{user_email}} antes de la transferencia.
+  - Preguntar sobre las opciones de contacto con el equipo de soporte para la integración de la base de datos interna.
+  - Solicitar información sobre cómo proceder para comunicarme con un especialista más tarde.
+  - user_email:
+      function: forward()
+      type: string
+      data:
+      - juan.perez@example.com
+      - maria.lopez@gmail.com
+      - carlos.sanchez@yahoo.es
+      - ana.garcia@hotmail.com
+      - luis.ramirez@outlook.com
+chatbot:
+  is_starter: false
+  fallback: Si tienes una pregunta específica sobre Botslovers o la inteligencia artificial, estaré encantado de ayudarte.
+  output:
+  - user_email:
+      type: string
+      description: Dirección de correo electrónico del usuario
+  - email_confirmation:
+      type: string
+      description: Confirmación de la dirección de correo electrónico
+  - support_contact_options:
+      type: string
+      description: Opciones de contacto con el equipo de soporte
+  - specialist_contact_info:
+      type: string
+      description: Información sobre cómo comunicarse con un especialista
+  - transfer_confirmation:
+      type: string
+      description: Confirmación de la transferencia a un especialista
+  - inquiry_topic:
+      type: string
+      description: Tema de la consulta del usuario
+  - user_query:
+      type: string
+      description: Pregunta específica del usuario relacionada con la plataforma
+  - consultation_topics:
+      type: string
+      description: Temas más consultados disponibles para el usuario
+  - assistance_request:
+      type: string
+      description: Solicitud de asistencia adicional del usuario
+  - follow_up_option:
+      type: string
+      description: Opción para seguimiento posterior con un especialista
+conversation:
+  number: 5
+  max_cost: 0.75
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

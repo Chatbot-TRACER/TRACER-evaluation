@@ -1,0 +1,70 @@
+test_name: Consulta sobre Impuestos y Calendarios
+llm:
+  temperature: 0.3
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en obtener información sobre los plazos de pago y el calendario fiscal relacionado con sus obligaciones tributarias.
+  context:
+  - 'personality: personalities/elderly-user'
+  - Recientemente has recibido una notificación sobre tus obligaciones tributarias y necesitas aclarar los plazos de pago y el calendario fiscal correspondiente.
+  - Además, te gustaría conocer las diferentes opciones de contacto para obtener asistencia adicional en caso de dudas sobre el proceso.
+  - Por último, deseas explorar la lista de tributos gestionados por la Diputación para asegurarte de cumplir con todas tus responsabilidades fiscales.
+  goals:
+  - Solicitar información sobre los plazos de pago y el calendario fiscal relacionado con mis obligaciones tributarias.
+  - Pedir el acceso a la lista de métodos disponibles para consultar los horarios de pago.
+  - Elegir un método de contacto como {{support_contact_info}} para obtener asistencia adicional.
+  - Solicitar información sobre cómo obtener un nuevo documento de pago de impuestos y los posibles costos adicionales.
+  - Pedir el acceso a la lista de tipos de tributos gestionados por la Diputación para saber más sobre ellos.
+  - support_contact_info:
+      function: forward()
+      type: string
+      data:
+      - correo@ejemplo.com
+      - 123-456-7890
+      - soporte@miempresa.com
+      - chat.enlinea@miempresa.com
+      - atencion_cliente@miempresa.com
+chatbot:
+  is_starter: false
+  fallback: Disculpa, pero... ¿Me lo puedes repetir con otras palabras? Respondo a preguntas sobre la <b>gestión de tributos</b>.
+  output:
+  - payment_deadline_info:
+      type: string
+      description: Información sobre los plazos de pago
+  - fiscal_calendar_access:
+      type: string
+      description: Método para acceder al calendario fiscal
+  - payment_methods_list:
+      type: string
+      description: Lista de métodos de consulta de horarios de pago
+  - support_contact_option:
+      type: string
+      description: Opción de contacto seleccionada
+  - document_request_methods:
+      type: string
+      description: Métodos para solicitar un nuevo documento de pago
+  - potential_costs:
+      type: money
+      description: Costos adicionales de documento de pago
+  - tax_types_access_methods:
+      type: string
+      description: Métodos para acceder a los tipos de tributos
+  - contact_information:
+      type: string
+      description: Información de contacto para asistencia
+  - telephone_assistance_hours:
+      type: string
+      description: Horarios de asistencia telefónica
+  - available_buttons:
+      type: string
+      description: Botones disponibles para funcionalidades adicionales
+conversation:
+  number: 5
+  max_cost: 0.75
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

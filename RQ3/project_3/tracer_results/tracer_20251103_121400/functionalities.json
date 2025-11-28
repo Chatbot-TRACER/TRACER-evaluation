@@ -1,0 +1,918 @@
+[
+  {
+    "name": "list_available_services",
+    "description": "The chatbot provides a list of services available in the Comunidad de Madrid for citizens.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_services_list",
+        "description": "Services include Sistema de Respuesta Vocal Interactiva (I.V.R), Servicio tracking de la app My112, Localización de llamadas móviles de alta precisión (AML), Mi Emergencia 112, Sistema de alertas públicas (ES_ALERT)"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  },
+  {
+    "name": "provide_service_tracking_info",
+    "description": "The chatbot delivers specific information about the 'Servicio tracking de la app My112.'",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tracking_service_features",
+        "description": "Detailed features of the tracking service such as localizing users in emergencies and sharing location with emergency services."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  },
+  {
+    "name": "provide_public_alert_info",
+    "description": "Describes the features and functionality of the public alert system, including how citizens can receive notifications during emergencies and the importance of enabling app notifications.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "alert_receiving_details",
+        "description": "Information on how alerts are activated, what types of notifications citizens will receive during emergencies, how these alerts are broadcasted, the public alert system, and the requirement for users to enable app notifications for receiving mass alerts and relevant safety recommendations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Alert Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_medical_choice_right",
+    "description": "Gives details on the right of free medical choice, including how citizens can choose their healthcare professionals.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "medical_choice_details",
+        "description": "Information on choosing family doctors, pediatricians, nurses, hospitals, and specialists"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Medical Choices",
+    "children": []
+  },
+  {
+    "name": "prompt_for_online_medical_choice_steps",
+    "description": "Informs the user of the specific steps to exercise the right of free medical choice online.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "online_medical_choice_steps",
+        "description": "Step-by-step instructions for selecting a medical professional online."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Medical Choices",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_waiting_lists_and_satisfaction",
+    "description": "Presents information on how to check waiting lists and satisfaction indicators for health centers and hospitals online.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "waiting_list_and_satisfaction_info",
+        "description": "Information on surgical waiting lists, outpatient consultations, diagnostic tests, and user satisfaction indicators."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Services Information",
+    "children": []
+  },
+  {
+    "name": "provide_child_vaccination_calendar_link",
+    "description": "Provides a direct link to the child vaccination calendar for citizens in the Comunidad de Madrid.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "child_vaccination_calendar_link",
+        "description": "Direct URL to the official vaccination calendar PDF."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Vaccination Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_configuring_public_alerts",
+    "description": "The chatbot provides step-by-step instructions on how to configure the My112 app to receive public alerts.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "App Configuration",
+    "children": []
+  },
+  {
+    "name": "provide_technical_support_guidance",
+    "description": "The chatbot informs the user on what to do in case of technical issues with the My112 app, including suggestions to check the help section or contact the phone operator.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "technical_support_options",
+        "description": "Guidance on troubleshooting steps for technical issues with the app."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Technical Support",
+    "children": []
+  },
+  {
+    "name": "list_additional_app_functions",
+    "description": "Provides a list of other functions available in the My112 app in addition to tracking.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "additional_functions_list",
+        "description": "Functions include Real-time Tracking, Notifications, and Quick Access."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Features",
+    "children": []
+  },
+  {
+    "name": "provide_incident_location_visualization_details",
+    "description": "Describes how the incident location is visualized in the My112 app through a real-time tracking system.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "location_visualization_features",
+        "description": "Features include interactive map, GPS coordinates, and real-time updates."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tracking Information",
+    "children": []
+  },
+  {
+    "name": "provide_emergency_type_information",
+    "description": "Details the types of emergencies classified in the My112 app and their importance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "emergency_type_list",
+        "description": "Common types include traffic accidents, fires, choking incidents, cardiac arrests, home accidents, and medical emergencies."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Information",
+    "children": []
+  },
+  {
+    "name": "provide_agency_information_and_status",
+    "description": "Provides information about the agencies intervening in an emergency and their current status.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "agency_intervention_details",
+        "description": "Includes identification of agencies, their current statuses, and real-time updates regarding their intervention."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Information",
+    "children": []
+  },
+  {
+    "name": "provide_call_timestamp_information",
+    "description": "Explains the significance of the date and time information recorded when a call is received by the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "call_timestamp_importance",
+        "description": "Details the use of receipt timing for coordination, prioritization of interventions, and case tracking."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Information",
+    "children": []
+  },
+  {
+    "name": "provide_real_time_tracking_info",
+    "description": "Provides an overview of the real-time tracking functionality of the Mi Emergencia 112 application during emergencies, detailing information such as emergency type, call date and time, user location, and the statuses of responding agencies.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "emergency_tracking_info",
+        "description": "Real-time tracking of emergencies, including emergency type, call date and time, user location, and details about responding agencies and their statuses."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tracking Information",
+    "children": []
+  },
+  {
+    "name": "provide_sanitario_emergency_guide",
+    "description": "The chatbot outlines key steps to take in the event of sanitary emergencies.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sanitary_emergency_steps",
+        "description": "Steps include maintaining calm, calling 112, providing location and incident details."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Guidance",
+    "children": []
+  },
+  {
+    "name": "provide_mi_emergencia_112_usage_guidelines",
+    "description": "Provides comprehensive guidelines on how to download and utilize the Mi Emergencia 112 app during emergency situations, including detailed steps after calling 112.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "emergency_usage_steps",
+        "description": "Steps to follow after calling 112, detailing how to handle emergency situations via the app, including app features."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Usage",
+    "children": []
+  },
+  {
+    "name": "list_faqs_in_help_section",
+    "description": "Provides examples of frequently asked questions found in the 'Help' section of the 'Mi Emergencia 112' app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "faqs_list",
+        "description": "List of common questions related to the 'Mi Emergencia 112' app and its usage."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "FAQ",
+    "children": []
+  },
+  {
+    "name": "test_and_ensure_location_accuracy",
+    "description": "Provides instructions for testing and ensuring the accuracy of the user's location within the app, including steps for verification and confirming permissions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "location_verification_steps",
+        "description": "Instructions to verify location accuracy by confirming GPS and app permissions for reliable location tracking and comparing results with other services."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Location Accuracy",
+    "children": []
+  },
+  {
+    "name": "handle_internet_connection_loss",
+    "description": "Provides guidance on what to do if the internet connection is lost while using the application.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "connection_loss_steps",
+        "description": "Instructions for reconnecting and emergency call protocols."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Technical Support",
+    "children": []
+  },
+  {
+    "name": "confirm_es_alert_no_registration",
+    "description": "Confirms to the user that no registration is necessary to receive alerts from the ES_ALERT system.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "es_alert_requirements_info",
+        "description": "Information confirming that no registration is necessary to receive alerts."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Alert Information",
+    "children": []
+  },
+  {
+    "name": "list_additional_services",
+    "description": "Lists additional services offered by the ES_ALERT system beyond public alerts, such as interactive voice response and precise mobile call localization.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "additional_services_list",
+        "description": "Sistema de Respuesta Vocal Interactiva (IVR), Servicio de tracking de la app My112, Localización de llamadas móviles de alta precisión (AML), Aplicación Mi Emergencia 112"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  },
+  {
+    "name": "provide_app_download_guidance",
+    "description": "Informs users about the availability of the My112 app on Android and iOS devices and provides instructions for downloading it.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "app_availability",
+        "description": "Available on Google Play Store and App Store, with information about compatibility with Android and iOS systems, as well as download instructions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Usage",
+    "children": []
+  },
+  {
+    "name": "provide_access_to_satisfaction_surveys",
+    "description": "Provides links to access satisfaction survey reports and their methodologies from previous years.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "satisfaction_survey_links",
+        "description": "URLs to satisfaction surveys and methodological reports for previous years and current surveys."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Feedback Information",
+    "children": []
+  },
+  {
+    "name": "provide_specific_user_satisfaction_data",
+    "description": "Provides access to data regarding user satisfaction specifically for family doctors.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "family_doctor_satisfaction_data",
+        "description": "Links to satisfaction survey reports regarding family doctors."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Feedback Information",
+    "children": []
+  },
+  {
+    "name": "provide_nursing_professionals_satisfaction_statistics",
+    "description": "Provides information on user satisfaction statistics specifically for nursing professionals.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "nursing_professionals_satisfaction_data",
+        "description": "Links to survey results and methodologies for nursing professionals."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Feedback Information",
+    "children": []
+  },
+  {
+    "name": "provide_comparative_satisfaction_data",
+    "description": "Allows comparison of satisfaction data between family doctors and nursing professionals through available surveys.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "comparative_satisfaction_data",
+        "description": "Links to satisfaction surveys that allow for comparison between the two professions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Feedback Information",
+    "children": []
+  },
+  {
+    "name": "list_available_health_services",
+    "description": "Provides a list of various health services and benefits available to citizens in the Comunidad de Madrid.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_health_services",
+        "description": "Information on primary healthcare services, including emergency care, specialized services, mental health support, substance abuse treatment, vaccination points, and blood donation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Services Information",
+    "children": []
+  },
+  {
+    "name": "list_vaccination_programs",
+    "description": "Lists current vaccination programs available in the Comunidad de Madrid.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vaccination_programs",
+        "description": "Information on vaccination programs including child vaccination, adult vaccination, HPV vaccination for adolescents, vaccinations against more than 15 diseases, specific vaccinations for at-risk groups and special situations, and international vaccination for travelers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Vaccination Information",
+    "children": []
+  },
+  {
+    "name": "provide_family_support_information",
+    "description": "Information on the family support offered through addiction services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "family_support_services",
+        "description": "Estrategias y consejos para aliviar el estrés, Información sobre prevención de consumo de drogas, Orientación y asesoramiento en el proceso de deshabituación, Actividades de formación para gestionar mejor la situación"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Support Services",
+    "children": []
+  },
+  {
+    "name": "list_health_promotion_programs",
+    "description": "Provides details on health promotion programs available in schools.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_promotion_programs",
+        "description": "Saludatuvida, Proyecto Desayunos Saludables e Higiene Bucodental, El Diario Saludable"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Promotion",
+    "children": []
+  },
+  {
+    "name": "provide_saludatuvida_details",
+    "description": "Details the 'Saludatuvida' program focusing on promoting healthy habits among students.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "saludatuvida_program_details",
+        "description": "Fomentar estilos de vida saludables, Actividad física, Alimentación, Salud emocional, Prevención de adicciones"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Promotion",
+    "children": []
+  },
+  {
+    "name": "list_other_health_education_programs",
+    "description": "Lists other educational health programs available in schools.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "other_health_education_programs",
+        "description": "Programa de Educación Afectivo-Sexual, Programa de Prevención de Adicciones, Programa de Alimentación Saludable"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Promotion",
+    "children": []
+  },
+  {
+    "name": "explain_program_access_steps",
+    "description": "Explains the steps required for schools to access health education programs.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "program_access_steps",
+        "description": "Cumplimentar formulario de preinscripción por el centro, Formulario de preinscripción individual por el docente, Compromiso para completar ambas fases del programa"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Promotion",
+    "children": []
+  },
+  {
+    "name": "provide_child_vaccination_information",
+    "description": "Provides detailed information about the child vaccination program, including vaccination calendars and schedules for various vaccines based on age.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vaccination_schedule_and_information",
+        "description": "Includes details about vaccination administration timelines for various ages (e.g., at birth, 2-6 months, and 12 months) along with information on common vaccines such as Hepatitis B, DTPa, and Polio, as well as childhood vaccination schedules and calendars."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Vaccination Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_travel_vaccines",
+    "description": "Provides information on recommended vaccinations for youths traveling abroad.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "travel_vaccine_recommendations",
+        "description": "Lists vaccines such as Hepatitis A, Yellow Fever, and others based on travel destinations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Vaccination Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_access_to_location_info",
+    "description": "Provides step-by-step instructions on how to access incident location information through the My112 app.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "App Configuration",
+    "children": []
+  },
+  {
+    "name": "prompt_for_registration_steps",
+    "description": "Provides detailed steps on how to register in the My112 app.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "App Configuration",
+    "children": []
+  },
+  {
+    "name": "specify_required_personal_data_for_registration",
+    "description": "Lists the personal data required to register in the My112 app.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "App Configuration",
+    "children": []
+  },
+  {
+    "name": "explain_verification_code_process",
+    "description": "Describes what type of verification code the user will receive upon registration.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Registration Information",
+    "children": []
+  },
+  {
+    "name": "provide_troubleshooting_steps_for_verification_code",
+    "description": "Offers troubleshooting steps for issues related to verification codes, whether they do not work or are not received.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Technical Support",
+    "children": []
+  },
+  {
+    "name": "provide_contact_info_for_customer_support",
+    "description": "Provides information on how to contact the customer support of My112.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Technical Support",
+    "children": []
+  },
+  {
+    "name": "inquire_language_assistance_options",
+    "description": "Responds to the user's inquiry about language assistance availability in customer support.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Technical Support",
+    "children": []
+  },
+  {
+    "name": "explain_additional_functions_of_app",
+    "description": "Explains additional features that the My112 app offers during emergencies.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_functions_list",
+        "description": "Lists functions such as service tracking, high precision location, emergency tracking, and public alert system."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Features",
+    "children": []
+  },
+  {
+    "name": "clarify_app_cost_information",
+    "description": "Informs the user that the My112 app is free to download and use, while clarifying that potential data charges may apply when not connected to Wi-Fi.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cost_details",
+        "description": "Information on the app's cost structure and potential data charges."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Cost Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_location_tracking_activation_steps",
+    "description": "Provides user instructions on activating location tracking within the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tracking_activation_steps",
+        "description": "Detailed steps to download the app, create an account, activate tracking, and confirm activation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Configuration",
+    "children": []
+  },
+  {
+    "name": "provide_accident_response_guidelines",
+    "description": "The chatbot provides guidelines on how to respond in the event of a traffic accident with injuries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "accident_response_steps",
+        "description": "Steps include mantener la calma, llamar al 112, no mover a los heridos, proporcionar primeros auxilios, and esperar ayuda."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Guidance",
+    "children": []
+  },
+  {
+    "name": "list_basic_first_aid_steps",
+    "description": "The chatbot lists steps for basic first aid that can be applied in case of a traffic accident with injuries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "first_aid_steps",
+        "description": "Steps include evaluar la consciencia y respiración, realizar RCP, aplicar presión a hemorragias, and mantener a la persona tranquila."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Guidance",
+    "children": []
+  },
+  {
+    "name": "provide_cpr_steps",
+    "description": "The chatbot provides detailed steps for performing cardiopulmonary resuscitation (RCP).",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cpr_steps",
+        "description": "Steps include verificar la consciencia, llamar al 112, verificar respiración, comenzar la RCP, and continuar hasta que llegue ayuda."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Guidance",
+    "children": []
+  },
+  {
+    "name": "provide_post_cpr_guidelines",
+    "description": "The chatbot provides guidelines on what to do if a person starts to respond or breathe after CPR.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "post_cpr_steps",
+        "description": "Steps include colocar en posición de recuperación, mantener a la persona cómoda, no dejarla sola, and esperar ayuda."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Guidance",
+    "children": []
+  },
+  {
+    "name": "provide_domestic_violence_response_guidelines",
+    "description": "The chatbot provides guidelines for responding in a situation of domestic violence.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "domestic_violence_steps",
+        "description": "Steps include buscar apoyo, tener un plan de salida, no avisar al agresor, llamar al 112, and considerar protección legal."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Guidance",
+    "children": []
+  },
+  {
+    "name": "list_types_of_protection_orders",
+    "description": "The chatbot lists the types of protection orders available in cases of domestic violence.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "protection_order_types",
+        "description": "Types include órdenes de alejamiento, órdenes de prohibición de comunicación, and órdenes de protección integral."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Support Services",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_support_services",
+    "description": "The chatbot provides ways to find support services for victims of gender violence in Spain.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "support_service_resources",
+        "description": "Resources include teléfono 012, centros de atención, and recursos online."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Support Services",
+    "children": []
+  },
+  {
+    "name": "list_resources_on_madrid_health_support",
+    "description": "The chatbot lists resources available on the web of the Comunidad de Madrid related to health and well-being.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_support_resources",
+        "description": "Resources include Escuela Madrileña de Salud, teléfono 012, centros de salud, and programas de prevención."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Resources",
+    "children": []
+  },
+  {
+    "name": "list_prevention_programs_available",
+    "description": "The chatbot provides information on various prevention programs offered through Madrid health resources.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "prevention_programs",
+        "description": "Programs include Programa de Prevención de los Trastornos de la Conducta Alimentaria, talleres educativos, and jornadas municipales."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Promotion",
+    "children": []
+  },
+  {
+    "name": "prompt_for_calling_steps",
+    "description": "Provides users with steps to follow for making a call to 112 using the My112 app, including any relevant tracking information.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "calling_steps",
+        "description": "Steps to follow for making a call."
+      },
+      {
+        "category": "tracking_info",
+        "description": "Information about real-time tracking of the emergency."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Guidance",
+    "children": []
+  },
+  {
+    "name": "list_emergency_types_handled_by_service",
+    "description": "Lists the different types of emergencies that can be reported through the app and the services that can attend to them.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "emergency_types",
+        "description": "Types of emergencies, including accidents, fires, medical emergencies, health, police, rescue, and situations of risk covered by the 112 service."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Emergency Information",
+    "children": []
+  },
+  {
+    "name": "provide_alerts_information",
+    "description": "Informs users about the lack of specific emergency alert functionalities in the My112 app while mentioning public alert systems available.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "alert_system_info",
+        "description": "Information regarding ES_ALERT public alert system in Madrid."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Alert Information",
+    "children": []
+  },
+  {
+    "name": "provide_usage_instructions",
+    "description": "Offers information about available usage instructions for various emergency situations within the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "usage_instructions_available",
+        "description": "Information on guides for different types of emergencies like accidents and fires."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Usage Instructions",
+    "children": []
+  },
+  {
+    "name": "provide_guide_location_information",
+    "description": "Informs where users can find the guides about emergency situations in the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "guide_location_info",
+        "description": "Instructions on locating the help or information section in the app."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Usage Instructions",
+    "children": []
+  },
+  {
+    "name": "prompt_for_app_update_steps",
+    "description": "Guides users on how to update the My112 app on their devices.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "update_steps",
+        "description": "Steps for updating the app through respective app stores."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Configuration",
+    "children": []
+  },
+  {
+    "name": "provide_foreign_usage_information",
+    "description": "Provides clarity on the usage of the app when the user is abroad.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "foreign_usage_details",
+        "description": "Information regarding the app's functionality and handling emergencies while abroad."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Usage Instructions",
+    "children": []
+  },
+  {
+    "name": "provide_location_sharing_information",
+    "description": "Informs users about the lack of location sharing features with other contacts during emergencies in the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "location_sharing_info",
+        "description": "Details regarding automatic location sharing with emergency services instead of other contacts."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Features",
+    "children": []
+  },
+  {
+    "name": "provide_notification_types",
+    "description": "Lists the types of notifications that can be received regarding the emergency situation.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "notification_types_list",
+        "description": "Includes Call Status, Real-time Updates, and Information about Responding Agencies."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Alert Information",
+    "children": []
+  },
+  {
+    "name": "provide_quick_access_options",
+    "description": "Lists the quick access options available in the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "quick_access_options_list",
+        "description": "Options include Direct Access to 112, Precise Location, Real-time Tracking, and Notifications."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Features",
+    "children": []
+  },
+  {
+    "name": "explain_access_direct_112_vs_precise_location",
+    "description": "Differentiates between direct access to 112 and precise location features in the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "differences_explained",
+        "description": "Explanation of access methods and their purposes."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Usage Instructions",
+    "children": []
+  },
+  {
+    "name": "provide_app_usage_info",
+    "description": "Clarifies the geographical limitations of the My112 app and its usage in other countries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "usage_location_details",
+        "description": "Information about app functionality primarily designed for Spain, specifically the Community of Madrid."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Usage Instructions",
+    "children": []
+  },
+  {
+    "name": "provide_language_support_info",
+    "description": "Details the language support available in the My112 app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "language_support_details",
+        "description": "Information about the app primarily being in Spanish and the need for basic Spanish knowledge for effective use."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Language Support",
+    "children": []
+  }
+]

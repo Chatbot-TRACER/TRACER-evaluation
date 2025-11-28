@@ -1,0 +1,61 @@
+test_name: Emergencias y asistencia
+llm:
+  temperature: 0.4
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Ciudadano que busca orientación sobre cómo actuar en situaciones de emergencia y asistencia ante accidentes.
+  context:
+  - 'personality: personalities/direct-user'
+  - Te encuentras en una situación donde la seguridad de tus seres queridos es una prioridad, especialmente en caso de un accidente inesperado.
+  - Has decidido informarte sobre las pautas de emergencia y los recursos disponibles para poder actuar de manera efectiva si surge la necesidad.
+  - Además, quieres asegurarte de conocer los apoyos disponibles para situaciones de violencia de género, ya que es un tema que te preocupa en tu entorno.
+  goals:
+  - Solicitar pautas sobre cómo actuar en caso de un accidente de tráfico con heridos.
+  - Petición de pasos a seguir para realizar maniobras de reanimación cardiopulmonar (RCP) en situaciones de emergencia.
+  - Preguntar por los servicios de apoyo disponibles para víctimas de violencia de género en España.
+  - Solicitar información sobre los tipos de órdenes de protección que existen en casos de violencia doméstica.
+  - Consultar detalles sobre el impacto de la información de fecha y hora registrada cuando se recibe una llamada en la app My112.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - accident_guidelines:
+      type: string
+      description: Pautas para accidentes de tráfico
+  - first_aid_steps:
+      type: string
+      description: Pasos de primeros auxilios básicos
+  - cpr_steps:
+      type: string
+      description: Pasos para reanimación cardiopulmonar
+  - recovery_guidelines:
+      type: string
+      description: Pautas para recuperación posterior a RCP
+  - domestic_violence_response:
+      type: string
+      description: Pautas para violencia doméstica
+  - support_services_info:
+      type: string
+      description: Información sobre servicios de apoyo
+  - protection_orders_types:
+      type: string
+      description: Tipos de órdenes de protección
+  - emergency_agency_status:
+      type: string
+      description: Estado de las agencias durante emergencias
+  - emergency_alerts_info:
+      type: string
+      description: Información sobre alertas de emergencia
+  - call_timestamp_impact:
+      type: string
+      description: Impacto del registro de fecha y hora en My112
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

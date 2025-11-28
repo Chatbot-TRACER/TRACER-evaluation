@@ -1,0 +1,64 @@
+test_name: Servicios y Empleo del Ayuntamiento
+llm:
+  temperature: 0.4
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en servicios y ofertas de empleo proporcionados por el Ayuntamiento de Morón de la Frontera.
+  context:
+  - 'personality: personalities/rude-user'
+  - Estás interesado en conocer los servicios y ofertas de empleo que ofrece el Ayuntamiento de Morón de la Frontera, ya que buscas mejorar tu situación laboral.
+  - Te gustaría informarte sobre los requisitos para presentar tu candidatura a las ofertas disponibles y cómo acceder a los servicios que te interesan.
+  - Además, consideras importante concertar una cita con el SAC para recibir asistencia personalizada en tus consultas.
+  goals:
+  - Solicitar información sobre los servicios disponibles del Ayuntamiento de Morón de la Frontera.
+  - Preguntar sobre las ofertas de empleo actuales y qué requisitos tienen para presentarse.
+  - Solicitar opciones para concertar una cita con el SAC.
+  - Pedir el enlace a la sede electrónica del Ayuntamiento.
+  - Consultar qué tipos de servicios ofrece el Ayuntamiento y cómo se pueden acceder.
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - available_job_offers:
+      type: string
+      description: Detalles sobre ofertas de empleo disponibles
+  - job_requirements:
+      type: string
+      description: Requisitos para presentarse a la oferta
+  - selection_procedures:
+      type: string
+      description: Procedimientos de selección para empleo
+  - citation_options:
+      type: string
+      description: Opciones para solicitar cita con departamentos
+  - electronic_headquarters_link:
+      type: string
+      description: URL de la sede electrónica del Ayuntamiento
+  - service_types:
+      type: string
+      description: Tipos de servicios ofrecidos por el Ayuntamiento
+  - service_access:
+      type: string
+      description: Métodos para acceder a los servicios
+  - sac_appointment_options:
+      type: string
+      description: Opciones para cita con el SAC
+  - municipal_services_link:
+      type: string
+      description: Enlace para acceso a servicios municipales
+  - service_hours:
+      type: string
+      description: Horas de servicio disponibles del Ayuntamiento
+  - contact_phone:
+      type: string
+      description: Número de teléfono del Ayuntamiento
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

@@ -1,0 +1,49 @@
+test_name: Información sobre pagos fiscales
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca opciones y detalles sobre los métodos y horarios de pago de tributos.
+  context:
+  - 'personality: personalities/elderly-user'
+  - Estás preparando los pagos de tus tributos y quieres asegurarte de cumplir con todas las obligaciones fiscales a tiempo.
+  - Para ello, necesitas información actualizada sobre los métodos y horarios de pago disponibles en la Oficina Virtual Tributaria.
+  - Además, te gustaría tener acceso fácil al calendario fiscal y detalles sobre cómo realizar los pagos en línea.
+  goals:
+  - ¿Cuáles son los métodos de pago disponibles para los impuestos?
+  - ¿Qué horarios de pago de impuestos tienen en la Oficina Virtual Tributaria?
+  - ¿Me puedes dar el enlace al calendario fiscal en la Oficina Virtual Tributaria?
+  - ¿Cómo puedo pagar mis tributos en línea a través de la sede electrónica?
+  - ¿Qué información me puedes proporcionar sobre el acceso a la Oficina Virtual Tributaria?
+chatbot:
+  is_starter: false
+  fallback: Disculpa, pero... ¿Me lo puedes repetir con otras palabras? Respondo a preguntas sobre la <b>gestión de tributos</b>.
+  output:
+  - payment_methods:
+      type: string
+      description: Métodos de pago disponibles
+  - tax_payment_schedule_info:
+      type: string
+      description: Información sobre horarios de pago de impuestos
+  - contact_information:
+      type: string
+      description: Número de teléfono de asistencia
+  - payment_methods_info:
+      type: string
+      description: Detalle de métodos para pagar tributos
+  - additional_information_link:
+      type: string
+      description: Enlace a fraccionamiento de deuda
+  - tax_calendar_link:
+      type: string
+      description: URL al calendario fiscal
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 22
+  interaction_style:
+  - single question

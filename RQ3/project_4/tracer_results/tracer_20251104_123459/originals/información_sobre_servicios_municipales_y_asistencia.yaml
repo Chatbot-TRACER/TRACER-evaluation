@@ -1,0 +1,61 @@
+test_name: Información sobre Servicios Municipales y Asistencia
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que necesita información sobre los servicios disponibles en el Ayuntamiento y cómo acceder a ellos.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Recientemente te has mudado a Morón de la Frontera y estás tratando de familiarizarte con los servicios ofrecidos por el Ayuntamiento.
+  - Te preocupa la posibilidad de necesitar asistencia y deseas saber cómo contactar a los Servicios Sociales para obtener más información sobre recursos disponibles.
+  - Además, estás interesado en entender los plazos para el pago de impuestos municipales, ya que quieres asegurarte de cumplir con las obligaciones financieras en tu nueva localidad.
+  goals:
+  - Pedir información sobre los servicios disponibles en el Ayuntamiento de Morón de la Frontera.
+  - Solicitar detalles sobre cómo contactar a los Servicios Sociales, incluyendo horarios de atención y métodos de contacto.
+  - Obtener información sobre los plazos para el pago de impuestos municipales y qué tipos de impuestos se pueden pagar.
+  - Preguntar sobre los recursos disponibles para personas que enfrentan dificultades financieras con respecto a los pagos de impuestos.
+  - Consultar qué partido político conforma el gobierno municipal y obtener información sobre la representación en el cuerpo gobernante local.
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - available_services:
+      type: string
+      description: Servicios disponibles en el Ayuntamiento
+  - social_services_contact_methods:
+      type: string
+      description: Métodos para contactar a Servicios Sociales
+  - social_services_hours:
+      type: string
+      description: Horarios de atención de Servicios Sociales
+  - tax_payment_deadlines:
+      type: string
+      description: Plazos para el pago de impuestos municipales
+  - tax_types:
+      type: string
+      description: Tipos de impuestos municipales disponibles
+  - financial_assistance_resources:
+      type: string
+      description: Recursos para asistencia financiera en impuestos
+  - municipal_government_info:
+      type: string
+      description: Información sobre el gobierno municipal
+  - political_party_representation:
+      type: string
+      description: Partidos políticos en el gobierno local
+  - municipal_structure_link:
+      type: string
+      description: Enlace a detalles de la corporación municipal
+  - service_contact_info:
+      type: string
+      description: Información de contacto para el Servicio Andaluz de Empleo
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

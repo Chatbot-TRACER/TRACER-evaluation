@@ -1,0 +1,46 @@
+test_name: Consulta sobre Impuestos Municipales
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca información sobre el pago de impuestos municipales.
+  context:
+  - 'personality: personalities/curious-user'
+  - Estás revisando tus obligaciones fiscales y te has dado cuenta de que necesitas más información sobre el pago de impuestos municipales en tu localidad.
+  - Quieres asegurarte de cumplir con los plazos establecidos y entender mejor los diferentes tipos de impuestos que podrías tener que pagar.
+  - Además, te interesa saber cómo gestionar cualquier queja y cómo programar una cita en el Ayuntamiento para resolver tus dudas en persona.
+  goals:
+  - ¿Cuáles son los plazos para el pago de impuestos municipales?
+  - ¿Puedes proporcionarme más detalles sobre los tipos de impuestos municipales?
+  - ¿Cuáles son los métodos para presentar una queja o reclamación?
+  - Quiero saber cómo programar una cita en el Ayuntamiento.
+  - ¿Puedes darme el enlace a la Sede Electrónica del Ayuntamiento?
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - tax_payment_deadlines:
+      type: date
+      description: Fechas específicas para el pago de impuestos
+  - types_of_municipal_taxes:
+      type: string
+      description: Lista de tipos de impuestos municipales
+  - complaint_methods:
+      type: string
+      description: Métodos para presentar queja o reclamación
+  - appointment_scheduling_info:
+      type: string
+      description: Instrucciones para programar cita en el Ayuntamiento
+  - electronic_office_link:
+      type: string
+      description: Enlace a la Sede Electrónica del Ayuntamiento
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

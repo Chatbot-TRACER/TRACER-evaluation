@@ -1,0 +1,121 @@
+test_name: Consulta y Navegación de Transporte
+llm:
+  temperature: 1.0
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca información sobre transporte y opciones de viaje en la red.
+  context:
+  - 'personality: personalities/curious-user'
+  - Estás planeando un viaje para visitar a familiares y necesitas información sobre las opciones de transporte disponibles.
+  - Te gustaría asegurarte de que el trayecto sea cómodo y económico para todos los integrantes de tu grupo.
+  - Además, es importante para ti conocer la situación actual de la red de transporte para evitar contratiempos en el camino.
+  goals:
+  - Solicitar la aceptación de la política de privacidad antes de continuar.
+  - Pedir información sobre los próximos trenes en la estación {{nombre_estacion_actual}}.
+  - Consultar el estado actual de la red de transporte.
+  - Solicitar la recomendación de la tarifa más conveniente según el grupo de edad {{grupo_edad}}.
+  - Indicar en qué zona se va a comenzar el recorrido desde {{zona_origen}} a {{zona_destino}}.
+  - grupo_edad:
+      function: forward()
+      type: string
+      data:
+      - 0-5 años
+      - 6-12 años
+      - 13-17 años
+      - 18-64 años
+      - 65 años o más
+  - nombre_estacion_actual:
+      function: forward()
+      type: string
+      data:
+      - Madrid Atocha
+      - Barcelona Sants
+      - Valencia Nord
+      - Sevilla Santa Justa
+      - Bilbao Abando
+      - Malaga María Zambrano
+  - zona_destino:
+      function: forward()
+      type: string
+      data:
+      - Madrid
+      - Barcelona
+      - Valencia
+      - Sevilla
+      - Bilbao
+      - Malaga
+  - zona_origen:
+      function: forward()
+      type: string
+      data:
+      - Madrid
+      - Barcelona
+      - Valencia
+      - Sevilla
+      - Bilbao
+      - Granada
+chatbot:
+  is_starter: false
+  fallback: 'Este canal está habilitado para ofrecer información de servicio y atención al cliente de Metro de Madrid. Para otros asuntos, por favor, consulta nuestra web oficial: 🌐 www.metromadrid.es ¿Puedo ayudarte en algo más? 👇'
+  output:
+  - privacy_acceptance:
+      type: string
+      description: Aceptación de la política de privacidad
+  - station_name:
+      type: string
+      description: Nombre de la estación actual
+  - upcoming_trains:
+      type: string
+      description: Información de los próximos trenes
+  - network_incidents:
+      type: string
+      description: Detalles sobre incidentes en la red
+  - operational_status:
+      type: string
+      description: Estado operativo de las líneas
+  - fare_recommendation:
+      type: string
+      description: Recomendación de tarifa según grupo de edad
+  - zone_origin:
+      type: string
+      description: Zona de origen del recorrido
+  - zone_destination:
+      type: string
+      description: Zona de destino del recorrido
+  - available_train_lines:
+      type: string
+      description: Líneas de tren disponibles en la estación
+  - connection_details:
+      type: string
+      description: Detalles sobre conexiones en la estación
+  - selected_line:
+      type: string
+      description: Línea del tren seleccionada para consulta
+  - waiting_time:
+      type: time
+      description: Tiempo de espera para los próximos trenes
+  - directions:
+      type: string
+      description: Direcciones para navegación a la estación
+  - assistance_options:
+      type: string
+      description: Opciones de asistencia disponibles
+  - group_age:
+      type: string
+      description: Grupo de edad del usuario
+  - incident_details:
+      type: string
+      description: Información detallada de incidentes
+  - station_operational_status:
+      type: string
+      description: Estado operativo de la estación
+conversation:
+  number: 6
+  max_cost: 0.9
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

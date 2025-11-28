@@ -1,0 +1,166 @@
+[
+  {
+    "name": "prompt_for_reframed_inquiry",
+    "description": "Asks the user to rephrase their question for better understanding.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "provide_fiscal_calendar_information",
+    "description": "Provides information about accessing the fiscal calendar and resources related to tribute management, including contact details for assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_virtual_tributaria_info",
+        "description": "Information about accessing the Office Virtual Tributaria, including a contact phone number and details regarding the fiscal calendar and its relevance to tribute payments. It also includes access to the fiscal calendar through the Oficina Virtual Tributaria, with a URL link and assistance contact number."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Information",
+    "children": []
+  },
+  {
+    "name": "provide_payment_methods",
+    "description": "Provides detailed options for paying receipts, including various methods and collaborating entities.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "payment_methods",
+        "description": "A detailed overview of available payment methods, including collaborating entities, Correos Pay, electronic headquarters options with card or BIZUM, and bank domiciliation within SEPA."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment Information",
+    "children": []
+  },
+  {
+    "name": "provide_main_functions_overview",
+    "description": "Outlines the primary services and support the chatbot offers regarding tax management inquiries.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "present_tax_calendar_link",
+    "description": "Provides a link to the tax calendar page in the Virtual Tax Office for further user exploration related to tax payment deadlines.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_calendar_link",
+        "description": "URL to the tax calendar page for direct access in the Virtual Tax Office."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Information",
+    "children": []
+  },
+  {
+    "name": "provide_tax_information",
+    "description": "Informs the user about the types of tributes or taxes managed by the Diputación and directs them to the Virtual Tax Office for more details or offers a contact number for further assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_tributos_info",
+        "description": "A list of types of tributes managed and collected."
+      },
+      {
+        "category": "contact_information",
+        "description": "The phone number for assistance."
+      },
+      {
+        "category": "tax_management_info",
+        "description": "Details about taxes managed by the Diputación and the methods for accessing that information."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Information",
+    "children": []
+  },
+  {
+    "name": "provide_tax_payment_information",
+    "description": "Informs users about tax payment schedules, methods, and how to access them through the Virtual Tax Office, along with providing assistance contact information.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_payment_schedule_info",
+        "description": "Information on when to pay taxes and rates, including details for accessing tax payment schedules through the Virtual Tax Office, payment methods, and contact details for support."
+      },
+      {
+        "category": "contact_information",
+        "description": "Phone number for assistance."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment Information",
+    "children": []
+  },
+  {
+    "name": "provide_access_instructions_to_virtual_tax_office",
+    "description": "Provides instructions on how to access the Virtual Tax Office and includes a clickable link for the user.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "access_link",
+        "description": "Clickable link to the Virtual Tax Office."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Access Information",
+    "children": []
+  },
+  {
+    "name": "provide_fraccionamiento_information",
+    "description": "Informs users about the possibility of requesting a split payment for amounts that could not be seized from their account and suggests contacting offices for assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_location_information",
+        "description": "Details of different offices of the Tax Management Service and their hours of operation available through the provided link."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment Information",
+    "children": []
+  },
+  {
+    "name": "present_office_location_information",
+    "description": "Presents information about various offices of the Tax Management Service, including their hours of operation and a clickable link for further details.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_location_details",
+        "description": "Information about the different offices, their locations, and hours of operation."
+      },
+      {
+        "category": "office_location_link",
+        "description": "URL to the office location details."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Access Information",
+    "children": []
+  },
+  {
+    "name": "provide_tax_payment_methods",
+    "description": "Informs the user of the available methods for paying taxes and provides detailed options for each method.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "payment_methods_info",
+        "description": "Users can pay in person, schedule appointments, or online via the Tax Virtual Office with a digital certificate or Cl@ve. This includes a comprehensive list of methods for paying taxes, detailing entities, electronic options, and bank domiciliation."
+      },
+      {
+        "category": "additional_information_link",
+        "description": "For more detailed information, users can consult the provided link regarding debt installment without guarantee."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment Information",
+    "children": []
+  }
+]

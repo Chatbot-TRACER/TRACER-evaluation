@@ -1,0 +1,46 @@
+test_name: Asistencia Técnica para Servicios Ambientales
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca información específica sobre los servicios ambientales y necesita asistencia para el uso eficiente de la plataforma.
+  context:
+  - 'personality: personalities/curious-user'
+  - Eres un ciudadano interesado en comprender mejor los servicios ambientales que ofrece el Ayuntamiento de Arucas para contribuir a la sostenibilidad local.
+  - Al navegar por la plataforma, te encuentras con dudas sobre la documentación necesaria y los procedimientos a seguir para acceder a estos servicios.
+  - Para facilitar el proceso, buscas recomendaciones sobre herramientas digitales y cómo gestionar tus datos personales en la plataforma.
+  goals:
+  - Solicitar información sobre los servicios ambientales disponibles en el Ayuntamiento de Arucas.
+  - Pedir el enlace para acceder a la información sobre los servicios ambientales ofrecidos por el Ayuntamiento.
+  - ' Preguntar qué documentos son necesarios para presentar una solicitud, específicamente en el BOP y el portal de transparencia ''Empleo en el sector público''.'
+  - Consultar sobre la recomendación del navegador, preguntando si Google Chrome es el mejor para realizar trámites electrónicos.
+  - Solicitar instrucciones sobre cómo cambiar mis datos personales a través de 'MI CUENTA'.".
+chatbot:
+  is_starter: false
+  fallback: ¿Disculpa?
+  output:
+  - environment_service_links:
+      type: string
+      description: Enlace a servicios ambientales
+  - document_sources:
+      type: string
+      description: Fuentes de documentación necesarias
+  - recommended_browser:
+      type: string
+      description: Navegador recomendado para trámites
+  - personal_data_change_instructions:
+      type: string
+      description: Instrucciones para cambiar datos personales
+  - application_documents:
+      type: string
+      description: Documentos necesarios para la solicitud
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

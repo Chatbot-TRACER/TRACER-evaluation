@@ -1,0 +1,67 @@
+test_name: Servicios sanitarios y emergencias
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Ciudadano en busca de información sobre servicios de salud y protocolos de emergencia disponibles en la Comunidad de Madrid.
+  context:
+  - 'personality: personalities/rude-user'
+  - Te encuentras investigando sobre los servicios de salud y protocolos de emergencia que ofrece la Comunidad de Madrid debido a un interés creciente en cuidar de tu salud y la de tu familia.
+  - A medida que te informas, deseas asegurarte de conocer los procedimientos y recursos disponibles en caso de una emergencia o necesidad médica.
+  - Te motiva la idea de acceder a información útil y actualizada que facilite la toma de decisiones en situaciones de salud.
+  goals:
+  - Preguntar cuáles son los servicios de salud disponibles en la Comunidad de Madrid.
+  - Solicitar información sobre los pasos específicos para ejercer el derecho de libre elección médica en línea.
+  - Pedir el enlace directo al calendario de vacunación infantil para ciudadanos en la Comunidad de Madrid.
+  - Consultar sobre cómo acceder a la información de listas de espera e indicadores de satisfacción de los centros de salud y hospitales en línea.
+  - Solicitar detalles sobre el proceso de descarga y activación de la app Mi Emergencia 112.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - servicios_salud:
+      type: string
+      description: Lista de servicios de salud disponibles
+  - derecho_libre_eleccion_info:
+      type: string
+      description: Información sobre derecho de libre elección médica
+  - pasos_libre_eleccion_online:
+      type: string
+      description: Pasos para ejercer libre elección médica en línea
+  - enlace_calendario_vacunacion:
+      type: string
+      description: Enlace al calendario de vacunación infantil
+  - acceso_listas_espera:
+      type: string
+      description: Información sobre listas de espera e indicadores de satisfacción
+  - proceso_descarga_app:
+      type: string
+      description: Pasos para descargar la app Mi Emergencia 112
+  - tipos_emergencias_app:
+      type: string
+      description: Tipos de emergencias en la app My112
+  - funciones_adicionales_app:
+      type: string
+      description: Otras funciones de la app My112
+  - guia_descarga_app:
+      type: string
+      description: Guía para descargar y utilizar la app Mi Emergencia 112
+  - programas_vacunacion:
+      type: string
+      description: Información sobre programas de vacunación disponibles
+  - datos_satisfaccion_medicos:
+      type: string
+      description: Datos de satisfacción de usuarios sobre médicos de cabecera
+  - servicios_salud_beneficios:
+      type: string
+      description: Servicios y beneficios para ciudadanos en la Comunidad de Madrid
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

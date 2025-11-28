@@ -1,0 +1,15 @@
+# Sensei Check Rule Configuration
+# Define your validation rule here
+
+name: example_rule1
+description: Example validation rule
+active: True
+conversations: 1
+oracle: conversation_length() == conversation_length('assistant') + conversation_length('user')
+
+# Adjust the rule parameters as needed
+# - name: unique identifier for the rule
+# - description: brief description of what the rule validates
+# - active: True/False to enable/disable the rule
+# - conversations: number of conversations to validate
+# - oracle: the validation logic

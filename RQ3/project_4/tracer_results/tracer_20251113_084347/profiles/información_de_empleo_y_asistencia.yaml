@@ -1,0 +1,63 @@
+test_name: Información de Empleo y Asistencia
+llm:
+  temperature: 0.3
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario desempleado que busca información sobre asistencia disponible y servicios de empleo.
+  context:
+  - 'personality: personalities/disorganized-user'
+  - Te encuentras en la búsqueda de un empleo después de haber estado desempleado por un tiempo, y necesitas información sobre las ayudas disponibles para tu situación.
+  - Además, deseas conocer cómo programar una cita con el Servicio Andaluz de Empleo para obtener orientación personalizada sobre las oportunidades laborales.
+  - Consideras realizar todo el proceso de manera accesible, ya sea de forma presencial o a través de otros métodos que faciliten la gestión de tu búsqueda de empleo.
+  goals:
+  - Consultar qué tipos de asistencia están disponibles para personas en situación de desempleo.
+  - Pedir información sobre cómo contactar el Servicio Andaluz de Empleo (SAE) para obtener detalles sobre citas y horarios de atención.
+  - Solicitar la lista de métodos de programación de citas disponibles.
+  - Elegir el método de programación de citas {{appointment_method}}.
+  - Acceder al sitio web del Ayuntamiento para obtener información adicional.
+  - appointment_method:
+      function: forward()
+      type: string
+      data:
+      - in-person
+      - online
+      - phone
+      - Fax
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - assistance_types:
+      type: string
+      description: Types of assistance available for unemployed
+  - contact_methods:
+      type: string
+      description: Methods to contact the Servicio Andaluz de Empleo
+  - service_hours:
+      type: string
+      description: Business hours for employment services
+  - appointment_scheduling:
+      type: string
+      description: Instructions for scheduling an appointment
+  - appointment_method:
+      type: string
+      description: Selected method for appointment scheduling
+  - website_link:
+      type: string
+      description: URL to the Ayuntamiento website
+  - additional_assistance_info:
+      type: string
+      description: Further assistance options for unemployment
+  - contact_information:
+      type: string
+      description: Details to reach the SAE office
+conversation:
+  number: 4
+  max_cost: 0.6
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

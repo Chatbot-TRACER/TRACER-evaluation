@@ -1,0 +1,156 @@
+[
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_information_about_arucas_campaign`",
+    "description": "\"Provides information about the 'Regálate Arucas' campaign, including details about its raffles and directs the user to the official website for further information.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "campaign_information",
+        "description": "Information and official website link to access all information about the 'Regálate Arucas' campaign and its raffles."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "prompt_for_information_about_services",
+    "description": "The chatbot prompts the user for more specific questions regarding the information they seek about Arucas.",
+    "parameters": [],
+    "outputs": [],
+    "children": [
+      {
+        "__type__": "FunctionalityNode",
+        "name": "prompt_for_information_about_services",
+        "description": "The chatbot prompts the user for specific questions regarding the services they want to learn about.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "service_information_link",
+            "description": "URL to detailed service information for 'Alumbrado' service"
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "provide_service_information_link",
+    "description": "The chatbot provides a link to the specific information about the environmental services offered by the Ayuntamiento of Arucas.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "link_to_environment_service",
+        "description": "URL for service details."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_information_about_arucas_services`",
+    "description": "\"Provides detailed information regarding the socioeconomic development services available in Arucas, covering various categories such as business census, news, training, orientation, and job offers.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "services_summary",
+        "description": "Information includes business census, news, training, orientation, and job offers."
+      },
+      {
+        "category": "access_link",
+        "description": "Link to the Office of Local Development's website."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_contact_information_for_library`",
+    "description": "\"Supplies the contact details (phone number and email address) for the Library of Arucas.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "library_contact_info",
+        "description": "Contact phone number and email address for the Library of Arucas, including phone number 928633461."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "provide_cultural_activity_information_link",
+    "description": "\"Provides a link to access detailed information about cultural activities in Arucas.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cultural_activity_link",
+        "description": "A URL providing detailed information about cultural activities in Arucas and access to the service of Culture."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_transparency_link`",
+    "description": "\"Supplies a link to the transparency information portal of the Ayuntamiento de Arucas in response to a user request.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "transparency_link",
+        "description": "URL to the Ayuntamiento de Arucas transparency portal, available at https://arucas.sedelectronica.es/transparency."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_initial_information_on_tramites`",
+    "description": "\"Supplies detailed instructions on how to initiate the process for a prior work communication request, encompassing information on physical locations, online submission options, documentation requirements, and payment details.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "physical_location",
+        "description": "Office de Atención Ciudadana at C/Alcalde Suárez Franchy n° 11, including its address."
+      },
+      {
+        "category": "appointment_request_methods",
+        "description": "Options to request an appointment (electronically via service or by phone) and phone number for appointment scheduling."
+      },
+      {
+        "category": "documentation_requirements",
+        "description": "Minimum documentation needed for requests, including details for communication requests."
+      },
+      {
+        "category": "tax_information",
+        "description": "Details regarding the ICIO payment, including percentage of the construction budget and payment methods."
+      },
+      {
+        "category": "electronic_procedure_advice",
+        "description": "Recommendations for using Google Chrome for electronic submissions and electronic requests."
+      },
+      {
+        "category": "contact_info_virtual_office",
+        "description": "Phone number for clarification on ICIO payment procedure."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_previous_communication_documentation_requirements`",
+    "description": "\"The chatbot provides requirements for submitting documentation related to previous communications, including necessary steps and payment information.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "required_documentation_summary",
+        "description": "Documentation required generally includes the model of Communication Previa and detailed descriptions of the intended work."
+      },
+      {
+        "category": "payment_information",
+        "description": "Information regarding the ICIO and payment methods."
+      }
+    ],
+    "children": []
+  }
+]

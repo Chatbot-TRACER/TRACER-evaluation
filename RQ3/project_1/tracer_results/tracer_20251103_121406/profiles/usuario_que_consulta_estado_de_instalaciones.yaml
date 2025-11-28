@@ -1,0 +1,78 @@
+test_name: Usuario que Consulta Estado de Instalaciones
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea información específica sobre el estado de las instalaciones del metro.
+  context:
+  - 'personality: personalities/rude-user'
+  - Recientemente has comenzado a utilizar el metro con más frecuencia y deseas estar al tanto de las condiciones de las instalaciones.
+  - Además, planeas realizar un viaje con amigos y quieres asegurarte de elegir la tarifa adecuada según sus edades.
+  - Para facilitar tu experiencia, necesitas acceder a la información en un idioma que te sea familiar.
+  goals:
+  - Seleccionar el idioma preferido para la comunicación como {{idioma_preferido}}.
+  - Aceptar la política de privacidad para poder recibir asistencia.
+  - Consultar el estado de las instalaciones en la estación {{nombre_estacion}}.
+  - Solicitar la recomendación de la tarifa que más conviene según mi grupo de edad de {{grupo_edad}}.
+  - Proporcionar información sobre el estado de la red del metro.
+  - grupo_edad:
+      function: forward()
+      type: string
+      data:
+      - 0-12 años
+      - 13-17 años
+      - 18-24 años
+      - 25-34 años
+      - 35-44 años
+      - 45 años o más
+  - idioma_preferido:
+      function: forward()
+      type: string
+      data:
+      - Español
+      - Inglés
+      - Francés
+  - nombre_estacion:
+      function: forward()
+      type: string
+      data:
+      - Estación Central
+      - Estación de Trenes del Norte
+      - Estación de Metro Plaza
+      - Estación de Autobuses de la Costa
+      - Estación de Servicio Sol
+chatbot:
+  is_starter: false
+  fallback: Lo siento, este es *un canal de información de servicio y de atención al cliente* de Metro de Madrid.\n \nPara cualquier otro tipo de información puedes consultar nuestra página web:\n🌐 www.metromadrid.es\n \n¿Con qué otra duda podría ayudarte? 👇
+  output:
+  - preferred_language:
+      type: string
+      description: Idioma seleccionado para la comunicación
+  - privacy_policy_accepted:
+      type: string
+      description: Confirmación de aceptación de política de privacidad
+  - station_name:
+      type: string
+      description: Nombre de la estación consultada
+  - services_requested:
+      type: string
+      description: Servicios solicitados por el usuario
+  - facilities_status:
+      type: string
+      description: Estado de las instalaciones en la estación
+  - age_group:
+      type: string
+      description: Grupo de edad del usuario
+  - recommended_fare:
+      type: money
+      description: Tarifa recomendada según grupo de edad
+conversation:
+  number: 6
+  max_cost: 0.9
+  goal_style:
+    steps: 24
+  interaction_style:
+  - single question

@@ -1,0 +1,10 @@
+'#execution_parameters':
+- '# - verbose'
+- '# - clean_cache'
+- '# - update_cache'
+- '# - ignore_cache'
+connector_parameters: {}
+extract: ''
+project_folder: project_1
+technology: metro_madrid
+user_profile: ''

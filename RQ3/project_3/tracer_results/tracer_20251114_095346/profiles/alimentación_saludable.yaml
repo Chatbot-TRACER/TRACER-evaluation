@@ -1,0 +1,61 @@
+test_name: Alimentación Saludable
+llm:
+  temperature: 0.3
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca recetas saludables y consejos para mejorar su dieta.
+  context:
+  - 'personality: personalities/impatient-user'
+  - Has decidido hacer cambios en tu dieta para adoptar un estilo de vida más saludable y buscas recetas que se ajusten a este nuevo enfoque.
+  - Además, te gustaría aprender a preparar algunos platillos sencillos y nutritivos que puedas integrar fácilmente en tu rutina diaria.
+  - A medida que exploras estas opciones, también estás interesado en mantener una buena hidratación y conocer más sobre los ingredientes saludables que puedes utilizar.
+  goals:
+  - Pedir recomendaciones de recetas saludables para almuerzos basadas en opciones disponibles.
+  - Solicitar instrucciones detalladas para preparar la ensalada de quinoa, incluyendo ingredientes y pasos.
+  - Preguntar sobre cómo cocinar adecuadamente la quinoa y sus mejores usos en recetas saludables.
+  - Solicitar una receta para un batido de frutas, incluyendo también los ingredientes y los pasos a seguir.
+  - Pedir consejos sobre cómo mantenerme hidratado a lo largo del día, incluyendo la cantidad de agua que debería consumir.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - lunch_recipe_options:
+      type: string
+      description: Suggestions for healthy lunch recipes
+  - recipe_name:
+      type: string
+      description: Name of the requested recipe
+  - recipe_details:
+      type: string
+      description: Ingredients and preparation steps
+  - quinoa_cooking_guide:
+      type: string
+      description: Instructions for cooking quinoa
+  - quinoa_recipe_details:
+      type: string
+      description: Ingredients and preparation steps for quinoa salad
+  - chickpea_salad_details:
+      type: string
+      description: Ingredients and instructions for chickpea salad
+  - fruit_salad_details:
+      type: string
+      description: Ingredients and preparation steps for fruit salad
+  - fruit_smoothie_recipe_details:
+      type: string
+      description: Ingredients and instructions for fruit smoothie
+  - hydration_advice:
+      type: string
+      description: Tips for maintaining hydration
+  - recommended_water_intake:
+      type: float
+      description: Suggested daily water consumption in liters
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

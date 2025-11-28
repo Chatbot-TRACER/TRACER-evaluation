@@ -1,0 +1,372 @@
+[
+  {
+    "name": "provide_model_communication_previa_details",
+    "description": "Relays the requirement for the model of Communication Previa and documentation needed when making the request.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "communication_model_info",
+        "description": "Information about the Communication Previa model and required documentation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Documentation Requirements",
+    "children": []
+  },
+  {
+    "name": "present_sede_electronica_link",
+    "description": "Provides a direct link to access the Sede Electrónica for appointment scheduling and services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "electronic_headquarters_link",
+        "description": "Direct URL to the Sede Electrónica for accessing services."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Navigation",
+    "children": []
+  },
+  {
+    "name": "provide_communication_request_guidance",
+    "description": "Provides comprehensive guidance on submitting a communication request for construction works, including necessary documentation, appointment scheduling, location information, and payment details.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "appointment_details",
+        "description": "Information on how to request and schedule an appointment, including relevant contact numbers and where to submit the request."
+      },
+      {
+        "category": "required_documents",
+        "description": "List of documents required for a communication request, including clarification on necessary documents such as the Communication Model and ICIO payment details."
+      },
+      {
+        "category": "payment_information",
+        "description": "Details about the ICIO tax, including its percentage and instructions on how to make the payment."
+      },
+      {
+        "category": "electronic_submission_guidance",
+        "description": "Instructions for electronically submitting requests using the Sede Electrónica."
+      },
+      {
+        "category": "contact_numbers",
+        "description": "Relevant contact numbers for further assistance."
+      },
+      {
+        "category": "location_information",
+        "description": "The address of the Oficina de Atención Ciudadana."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Guidance",
+    "children": [
+      {
+        "name": "provide_electronic_submission_guidelines",
+        "description": "Informs the user on how to submit the communication request electronically, including guidelines on the digital submission process, recommended browser use, payment instructions, and required documentation.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "electronic_submission_guidelines",
+            "description": "Instructions and information on the electronic submission process, including recommendations for supported browsers."
+          },
+          {
+            "category": "payment_information",
+            "description": "Details on payment options and the procedure for paying the ICIO through the Virtual Tax Office."
+          },
+          {
+            "category": "documentation_requirements",
+            "description": "Minimum documentation required for submission."
+          },
+          {
+            "category": "contact_information",
+            "description": "Phone numbers for appointment scheduling and ICIO inquiries."
+          }
+        ],
+        "parent_names": [
+          "provide_communication_request_guidance"
+        ],
+        "suggested_category": "Electronic Submission",
+        "children": []
+      },
+      {
+        "name": "request_documents_for_submission",
+        "description": "Requests and clarifies the documents needed for the submission of the communication request based on the user's specific requirements.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "required_documents",
+            "description": "A list of required documents needed for submission, including documents necessary for a communication request and specific reference to the model of Communication Previa."
+          }
+        ],
+        "parent_names": [
+          "provide_communication_request_guidance"
+        ],
+        "suggested_category": "Documentation Requirements",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "provide_icio_payment_information",
+    "description": "Provides information regarding the ICIO payment process, including payment details and contact numbers for inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "icio_payment_contact_info",
+        "description": "Information regarding the ICIO payment process, including contact numbers for further inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment",
+    "children": []
+  },
+  {
+    "name": "provide_digital_certificate_information",
+    "description": "Explains what a digital certificate is, the process to acquire one, and how it is utilized for online procedures.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "digital_certificate_information",
+        "description": "Explanation of the digital certificate process and its use cases."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "User Authentication",
+    "children": []
+  },
+  {
+    "name": "prompt_for_urbanism_request_details",
+    "description": "Prompts the user for necessary details to submit a request for an urbanism consultation.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "urbanism_request_instructions",
+        "description": "Instructions on how to correctly submit a request for urbanism consultation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Request Processing",
+    "children": []
+  },
+  {
+    "name": "prompt_for_department_selection",
+    "description": "Prompts the user to select a specific department for scheduling appointments and provides available options for that selection.",
+    "parameters": [
+      {
+        "name": "selected_department",
+        "description": "Specifies the chosen department for scheduling the appointment.",
+        "options": [
+          "urbanismo",
+          "intervención",
+          "empleo",
+          "concejal"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "category": "department_options",
+        "description": "Departments available for appointment scheduling include: Intervention, Urbanism, Employment Services, Councillors."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Department Selection",
+    "children": []
+  },
+  {
+    "name": "provide_appointment_information_for_councillor",
+    "description": "Informs users about how to request an appointment with a councillor and provides a direct link to the relevant service.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "council_member_appointment_link",
+        "description": "Direct link for requesting an appointment with a council member."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Appointment Scheduling",
+    "children": []
+  },
+  {
+    "name": "present_available_contact_options",
+    "description": "Presents a list of contact categories available for the user to choose from.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_categories",
+        "description": "Contact categories include Centro de Salud, Biblioteca, Formulario de Contacto (Ayuntamiento), Teléfonos de interés, Oficina de Desarrollo Local, Dpto. de Intervención, Servicio Municipal de Participación Ciudadana, Casa de la Cultura, Patrimonio Histórico, Oficina de Recaudación, Unidad de Atención a las Drogodependencias."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Options",
+    "children": []
+  },
+  {
+    "name": "provide_library_contact_info",
+    "description": "Provides the contact information for the Biblioteca de Arucas, including phone number and email address.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "library_contact_phone",
+        "description": "Phone number for the Biblioteca de Arucas."
+      },
+      {
+        "category": "library_contact_email",
+        "description": "Email address for the Biblioteca de Arucas."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "present_appointment_booking_options",
+    "description": "Presents users with various methods for booking appointments, including online and phone scheduling, along with necessary details for each department.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "appointment_services",
+        "description": "Lists the departments for scheduling appointments, such as Urbanism and Intervention, detailing methods for booking appointments, including online and phone options along with required information for each department."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Appointment Scheduling",
+    "children": []
+  },
+  {
+    "name": "prompt_for_appointment_details",
+    "description": "The chatbot prompts the user for further details when scheduling an appointment with different departments, specifying the need to provide context for the request.",
+    "parameters": [
+      {
+        "name": "context_of_request",
+        "description": "Description of the reason for the appointment; property_reference: Reference details about a property or parcel",
+        "options": []
+      },
+      {
+        "name": "if applicable; case_number",
+        "description": "Number of any ongoing case related to the appointment.",
+        "options": []
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Appointment Details",
+    "children": []
+  },
+  {
+    "name": "prompt_for_appointment_request_methods",
+    "description": "Prompts the user for information on how to request an appointment with the relevant employment service through various channels.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "employment_service_appointment_methods",
+        "description": "Describes the methods available for booking appointments with the employment service, including the Servicio Canario de Empleo."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Request Processing",
+    "children": []
+  },
+  {
+    "name": "provide_appointment_video_link",
+    "description": "Provides a link to a video that explains how to book or request an appointment.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "appointment_video_link",
+        "description": "URL link to a video guide on how to request, schedule, and book an appointment."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Guidance",
+    "children": []
+  },
+  {
+    "name": "schedule_cita_previa",
+    "description": "Provides information and options for scheduling a prior appointment (cita previa) through various channels.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cita_previa_information",
+        "description": "Information on scheduling cita previa through various methods such as phone, mobile app, or online, including detailed contact numbers and website links."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Appointment Scheduling",
+    "children": []
+  },
+  {
+    "name": "link_to_certificate_appointment",
+    "description": "Provides a direct link for scheduling an appointment to obtain a digital certificate.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "digital_certificate_appointment_link",
+        "description": "URL for booking an appointment for the digital certificate accreditation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Appointment Scheduling",
+    "children": []
+  },
+  {
+    "name": "present_service_type_options",
+    "description": "Presents available appointment types that can be requested.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "appointment_type_options",
+        "description": "Types of appointments available include 'Cita previa para acreditar un certificado digital', 'Cita previa con el Departamento de Intervención', 'Cita previa con el Servicio Canario de Empleo (SCE)', 'Cita previa con el Departamento de urbanismo/oficina técnica', 'Cita previa con un concejal o concejala'."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Appointment Scheduling",
+    "children": []
+  },
+  {
+    "name": "provide_service_contact_options",
+    "description": "Provides different communication channels available for requesting appointments.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "communication_channel_options",
+        "description": "Options for contacting services include phone calls, mobile application usage, or online booking through electronic platforms."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Options",
+    "children": []
+  },
+  {
+    "name": "provide_urbanism_service_information",
+    "description": "Provides the user with a link to access information about the urbanism department.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "urbanism_service_link",
+        "description": "URL to information about the urbanism service"
+      },
+      {
+        "category": "general_plan_link",
+        "description": "URL to General Urban Planning document"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Information Access",
+    "children": []
+  },
+  {
+    "name": "provide_subsidiary_norms_information",
+    "description": "Provides the user with a link to access the subsidiary norms of Arucas.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "subsidiary_norms_link",
+        "description": "URL to the Normas Subsidiarias de Arucas document"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Information Access",
+    "children": []
+  }
+]

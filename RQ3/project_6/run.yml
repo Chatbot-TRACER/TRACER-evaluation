@@ -1,0 +1,10 @@
+'#execution_parameters':
+- '# - verbose'
+- '# - clean_cache'
+- '# - update_cache'
+- '# - ignore_cache'
+connector_parameters: {}
+extract: ''
+project_folder: project_6
+technology: millionbot
+user_profile: ''

@@ -1,0 +1,794 @@
+[
+  {
+    "name": "provide_health_tips",
+    "description": "Provides initial recommendations for leading a healthier lifestyle, including advice on nutrition, physical activity, hydration, and rest.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Health & Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_nutrition_guidance",
+    "description": "Offers detailed information and recommendations for balanced nutrition, including healthy eating habits and food group servings.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "food_group_recommendations",
+        "description": "Daily food group servings and details of recommended food groups for a balanced diet, including fruits, vegetables, whole grains, dairy, and water recommendations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_protein_sources",
+    "description": "Lists examples of lean protein sources that can be included in a healthy diet.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_cereal_information",
+    "description": "Discusses the importance of cereals in the diet and offers recommendations for choosing healthier options.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_legume_information",
+    "description": "Shares benefits and examples of legumes as an essential element of a balanced diet.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_legume_cooking_tips",
+    "description": "Gives practical tips on how to cook legumes effectively and deliciously.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Cooking Tips",
+    "children": []
+  },
+  {
+    "name": "provide_recipe",
+    "description": "Shares detailed recipes including ingredients and cooking instructions for the specified dish.",
+    "parameters": [
+      {
+        "name": "recipe_name",
+        "description": "Specifies the name of the recipe requested by the user.",
+        "options": []
+      }
+    ],
+    "outputs": [
+      {
+        "category": "recipe_details",
+        "description": "A detailed list of ingredients and preparation steps for recipes, including specific examples such as baked fish with vegetables."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_additional_recipes",
+    "description": "Suggests additional healthy recipes that are easy to prepare.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_hummus_recipe",
+    "description": "Provides a detailed recipe for preparing hummus, including ingredients and instructions for serving with vegetable sticks for dipping.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hummus_recipe_details",
+        "description": "Ingredients and preparation steps for hummus, including a list of ingredients and instructions for making the dish."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_pasta_recipe",
+    "description": "Supplies a detailed recipe for preparing pasta with vegetables.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pasta_recipe_details",
+        "description": "Ingredients and preparation steps for pasta with vegetables"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_oatmeal_recipe",
+    "description": "Gives a detailed recipe for making porridge (oatmeal) with fruits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "oatmeal_recipe_details",
+        "description": "Ingredients and preparation steps for oatmeal with fruits"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_tofu_cooking_methods",
+    "description": "Lists various methods for cooking tofu.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cooking_methods_list",
+        "description": "Salteado, a la parrilla, al horno, en sopas"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Cooking Tips",
+    "children": []
+  },
+  {
+    "name": "provide_toast_recipe",
+    "description": "Provides a simple recipe for a tofu stir-fry with vegetables, including ingredients and instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredients",
+        "description": "250 g de tofu firme, 1 pimiento rojo, 1 zanahoria, 1 calabacín, 2 cucharadas de salsa de soja, 1 cucharada de aceite de oliva, ajo y jengibre al gusto"
+      },
+      {
+        "category": "recipe_instructions",
+        "description": "Corta el tofu en cubos y sécalo con papel de cocina. Calienta el aceite en una sartén y añade el tofu. Cocina hasta que esté dorado. Agrega las verduras cortadas y saltea durante 5-7 minutos. Incorpora la salsa de soja, ajo y jengibre. Cocina 2 minutos más. Sirve caliente, solo o con arroz."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_falafel_information",
+    "description": "Provides information about falafel, including its ingredients and common uses.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "falafel_ingredient_list",
+        "description": "Garbanzos, cebolla, ajo, perejil, especias"
+      },
+      {
+        "category": "falafel_serving_suggestions",
+        "description": "Se puede servir en pita, acompañado de ensaladas y salsas como el tahini"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_falafel_recipe",
+    "description": "Offers a simple recipe for preparing falafel, including ingredients and instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "falafel_recipe_ingredients",
+        "description": "400 g de garbanzos (remojados durante la noche), 1 cebolla pequeña, 2 dientes de ajo, un puñado de perejil fresco, 1 cucharadita de comino molido, 1 cucharadita de cilantro molido, sal y pimienta al gusto, aceite para freír"
+      },
+      {
+        "category": "falafel_recipe_instructions",
+        "description": "Escurre los garbanzos y tritúralos junto con la cebolla, ajo, perejil y especias hasta obtener una masa homogénea. Forma bolitas con la mezcla. Calienta el aceite en una sartén y fríe los falafel hasta que estén dorados. Sirve en pita con ensalada y salsa tahini."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_tahini_information",
+    "description": "Provides information about tahini, including its nutritional value and uses in cooking.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tahini_nutritional_value",
+        "description": "Rica en nutrientes: contiene proteínas, grasas saludables, calcio y hierro"
+      },
+      {
+        "category": "tahini_uses",
+        "description": "Se puede usar como aderezo, dip o ingrediente en salsas"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_steel_cut_oatmeal_instructions",
+    "description": "Offers instructions for preparing steel-cut oatmeal, including ingredients and cooking directions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "steel_cut_oatmeal_recipe",
+        "description": "Provides ingredients and cooking instructions for making steel-cut oats in a slow cooker."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_oatmeal_cookie_recipe",
+    "description": "Details a recipe for making oatmeal cookies.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "oatmeal_cookie_recipe",
+        "description": "Lists ingredients and step-by-step instructions for preparing oatmeal cookies."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "suggest_substitutes_for_peanut_butter",
+    "description": "Offers alternatives to peanut butter in the oatmeal cookie recipe.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "butter_substitution_options",
+        "description": "Includes almond butter, cashew butter, Greek yogurt, banana puree, and standard butter."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_almond_butter_information",
+    "description": "Shares nutritional information and uses for almond butter as an alternative.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "almond_butter_benefits",
+        "description": "Discusses nutrition, flavor, culinary uses, and allergy considerations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_recipe_using_almond_butter",
+    "description": "Gives a recipe for oatmeal cookies using almond butter.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "almond_butter_oatmeal_cookie_recipe",
+        "description": "Ingredients and instructions for preparing oatmeal cookies using almond butter."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_storage_recommendations_chickpea_mango_salad",
+    "description": "Offers recommendations for proper storage of the chickpea and mango salad.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "storage_tips",
+        "description": "Guidelines for storing the chickpea and mango salad to maintain freshness."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "suggest_side_dishes_for_chickpea_mango_salad",
+    "description": "Recommends various side dishes that pair well with chickpea and mango salad.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "side_dish_recommendations",
+        "description": "List of suggested side dishes that complement the chickpea and mango salad."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "suggest_zucchini_recipes",
+    "description": "Suggests various healthy recipes that incorporate zucchini.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "zucchini_recipe_ideas",
+        "description": "A list of healthy zucchini recipes with brief descriptions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_cold_carrot_zucchini_soup_recipe",
+    "description": "Provides a specific recipe for making cold carrot and zucchini soup, including ingredients and instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cold_carrot_zucchini_soup_recipe",
+        "description": "Recipe details for cold carrot and zucchini soup including ingredients and step-by-step instructions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_healthy_dessert_recipe",
+    "description": "Provides a specific recipe for a healthy dessert, including ingredients and instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "healthy_dessert_recipe",
+        "description": "Recipe details for a quick healthy dessert including ingredients and step-by-step instructions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_lentil_stew_recipe",
+    "description": "Offers a simple recipe for making lentil stew, including a list of ingredients and step-by-step cooking instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredients",
+        "description": "List of ingredients needed for preparing the lentil stew."
+      },
+      {
+        "category": "recipe_instructions",
+        "description": "Step-by-step instructions for preparing the lentil stew."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_zucchini_burger_recipe",
+    "description": "Supplies a recipe for making zucchini burgers, outlining ingredients and cooking steps.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredients",
+        "description": "List of ingredients needed for zucchini burgers."
+      },
+      {
+        "category": "recipe_steps",
+        "description": "Step-by-step instructions for preparing zucchini burgers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_yogurt_sauce_recipe",
+    "description": "Offers a recipe for a yogurt-based sauce suitable for pairing with zucchini burgers, including a list of ingredients and step-by-step preparation instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredients",
+        "description": "List of ingredients for tzatziki and yogurt sauce."
+      },
+      {
+        "category": "recipe_steps",
+        "description": "Step-by-step preparation instructions for tzatziki and yogurt sauce."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_eggplant_burger_recipe",
+    "description": "Supplies a recipe for making eggplant burgers, outlining ingredients and cooking steps.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredients",
+        "description": "List of ingredients for eggplant burgers"
+      },
+      {
+        "category": "recipe_steps",
+        "description": "Step-by-step preparation instructions for eggplant burgers"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_variations_for_burger_recipe",
+    "description": "Offers suggestions for variations to modify burger recipes, including ingredient substitutions and modifications based on specified burger type.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "variation_ideas",
+        "description": "List of potential ingredient substitutions and modifications for various types of burgers, including eggplant and lentil burgers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Cooking Tips",
+    "children": []
+  },
+  {
+    "name": "provide_chickpea_burger_recipe",
+    "description": "Supplies a recipe for making chickpea burgers, outlining ingredients and cooking steps.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredients",
+        "description": "List of ingredients for chickpea burgers"
+      },
+      {
+        "category": "recipe_steps",
+        "description": "Step-by-step preparation instructions for chickpea burgers"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_accompaniment_suggestions_for_chickpea_burgers",
+    "description": "Suggests various accompaniments that pair well with chickpea burgers.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "accompaniment_options",
+        "description": "List of recommended side dishes and sauces for chickpea burgers"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_lentil_burger_recipe",
+    "description": "Supplies a recipe for making lentil burgers, outlining ingredients and cooking steps.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredients",
+        "description": "List of ingredients for lentil burgers"
+      },
+      {
+        "category": "recipe_steps",
+        "description": "Step-by-step preparation instructions for lentil burgers"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_hydration_information",
+    "description": "Provides information on the importance of hydration and its benefits for health.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hydration_importance_list",
+        "description": "Describes the benefits of hydration including temperature regulation, digestion support, skin health, nutrient transport, and prevention of fatigue."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health & Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_hydration_methods",
+    "description": "Shares methods and strategies to prevent dehydration and maintain proper hydration.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hydration_methods",
+        "description": "Lists methods to avoid dehydration and stay hydrated, including drinking water regularly, increasing fluid intake during exercise, consuming water-rich foods, and carrying water bottles."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health & Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_cooking_ideas_for_vegetables",
+    "description": "Suggests various methods to cook and incorporate vegetables into meals.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cooking_ideas",
+        "description": "Different cooking methods and recipe ideas for vegetables."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Cooking Tips",
+    "children": []
+  },
+  {
+    "name": "provide_detailed_pimientos_rellenos_recipe",
+    "description": "Shares a detailed recipe for making stuffed peppers (pimientos rellenos), including ingredients and cooking instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pimientos_rellenos_recipe_details",
+        "description": "Ingredient list and preparation steps for the stuffed peppers recipe."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_daily_food_quantity_recommendations",
+    "description": "Supplies recommended daily quantities for various food groups for an adult.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fruits_recommendation",
+        "description": "Recommended daily intake of 3 servings (120-200 g) of fruits."
+      },
+      {
+        "category": "vegetables_recommendation",
+        "description": "Recommended daily intake of 2 servings (150-200 g) of vegetables."
+      },
+      {
+        "category": "dairy_recommendation",
+        "description": "Recommended daily intake of 3-4 servings (200-250 ml of milk or 200-250 g of yogurt) of dairy products."
+      },
+      {
+        "category": "olive_oil_recommendation",
+        "description": "Recommended daily intake of 3-6 tablespoons (10 ml each) of olive oil."
+      },
+      {
+        "category": "bread_cereal_recommendation",
+        "description": "Recommended daily intake of 3-4 servings (40-60 g of bread) of bread and cereals."
+      },
+      {
+        "category": "pasta_rice_potatoes_recommendation",
+        "description": "Recommended weekly intake of 4-6 servings (60-80 g dry) of pasta, rice, or potatoes."
+      },
+      {
+        "category": "legumes_recommendation",
+        "description": "Recommended weekly intake of 2-4 servings (60-80 g dry) of legumes."
+      },
+      {
+        "category": "fish_recommendation",
+        "description": "Recommended daily intake of 4-5 servings (150-170 g) of fish."
+      },
+      {
+        "category": "lean_meat_poultry_recommendation",
+        "description": "Recommended daily intake of 3-4 servings (130-150 g) of lean meat or poultry."
+      },
+      {
+        "category": "eggs_recommendation",
+        "description": "Recommended weekly intake of 4-5 eggs (60-75 g)."
+      },
+      {
+        "category": "daily_quantity_recommendations",
+        "description": "Specific quantities for daily intake of fruits, vegetables, grains, and protein sources."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_meal_examples",
+    "description": "Provides examples of balanced and nutritious meals suitable for breakfast, lunch, dinner, and snacks.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "nutritious_meals",
+        "description": "Examples of nutritious meal options, including balanced breakfasts, lunches, dinners, and snacks."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_legume_meal_recipes",
+    "description": "Provides examples of nutritious meals and recipes that can be prepared with legumes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "legume_meal_recipes",
+        "description": "A list of nutritious meals featuring legumes, including recipes such as Ensalada de garbanzos, lentejas guisadas, and hummus."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_healthy_snack_options",
+    "description": "Provides a list of nutritious snack suggestions with brief descriptions and options for healthy afternoon snacks.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "healthy_snack_options",
+        "description": "A list of nutritious options for afternoon snacks, including brief descriptions and suggestions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_improvement_tips_for_avocado_hummus",
+    "description": "Provides suggestions for enhancing the flavor of avocado hummus.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "improvement_tips",
+        "description": "List of tips for improving the flavor of avocado hummus."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Cooking Tips",
+    "children": []
+  },
+  {
+    "name": "recommend_vegetable_pairings_for_fish",
+    "description": "Recommends suitable vegetables to use when baking fish.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vegetable_combination_with_fish",
+        "description": "A list of vegetables recommended for use together with fish, including suitable options for baking."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "list_common_mistakes_in_baking_fish",
+    "description": "Lists common mistakes to avoid when baking fish.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "common_baking_mistakes",
+        "description": "A list of errors to avoid while baking fish."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Cooking Tips",
+    "children": []
+  },
+  {
+    "name": "explain_oatmeal_difference",
+    "description": "Provides confirmation and detailed differences between traditional oatmeal and instant oatmeal.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "oatmeal_characteristics",
+        "description": "Descriptions and characteristics of different types of oatmeal, including traditional oatmeal and instant oatmeal, along with the differences between them."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "suggest_oatmeal_ideas",
+    "description": "Provides practical suggestions for using both traditional and instant oatmeal in various recipes and meal incorporation.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "oatmeal_uses",
+        "description": "Ideas and suggestions for using traditional and instant oatmeal, including breakfast mixes, smoothie additions, cookie recipes, soup enrichments, and snack bar preparations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "list_oatmeal_recipes",
+    "description": "Provides a list of oatmeal recipes, which may include specific or popular options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "oatmeal_recipes",
+        "description": "Details of various popular recipes using oatmeal, including oatmeal porridge, oatmeal cookies, oatmeal smoothies, oatmeal bars, and oatmeal muffins."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_vegan_gachas_recipe",
+    "description": "Provides a recipe for making a vegan version of gachas.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vegan_gachas_recipe_ingredients",
+        "description": "List of ingredients for vegan gachas"
+      },
+      {
+        "category": "vegan_gachas_recipe_instructions",
+        "description": "Instructions for preparing vegan gachas"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_vegan_recipes",
+    "description": "Suggests a list of simple and delicious vegan recipes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vegan_recipe_list",
+        "description": "Details of different vegan recipes"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_detailed_tacos_recipe",
+    "description": "Provides a detailed recipe for making chickpea tacos.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tacos_recipe_ingredients",
+        "description": "List of ingredients for tacos"
+      },
+      {
+        "category": "tacos_recipe_instructions",
+        "description": "Step-by-step cooking instructions for tacos"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_wrap_recipe",
+    "description": "Supplies a specific recipe for a wrap, detailing ingredients and preparation steps upon user request.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "wrap_recipe_details",
+        "description": "Ingredients and method for preparing the wrap of choice provided."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  }
+]

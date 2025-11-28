@@ -1,0 +1,174 @@
+[
+  {
+    "name": "list_main_tax_services",
+    "description": "The chatbot provides information about types of taxes that can be managed or collected through the Diputación.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_services_info",
+        "description": "Information about the tax types managed by the Diputación."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Services",
+    "children": []
+  },
+  {
+    "name": "prompt_for_tax_information_access",
+    "description": "Prompts the user for information on accessing tax payment deadlines and schedules, including links to the tax calendar and contact information for assistance via the Virtual Tax Office or phone.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_information",
+        "description": "Information on tax management, including access to tax payment dates and deadlines, the tax calendar via the Virtual Office, and contact details for assistance."
+      },
+      {
+        "category": "fiscal_calendar_link",
+        "description": "URL for accessing the fiscal calendar."
+      },
+      {
+        "category": "phone_assistance_information",
+        "description": "Contact phone number and availability for further inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Information",
+    "children": []
+  },
+  {
+    "name": "provide_tax_management_resources",
+    "description": "Suggests resources for managing taxes, including links to relevant tax offices, submission processes, and contact information for inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "resource_submission_info",
+        "description": "Describes the process and timeframe for submitting resources, including details on the recurso de reposición submission process."
+      },
+      {
+        "category": "resource_submission_link",
+        "description": "URL to the submission process for the tax management resources provided."
+      },
+      {
+        "category": "resource_form_link",
+        "description": "URL link to the resource presentation form."
+      },
+      {
+        "category": "tax_resources",
+        "description": "Links to the Virtual Tax Office and contact information for tax-related inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Resources",
+    "children": []
+  },
+  {
+    "name": "provide_tax_embargo_information",
+    "description": "The chatbot offers information on how to obtain details regarding tax embargoes, including contact methods and online access options for the Virtual Tax Office.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_methods",
+        "description": "Describes various ways to obtain information, including phone number and email address for inquiries."
+      },
+      {
+        "category": "virtual_office_access",
+        "description": "Provides information on how to access the Virtual Tax Office using digital certificates or Cl@ve."
+      },
+      {
+        "category": "additional_info_links",
+        "description": "Links to more detailed information regarding the retention of embargo, including how to request embargo information."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Embargo Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_access_to_virtual_office",
+    "description": "Guides the user on how to access the Virtual Tax Office by providing a clickable link.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "link_to_virtual_office",
+        "description": "URL to access the Virtual Tax Office."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Virtual Office Access",
+    "children": []
+  },
+  {
+    "name": "provide_offices_information",
+    "description": "Informs the user about the different offices of the Tax Management Service and their hours, providing links to geographical locations and additional details.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "office_information",
+        "description": "Links to the geographical locations and operational hours of the Tax Management Service offices."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Office Information",
+    "children": []
+  },
+  {
+    "name": "handle_unspecified_tax_question",
+    "description": "The chatbot informs the user that it cannot provide details on a specific tax presentation process and offers to pass the question to staff for future reference.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_info_on_types_of_taxes",
+    "description": "The chatbot directs the user to the Virtual Tax Office for information on the taxes managed and collected by the authority.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "output_links",
+        "description": "Link to the Virtual Tax Office."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Information",
+    "children": []
+  },
+  {
+    "name": "present_fiscal_tax_calendar_link",
+    "description": "Provides the user with a direct link to the Fiscal or Tax Calendar for reference and additional information regarding important payment dates.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fiscal_tax_calendar_link",
+        "description": "A direct URL linking to the Fiscal Calendar and Tax Calendar for reference and further details."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Calendar",
+    "children": []
+  },
+  {
+    "name": "outline_tax_management_services",
+    "description": "Outlines the main functions related to tax management, providing users with information about tax collection and management services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_services_list",
+        "description": "Information about tax management and collection services, such as those accessible via the Virtual Tax Office."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Services",
+    "children": []
+  },
+  {
+    "name": "prompt_for_tax_management_inquiries",
+    "description": "Prompts the user to specify any questions or inquiries they have regarding tax management.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Inquiry",
+    "children": []
+  }
+]

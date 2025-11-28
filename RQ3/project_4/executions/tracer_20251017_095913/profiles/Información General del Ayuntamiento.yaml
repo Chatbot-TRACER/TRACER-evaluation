@@ -1,0 +1,46 @@
+test_name: Información General del Ayuntamiento
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca información general sobre el Ayuntamiento de Morón de la Frontera, incluyendo servicios, impuestos y contacto.
+  context:
+  - 'personality: personalities/conversational-user'
+  - Estás planificando un proyecto comunitario en Morón de la Frontera y necesitas obtener información sobre los servicios y recursos que ofrece el Ayuntamiento.
+  - Además, deseas conocer los plazos de pago de impuestos municipales para asegurarte de que tu proyecto esté en conformidad con la normativa local.
+  - También te gustaría tener información sobre el cuerpo gobernante actual y los grupos políticos para mantener una comunicación adecuada durante tu iniciativa.
+  goals:
+  - Proporcionar el enlace al sitio web oficial del Ayuntamiento de Morón de la Frontera.
+  - Solicitar información sobre los plazos específicos para el pago de impuestos municipales.
+  - Pedir detalles sobre el cuerpo gobernante actual del Ayuntamiento y los grupos políticos representados.
+  - Solicitar el enlace a la información sobre la corporación municipal de Morón de la Frontera.
+  - Obtener los detalles de contacto del Ayuntamiento, incluyendo las horas de operación.
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - website_link:
+      type: string
+      description: Enlace al sitio web oficial
+  - tax_payment_schedule:
+      type: string
+      description: Plazos para el pago de impuestos
+  - governing_body_info:
+      type: string
+      description: Información sobre el cuerpo gobernante actual
+  - corporation_info_link:
+      type: string
+      description: Enlace a información sobre la corporación municipal
+  - service_hours_info:
+      type: string
+      description: Detalles de contacto y horas de operación
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

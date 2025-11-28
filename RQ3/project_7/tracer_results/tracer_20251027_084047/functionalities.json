@@ -1,0 +1,791 @@
+[
+  {
+    "name": "provide_product_category_overview",
+    "description": "Lists the types of products available on the Alcampo website, inviting the user to explore.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "product_category_options",
+        "description": "Assortment includes fresh foods, frozen foods, groceries, beverages, hygiene products, textiles, baby products, home entertainment, toys, televisions, pet food, electronics, small appliances, and more."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_fresh_food_options",
+    "description": "Details the variety of fresh food options available at Alcampo, encouraging exploration for online ordering.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fresh_food_category_options",
+        "description": "Includes fruits and vegetables, fresh meats, fish, dairy, cold cuts, cheeses, bakery items, and ready-made meals."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_beef_cut_options",
+    "description": "Lists the different cuts of beef available at Alcampo, focusing on quality and types of beef offered.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "beef_cut_options",
+        "description": "Includes filet, sirloin, entrecote, and rib-eye cuts."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_electronics_category_overview",
+    "description": "Describes the electronics category at Alcampo, detailing types of products available and encouraging online exploration.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "electronics_product_types",
+        "description": "Includes tablets, LED TVs, computer monitors, and smartphones."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_television_options",
+    "description": "Details the variety of televisions available at Alcampo, including sizes and brands.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "television_size_options",
+        "description": "Includes 32 inches, 43 inches, and 50 inches"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_initial_greeting_and_guidance",
+    "description": "Introduces the chatbot and provides initial guidance on how to start browsing for products.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "prompt_for_prepared_fruit_set_details",
+    "description": "Offers information about prepared fruit sets and prompts the user to check online for specific types of fruits included.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_baked_goods_options",
+    "description": "Presents a variety of baked goods available for online ordering, including cakes, pastries, and other sweets.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "baked_goods_options",
+        "description": "A list of available baked goods for ordering, including cakes, cream cakes, cream-filled pastries, assorted pastries like pasteles de nata, and other sweets."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_galician_beef_cuts_information",
+    "description": "Suggests checking the online store for details about cuts of Galician beef.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_organic_poultry_sourcing_standards",
+    "description": "Provides a general overview of the sourcing standards for organic poultry products.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_innovative_packaging_solutons",
+    "description": "Details the innovative packaging solutions used to reduce plastic usage.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "packaging_initiatives",
+        "description": "Includes targets for 100% recyclable packaging by 2025, use of recycled materials, and initiatives to reduce plastic use."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  },
+  {
+    "name": "provide_cultivamos_lo_bueno_program_details",
+    "description": "Provides an overview of the 'Cultivamos lo Bueno' program and its focus on quality, traceability, and environmental respect.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "program_overview",
+        "description": "Describes the history and purpose of the program"
+      },
+      {
+        "category": "product_categories",
+        "description": "Includes various product categories covered under the program."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  },
+  {
+    "name": "provide_cultivamos_lo_bueno_events",
+    "description": "Lists events organized related to the 'Cultivamos lo Bueno' program.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "event_types",
+        "description": "Includes masterclasses, tastings, and degustations"
+      },
+      {
+        "category": "purpose_of_events",
+        "description": "Aims to showcase product quality and traditional flavors."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  },
+  {
+    "name": "highlight_burger_meat_benefits",
+    "description": "Explains the benefits of using burger meat from Alcampo, focusing on quality, sustainability, and dietary considerations.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "burger_meat_benefits_summary",
+        "description": "Summary of benefits including meat percentage, clean label, animal welfare certification, and environmentally friendly packaging."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_meal_options_overview",
+    "description": "Provides an overview of the various ready-made meal options available at Alcampo and suggests checking the online store for the full selection.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "prepared_meals",
+        "description": "A variety of meal options including prepared dishes, fresh meals, frozen meals, and various prepared food items suitable for quick consumption."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "explain_la_cocina_de_alcampo",
+    "description": "Describes the 'La Cocina de Alcampo' feature, outlining its capabilities in helping users find recipes and manage ingredient lists for shopping.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cocina_feature_info",
+        "description": "Details on how the feature works and its benefits for users"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "explain_recipe_search_options",
+    "description": "Explains that users can search for recipes by season and by product category within 'La Cocina de Alcampo' on the website and app.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_search_options",
+        "description": "Searching criteria available in 'La Cocina de Alcampo'"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_recipe_ingredients_info",
+    "description": "Informs the user that they can view and add ingredients needed for a selected recipe in 'La Cocina de Alcampo' directly to their shopping list.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_ingredient_management",
+        "description": "Information on how to manage ingredients for recipes"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_favorite_recipe_feature_info",
+    "description": "Describes the capability to save favorite recipes within 'La Cocina de Alcampo' for easy future access and shopping convenience.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "favorite_recipe_feature_info",
+        "description": "Details on saving recipes for later use."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_hygiene_product_details",
+    "description": "Offers information about the range of hygiene products available at Alcampo, including various types, uses, and brands.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hygiene_products",
+        "description": "A list of hygiene products including disinfectants for home, cleaning products without bleach, textile odor eliminators, active oxygen disinfectants, and paper hygiene products. Types include disinfectant gels, multi-purpose cleaners, and toilet paper options."
+      },
+      {
+        "category": "available_brands",
+        "description": "A list of available brands including SANYTOL, LA SALUD, AMUKINA, and Alcampo branded items."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_ordering_instructions",
+    "description": "Offers step-by-step instructions on how to order a specific product online from Alcampo.",
+    "parameters": [
+      {
+        "name": "product_name",
+        "description": "name of the product the user wants to order",
+        "options": []
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Ordering Information",
+    "children": []
+  },
+  {
+    "name": "provide_tp_link_tapo_p110_features",
+    "description": "Lists the advantages of using the TP-LINK Tapo P110 smart plug.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tp_link_tapo_p110_features",
+        "description": "Features include WiFi control, voice command compatibility, scheduling, and compact design"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_smart_plug_details",
+    "description": "Shares information about available smart plugs with WiFi connectivity and key features, including specific model options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "smart_plug_features",
+        "description": "Capabilities include WiFi connectivity, programmability, remote control, energy monitoring, and voice control."
+      },
+      {
+        "category": "smart_plug_models",
+        "description": "Available models include TP-LINK Tapo P110 and XIAOMI Mi Smart Plug."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_xiaomi_led_32_inch_smart_tv_features",
+    "description": "Describes the key features of the Xiaomi LED 32\" Smart TV available at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "xiaomi_led_32_inch_tv_features",
+        "description": "Features include HD Ready resolution, HDR support, and smart capabilities"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_samsung_qled_gaming_features",
+    "description": "Lists the advanced gaming features available on Samsung QLED Smart TVs.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "samsung_qled_gaming_features",
+        "description": "Includes Motion Xcelerator Turbo+, Samsung Gaming Hub, and HDMI 2.1 support"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_smart_activity_bands_info",
+    "description": "Informs the user about the current lack of specific information on smart activity bands available at Alcampo and suggests checking the website.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "activity_bands_availability",
+        "description": "Suggests visiting the website for the latest product availability in the wearables section."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_promotions_info",
+    "description": "Informs the user about current promotions and discounts available for electronics and provides links to view them.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "promotions_link",
+        "description": "URL to view current promotions and offers for televisions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "provide_accessories_recommendations",
+    "description": "The chatbot recommends accessories that complement the selected television model, enhancing the user's overall experience.",
+    "parameters": [
+      {
+        "name": "selected_tv_model",
+        "description": "Represents the selected TV model for which accessories are being recommended.",
+        "options": [
+          "LG 43\" 4K UHD Smart TV"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "category": "accessory_recommendations",
+        "description": "Lists suggested accessories that match the selected television model, such as HDMI cables, stands, and soundbars."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_fresh_produce_availability_info",
+    "description": "Informs the user about the availability of organic fruits in the fresh produce section of the store.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "availability_info",
+        "description": "Information about the presence of organic fruits, including apples, available at Alcampo."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "present_fruit_category_link",
+    "description": "Shares a direct link to the fruits category on the Alcampo online store for the user to explore.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "category_link",
+        "description": "Direct link to the fruits category page for further exploration."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_suppliers",
+    "description": "Informs the user about suppliers and the general availability of organic fruits within the store.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "supplier_info",
+        "description": "Details about suppliers who provide organic produce at Alcampo."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "present_fresh_fruits_information",
+    "description": "Provides an overview of fresh fruits available at Alcampo, including details about sourcing quality, sustainability initiatives, and types of fresh fruits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fresh_fruits",
+        "description": "A list of types and varieties of fresh fruits available."
+      },
+      {
+        "category": "fresh_fruit_sources",
+        "description": "Information on sources of fresh fruits, including details like Way Fruit."
+      },
+      {
+        "category": "quality_assurance",
+        "description": "Information about quality control measures and sourcing practices for fresh fruits."
+      },
+      {
+        "category": "sustainability_initiatives",
+        "description": "Description of sustainability efforts related to sourcing fresh fruits."
+      },
+      {
+        "category": "fruit_product_formats",
+        "description": "Different formats in which fresh fruits are available."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_natural_fruit_mixes_benefits",
+    "description": "Outlines the benefits of natural, preservative-free mixes of tropical fruits offered at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fruit_mixes_benefits",
+        "description": "List of health and versatility benefits of natural fruit mixes."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "check_promotions_for_tropical_fruits",
+    "description": "Informs the user about the current status of promotions or discounts on tropical fruits at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "current_promotions_status",
+        "description": "Information about available promotions or discounts."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "provide_promotion_update_frequency",
+    "description": "Shares information about the frequency of updates for fruit product promotions at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "promotion_update_frequency",
+        "description": "General information on how often promotions are updated."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "provide_seasonal_fruit_information",
+    "description": "Offers information and recommendations about seasonal fruits available, including options for online ordering.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "seasonal_fruits",
+        "description": "A list of various seasonal fruits typically available during the mentioned time and for purchase online, including bananas, mandarins, and region-adapted fruits."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "describe_support_for_local_producers",
+    "description": "Describes how Alcampo collaborates with local producers to source seasonal fruits and the initiatives supporting them.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "support_initiatives",
+        "description": "Information on specific initiatives taken to support local producers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  },
+  {
+    "name": "provide_popular_fruit_list",
+    "description": "Lists popular fresh fruits commonly available at Alcampo and provides a link to explore more options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "popular_fruits",
+        "description": "A selection of commonly enjoyed fruits including strawberries, bananas, apples, pears, peaches, oranges, mangoes, passion fruit, and berries."
+      },
+      {
+        "category": "recommended_fruit_link",
+        "description": "Link to explore more fresh fruit options at Alcampo's online store."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "suggest_price_check",
+    "description": "Advises the user to check the online store for the latest prices of fruits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pricing_information",
+        "description": "Advises using the online store for accurate prices and indicates that prices may vary by location and promotions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Pricing Information",
+    "children": []
+  },
+  {
+    "name": "direct_user_to_promotions_page",
+    "description": "Informs the user about current promotions on fresh fruits and provides a link to check for offers.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "promotions_link",
+        "description": "URL to all ongoing promotions and offers"
+      },
+      {
+        "category": "available_fruit_promotions",
+        "description": "Types of fresh fruits typically on promotion, including local and seasonal options"
+      },
+      {
+        "category": "general_category_promotions",
+        "description": "Promotions available across other product categories such as frozen products, groceries, hygiene, etc."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "provide_customer_service_options",
+    "description": "Lists various customer service options available for user assistance at Alcampo, including different contact methods.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_contact_methods",
+        "description": "Contact methods for customer service, including telephone support, in-store information points, email support, online contact form, and optical services contact."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Service",
+    "children": []
+  },
+  {
+    "name": "describe_query_types_for_contact_form",
+    "description": "Explains the types of queries that can be submitted through the online contact form.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "query_types",
+        "description": "General questions about products and services, reports of incidents, complaints, information or assistance requests regarding purchases or store experiences"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Service",
+    "children": []
+  },
+  {
+    "name": "prompt_for_nearest_store_contact_information",
+    "description": "Suggests visiting the official Alcampo website or checking directly at the store for the nearest store's contact number.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Service",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_information",
+    "description": "Recommends visiting the official Alcampo website or app store for detailed information regarding the Club Alcampo app and loyalty program, including how to earn points and membership benefits.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "inform_on_promotions_and_discounts",
+    "description": "Informs the user about the current promotions, discounts, and exclusive benefits available to Club Alcampo members.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "promotions_details",
+        "description": "Offers on products, loyalty points, direct discounts, coupons, accumulated balance for future purchases"
+      },
+      {
+        "category": "current_promotions_link",
+        "description": "Link to current offers on Alcampo's website"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "inform_on_special_events_or_activities",
+    "description": "Advises visiting Alcampo's official website or social media for updates on special events or activities, as specific information is not available.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_fresh_product_details",
+    "description": "Provides details about the fresh products category, including available types, sourcing information, and sustainability practices.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fresh_product_categories",
+        "description": "A comprehensive list of available fresh product categories including fruits, vegetables, meats, fish, dairy, bakery items, and descriptions of fresh products related to fishmongery, butchery, delicatessen, and commitment to sustainability."
+      },
+      {
+        "category": "sourcing_information",
+        "description": "Details on sourcing from local producers and quality assurance practices."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_cultivamos_lo_bueno_details",
+    "description": "Provides information about the 'Cultivamos lo Bueno' initiative, including types of products offered and their sustainability and animal welfare certifications.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "initiative_details",
+        "description": "Describes the focus on animal welfare and organic produce under the initiative"
+      },
+      {
+        "category": "product_certifications",
+        "description": "Lists certifications such as Welfair®, organic production, FSC for packaging, DOP, and IGP."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  },
+  {
+    "name": "provide_certification_types",
+    "description": "Lists the types of certifications associated with products under the 'Cultivamos lo Bueno' initiative.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "certification_types",
+        "description": "Describes certification types including animal welfare, organic production, FSC certification, DOP, and IGP."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  },
+  {
+    "name": "provide_meat_options",
+    "description": "Describes the available fresh meat types, including sourcing details, quality standards, and specific product examples.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "meat_categories",
+        "description": "A list of available meats such as pork, chicken, beef (including wagyu and Galician), lamb, and horse meat sourced from trusted producers and sustainable practices."
+      },
+      {
+        "category": "specialty_product_examples",
+        "description": "Highlights specific product types like IGP certified items."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_seafood_details",
+    "description": "Provides detailed information about available seafood products, including types of fresh fish and sustainability certifications.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "seafood_types",
+        "description": "Lists species of seafood including varieties like salmon, tuna, dorada, bacalao, anchovies, boquerón, bonito del Norte, lubina, and various mariscos."
+      },
+      {
+        "category": "sustainability_info",
+        "description": "Information about sustainability practices and certifications for seafood, including details on certifications like MSC and ASC."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_prepared_vegetable_mixes_info",
+    "description": "Informs the user about the prepared vegetable mixes available, encouraging them to check online for specific options.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "explain_sustainable_fishing_practices",
+    "description": "Provides an overview of Alcampo's commitment to sustainable fishing practices, including details on certifications and policies related to seafood.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sustainable_fishing_info",
+        "description": "Overview of Alcampo's sustainability measures, certifications (MSC and ASC), and efforts to combat illegal fishing while preserving marine biodiversity."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  },
+  {
+    "name": "explain_support_for_fisheries",
+    "description": "Explains how Alcampo supports local and artisanal fisheries through sourcing practices and sustainability initiatives.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "local_fishery_support",
+        "description": "Information on sourcing from local fish markets and promoting sustainability, as well as how Alcampo collaborates with local fish markets to support small-scale fishers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sustainability",
+    "children": []
+  }
+]

@@ -1,0 +1,55 @@
+test_name: Consejo y Preparación de Alimentos
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca consejos sobre la preparación de alimentos y mejores prácticas en cocina saludable.
+  context:
+  - 'personality: personalities/elderly-user'
+  - Estás interesado en mejorar tus hábitos alimenticios y buscas consejos para preparar comidas más saludables y sabrosas.
+  - Te gustaría incorporar más fuentes de proteínas magras y cereales en tu dieta diaria, así como aprender a cocinar legumbres de manera efectiva.
+  - Además, quieres explorar recetas que incluyan avena y mejorar la sabor de tus preparaciones, como el hummus de aguacate.
+  goals:
+  - Solicitar información sobre las fuentes de proteínas magras que se pueden incluir en una dieta saludable.
+  - Preguntar sobre los cereales en la dieta y obtener recomendaciones para opciones más saludables.
+  - Pedir consejos prácticos sobre cómo cocinar legumbres de manera efectiva y deliciosa.
+  - Solicitar una lista de recetas de avena y elegir una receta específica para preparar.
+  - Pedir recomendaciones sobre cómo mejorar el sabor del hummus de aguacate.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - lean_protein_sources:
+      type: string
+      description: Fuentes de proteína magra en la dieta
+  - healthy_grain_recommendations:
+      type: string
+      description: Opciones de cereales más saludables
+  - legume_cooking_tips:
+      type: string
+      description: Consejos para cocinar legumbres
+  - oatmeal_recipes_list:
+      type: string
+      description: Lista de recetas de avena
+  - selected_oatmeal_recipe:
+      type: string
+      description: Receta específica de avena elegida
+  - hummus_flavor_improvement_tips:
+      type: string
+      description: Consejos para mejorar el sabor del hummus
+  - vegetable_cooking_methods:
+      type: string
+      description: Métodos para cocinar vegetales
+  - chickpea_mango_salad_storage_tips:
+      type: string
+      description: Directrices de almacenamiento para ensalada
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

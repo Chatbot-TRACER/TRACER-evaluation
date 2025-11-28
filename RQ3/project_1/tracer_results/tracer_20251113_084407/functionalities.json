@@ -1,0 +1,596 @@
+[
+  {
+    "name": "prompt_for_language_selection",
+    "description": "Asks the user to select their preferred language for communication with the chatbot.",
+    "parameters": [
+      {
+        "name": "selected_language",
+        "description": "The preferred language the user wishes to communicate in.",
+        "options": [
+          "Español",
+          "Inglés"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": [
+      {
+        "name": "prompt_for_privacy_policy_acceptance",
+        "description": "Requests the user to accept or decline the privacy policy to proceed with assistance.",
+        "parameters": [
+          {
+            "name": "privacy_policy_acceptance",
+            "description": "The user's decision to accept or decline the privacy policy.",
+            "options": [
+              "Accept",
+              "No",
+              "Not Accept",
+              "Sí",
+              "Yes",
+              "accept",
+              "reject"
+            ]
+          }
+        ],
+        "outputs": [],
+        "parent_names": [
+          "prompt_for_language_selection"
+        ],
+        "suggested_category": "Chatbot Meta",
+        "children": [
+          {
+            "name": "prompt_for_age_group_selection",
+            "description": "Requests the user to select their age group in order to provide tailored fare recommendations.",
+            "parameters": [
+              {
+                "name": "age_group",
+                "description": "The age group of the user for fare calculation and relevant recommendations, represented in various formats.",
+                "options": [
+                  "15-25",
+                  "15_to_25",
+                  "26-64",
+                  "26_to_64",
+                  "4-6",
+                  "4_to_6",
+                  "7-14",
+                  "7_to_14",
+                  "Entre 15 y 25 años",
+                  "Entre 26 y 64 años",
+                  "Entre 4 y 6 años",
+                  "Entre 7 y 14 años",
+                  "Menor de 4 años",
+                  "Más de 65 años",
+                  "Over 65",
+                  "Under 4",
+                  "over_65",
+                  "under_4"
+                ]
+              }
+            ],
+            "outputs": [],
+            "parent_names": [
+              "prompt_for_privacy_policy_acceptance"
+            ],
+            "suggested_category": "User Information Gathering",
+            "children": [
+              {
+                "name": "provide_fare_recommendations",
+                "description": "Provides the user with recommended fare and tariff options based on their profile, including pricing details for various ticket types and tourist passes.",
+                "parameters": [],
+                "outputs": [
+                  {
+                    "category": "fare_options",
+                    "description": "Details on pricing for various ticket options including single journeys (Billete sencillo combinado), 10-journey tickets (10 viajes combinado), and tourist passes (Título Turístico) with prices for different durations."
+                  }
+                ],
+                "parent_names": [
+                  "prompt_for_age_group_selection",
+                  "prompt_for_user_type"
+                ],
+                "suggested_category": "Fare Recommendations",
+                "children": []
+              },
+              {
+                "name": "provide_fare_information",
+                "description": "Shares information regarding fare rules and requirements based on the user's age group.",
+                "parameters": [],
+                "outputs": [
+                  {
+                    "category": "fare_information_details",
+                    "description": "Details about fare policies related to various age groups."
+                  }
+                ],
+                "parent_names": [
+                  "prompt_for_age_group_selection"
+                ],
+                "suggested_category": "Fare Information",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "prompt_for_user_type",
+            "description": "Inquires whether the user is a visitor or a regular user of the Metro network to provide relevant fare recommendations.",
+            "parameters": [
+              {
+                "name": "user_type",
+                "description": "The classification of the user's relationship with the Metro network, indicating if the user is a visitor or a regular metro user.",
+                "options": [
+                  "Estoy de visita",
+                  "Regular User",
+                  "Usuario habitual",
+                  "regular",
+                  "regular_user",
+                  "visitor"
+                ]
+              }
+            ],
+            "outputs": [],
+            "parent_names": [
+              "prompt_for_privacy_policy_acceptance"
+            ],
+            "suggested_category": "User Information Gathering",
+            "children": [
+              {
+                "name": "provide_fare_recommendations",
+                "description": "Provides the user with recommended fare and tariff options based on their profile, including pricing details for various ticket types and tourist passes.",
+                "parameters": [],
+                "outputs": [
+                  {
+                    "category": "fare_options",
+                    "description": "Details on pricing for various ticket options including single journeys (Billete sencillo combinado), 10-journey tickets (10 viajes combinado), and tourist passes (Título Turístico) with prices for different durations."
+                  }
+                ],
+                "parent_names": [
+                  "prompt_for_age_group_selection",
+                  "prompt_for_user_type"
+                ],
+                "suggested_category": "Fare Recommendations",
+                "children": []
+              },
+              {
+                "name": "provide_combined_ticket_info",
+                "description": "Provides details about the Combined Ticket, including its validity and usage conditions.",
+                "parameters": [],
+                "outputs": [
+                  {
+                    "category": "combined_ticket_info",
+                    "description": "Information about the Combined Ticket, including its validity across different lines, usage requirements, qualities, and restrictions."
+                  }
+                ],
+                "parent_names": [
+                  "prompt_for_user_type"
+                ],
+                "suggested_category": "Ticket Information",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "prompt_for_privacy_acceptance",
+        "description": "Requests the user to accept the privacy policy to proceed with further assistance.",
+        "parameters": [
+          {
+            "name": "acceptance",
+            "description": "user confirmation for acceptance of the privacy policy.",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          }
+        ],
+        "outputs": [],
+        "parent_names": [
+          "prompt_for_language_selection"
+        ],
+        "suggested_category": "Chatbot Meta",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "prompt_for_destination_zone_selection",
+    "description": "Requests the user to specify the destination zone for their journey.",
+    "parameters": [
+      {
+        "name": "destination_zone",
+        "description": "The zone to which the user intends to travel.",
+        "options": [
+          "A",
+          "B1",
+          "B2",
+          "B3",
+          "C1",
+          "C2",
+          "E1",
+          "E2",
+          "No lo sé",
+          "Unsure",
+          "Zona A",
+          "Zona B1",
+          "Zona B2",
+          "Zona B3",
+          "Zona C1",
+          "Zona C2",
+          "Zona E1",
+          "Zona E2"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Information Gathering",
+    "children": []
+  },
+  {
+    "name": "provide_network_status",
+    "description": "Informs the user about the current network status, including any disruptions or incidents affecting subway or train lines.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "network_incidents",
+        "description": "Specific incidents affecting subway lines, including detailed information about Line 6 and Line 7, their impact on train circulation, duration, and alternative transportation options available."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Network Status",
+    "children": []
+  },
+  {
+    "name": "prompt_for_general_inquiry",
+    "description": "The chatbot asks the user to specify other questions or inquiries they may have.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Interaction",
+    "children": []
+  },
+  {
+    "name": "provide_pet_transportation_policy",
+    "description": "The chatbot informs the user about the policies regarding traveling with small pets on the subway.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pet_policy_details",
+        "description": "Specific rules governing pet transport on the subway."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Pet Policy",
+    "children": []
+  },
+  {
+    "name": "prompt_for_destination_station",
+    "description": "Prompts the user for their destination station to provide directions.",
+    "parameters": [
+      {
+        "name": "destination_station",
+        "description": "The station where the user is headed, or the name of the station the user is traveling to.",
+        "options": []
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Information Gathering",
+    "children": [
+      {
+        "name": "provide_route_information",
+        "description": "The chatbot provides details about the route from the starting station to the destination station, including estimated duration, transfer information, and an interactive map link.",
+        "parameters": [
+          {
+            "name": "current_station",
+            "description": "The starting station (e.g., Atocha); destination_station: The destination station (e.g., Chamartín)",
+            "options": []
+          }
+        ],
+        "outputs": [
+          {
+            "category": "route_information",
+            "description": "Estimated duration of the journey along with information about any required transfers."
+          },
+          {
+            "category": "interactive_map_link",
+            "description": "A link to an interactive map for journey visualization."
+          }
+        ],
+        "parent_names": [
+          "prompt_for_current_station",
+          "prompt_for_destination_station"
+        ],
+        "suggested_category": "Route Information",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "present_transport_card_options",
+    "description": "Lists different transportation cards available and their respective details.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "transport_card_types",
+        "description": "Information about the Public Transport Personal Card, Public Transport Multi Card, and others available on the network."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Transit Options",
+    "children": []
+  },
+  {
+    "name": "present_assistance_options",
+    "description": "Presents the user with a comprehensive list of options and services available for assistance with transportation-related inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "assistance_options",
+        "description": "Options available for assistance include inquiries about upcoming trains, recommended fares, transport card information, directions to stations, network status, facility status, and other inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "User Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_start_zone",
+    "description": "Prompts the user to specify their starting zone for the journey.",
+    "parameters": [
+      {
+        "name": "departure_zone",
+        "description": "The zone from which the user plans to start their journey.",
+        "options": [
+          "No lo sé",
+          "Unsure",
+          "Zona A",
+          "Zona B1",
+          "Zona B2",
+          "Zona B3",
+          "Zona C1",
+          "Zona C2",
+          "Zona E1",
+          "Zona E2"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Information Gathering",
+    "children": []
+  },
+  {
+    "name": "prompt_for_inquiry_type",
+    "description": "The chatbot asks the user to specify the type of inquiry they have from a provided list.",
+    "parameters": [
+      {
+        "name": "inquiry_type",
+        "description": "The specific area the user wants assistance with.",
+        "options": [
+          "service_hours",
+          "bicycle_access",
+          "pet_access",
+          "use_regulations",
+          "other"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Interaction",
+    "children": []
+  },
+  {
+    "name": "provide_bicycle_transportation_information",
+    "description": "The chatbot provides information about the rules and policies governing bicycle transportation on the subway.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "bicycle_transport_rules",
+        "description": "Details about the rules for traveling with bicycles, including specific regulations for transport on the subway."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Bicycle Policy",
+    "children": []
+  },
+  {
+    "name": "present_map_download_options",
+    "description": "The chatbot offers different map download options to the user.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "map_options",
+        "description": "Available maps include schematic map and tourist map."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Map Services",
+    "children": []
+  },
+  {
+    "name": "provide_map_download",
+    "description": "The chatbot shares the schematic map of the metro upon request.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Map Services",
+    "children": []
+  },
+  {
+    "name": "prompt_for_usage_regulation_info",
+    "description": "The chatbot offers a link to the regulations that govern usage of the metro service.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "usage_regulation_link",
+        "description": "Link to the regulations of the metro service."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Regulation Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_fare_recommendation",
+    "description": "The chatbot prompts the user for information needed to recommend the best fare option.",
+    "parameters": [
+      {
+        "name": "age_group",
+        "description": "The user's age group for fare recommendation.",
+        "options": [
+          "under_4",
+          "age_4_to_6",
+          "age_7_to_14",
+          "age_15_to_25",
+          "age_26_to_64",
+          "age_65_plus"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Information Gathering",
+    "children": []
+  },
+  {
+    "name": "prompt_for_current_station",
+    "description": "Requests the user to specify their current station to provide further assistance or train information.",
+    "parameters": [
+      {
+        "name": "current_station",
+        "description": "The name of the station where the user is currently located.",
+        "options": []
+      }
+    ],
+    "outputs": [
+      {
+        "category": "map_image",
+        "description": "link to or description of a map with the stations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "User Information Gathering",
+    "children": [
+      {
+        "name": "present_subway_line_options",
+        "description": "Provides information on the available subway lines at the specified station and prompts the user for their selection.",
+        "parameters": [
+          {
+            "name": "selected_line",
+            "description": "The train line the user wishes to inquire further about, including subway options.",
+            "options": [
+              "10",
+              "4",
+              "5",
+              "All",
+              "All Lines"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "category": "line_info",
+            "description": "Information about the selected line and its connections, including lines like Línea 4, Línea 5, and Línea 10."
+          }
+        ],
+        "parent_names": [
+          "prompt_for_current_station"
+        ],
+        "suggested_category": "Transit Information",
+        "children": []
+      },
+      {
+        "name": "provide_route_information",
+        "description": "The chatbot provides details about the route from the starting station to the destination station, including estimated duration, transfer information, and an interactive map link.",
+        "parameters": [
+          {
+            "name": "current_station",
+            "description": "The starting station (e.g., Atocha); destination_station: The destination station (e.g., Chamartín)",
+            "options": []
+          }
+        ],
+        "outputs": [
+          {
+            "category": "route_information",
+            "description": "Estimated duration of the journey along with information about any required transfers."
+          },
+          {
+            "category": "interactive_map_link",
+            "description": "A link to an interactive map for journey visualization."
+          }
+        ],
+        "parent_names": [
+          "prompt_for_current_station",
+          "prompt_for_destination_station"
+        ],
+        "suggested_category": "Route Information",
+        "children": []
+      },
+      {
+        "name": "list_train_lines",
+        "description": "Displays the available train lines at the user's specified station and prompts for the selection of a specific line.",
+        "parameters": [
+          {
+            "name": "selected_line",
+            "description": "Indicates which train line the user wants information about",
+            "options": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "category": "available_lines",
+            "description": "Line 4, Line 5, Line 10. Lists the train lines that operate from the specified station."
+          }
+        ],
+        "parent_names": [
+          "prompt_for_current_station"
+        ],
+        "suggested_category": "Transit Information",
+        "children": [
+          {
+            "name": "provide_upcoming_trains_information",
+            "description": "Provides information about upcoming trains for the selected line at the user's station, including destinations and arrival times.",
+            "parameters": [
+              {
+                "name": "selected_line",
+                "description": "The line that the user wants to check upcoming trains for (e.g., 4, 5, or 10).",
+                "options": []
+              }
+            ],
+            "outputs": [
+              {
+                "category": "upcoming_trains",
+                "description": "Lists the upcoming trains with their respective destinations, directions, and estimated arrival times."
+              }
+            ],
+            "parent_names": [
+              "list_train_lines"
+            ],
+            "suggested_category": "Train Schedule",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "provide_next_train_info",
+    "description": "Displays information about the next trains arriving at the specified station, including line numbers, directions, and waiting/arrival times.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "upcoming_trains_info",
+        "description": "Details of the next trains arriving, including line numbers, directions, waiting times, and arrival times."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Train Schedule",
+    "children": []
+  }
+]

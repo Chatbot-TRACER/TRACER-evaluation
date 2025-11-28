@@ -1,0 +1,112 @@
+test_name: Visitante del metro
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Un visitante que necesita asistencia completa en la red de metro, desde la llegada hasta la salida.
+  context:
+  - Como visitante de una ciudad nueva, necesitas navegar por la red de metro para llegar a un evento importante.
+  - Apuesta por tener una experiencia fluida y segura, ya que es tu primera vez utilizando este medio de transporte.
+  - Además, estás viajando con tu mascota y quieres asegurarte de cumplir con las normas del transporte de animales.
+  goals:
+  - Seleccionar mi idioma preferido como {{language_choice}} para comunicarme con el chatbot.
+  - Aceptar la política de privacidad para continuar con la asistencia con la opción {{privacy_policy_acceptance}}.
+  - Especificar mi grupo de edad seleccionando {{age_group}} para recibir recomendaciones de tarifas.
+  - Indicar la zona a la que me dirijo, por ejemplo, seleccionando {{destination_zone}} para obtener información sobre mi viaje.
+  - Consultar sobre las políticas de transporte de mascotas en el metro.
+  - age_group:
+      function: forward()
+      type: string
+      data:
+      - 15-25
+      - 26-64
+      - 4-6
+      - 7-14
+      - Menor de 4 años
+      - Más de 65 años
+      - Over 65
+      - Under 4
+      - Adulto joven
+  - destination_zone:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - No lo sé
+      - Unsure
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - Zona D
+  - language_choice:
+      function: forward()
+      type: string
+      data:
+      - Español
+      - Inglés
+      - Français
+  - privacy_policy_acceptance:
+      function: forward()
+      type: string
+      data:
+      - Aceptar
+      - 'No'
+      - No Aceptar
+      - Sí
+      - 'Yes'
+      - aceptar
+      - rechazar
+      - Consentimiento parcial
+chatbot:
+  is_starter: false
+  fallback: 'Este canal está destinado a cuestiones relacionadas con el servicio y atención al cliente de Metro de Madrid. Para otros temas, consulta nuestra web: 🌐 www.metromadrid.es. ¿Puedo ayudarte en algo más? 👇'
+  output:
+  - language_choice:
+      type: string
+      description: Idioma preferido del usuario
+  - privacy_policy_acceptance:
+      type: string
+      description: Aceptación de la política de privacidad
+  - age_group:
+      type: string
+      description: Grupo de edad del usuario
+  - destination_zone:
+      type: string
+      description: Zona de destino del viaje
+  - pet_transport_policy:
+      type: string
+      description: Políticas de transporte de mascotas
+  - user_type:
+      type: string
+      description: Tipo de usuario (visitante o habitual)
+  - query_type:
+      type: string
+      description: Tipo de consulta del usuario
+  - map_download_option:
+      type: string
+      description: Opción de descarga de mapas
+  - service_regulations_link:
+      type: string
+      description: Enlace a regulaciones del servicio
+conversation:
+  number: 19
+  max_cost: 2.85
+  goal_style:
+    steps: 28
+  interaction_style:
+  - single question

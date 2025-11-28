@@ -1,0 +1,463 @@
+[
+  {
+    "name": "present_service_capabilities",
+    "description": "Presents an overview of the chatbot's capabilities in automating customer service and sales, highlighting enhancements such as 24/7 assistance, optimized query processing, and personalized responses.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_summary",
+        "description": "Overview of how AI enhances customer service efficiency and personalization."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "prompt_for_initial_interaction_method",
+    "description": "The chatbot prompts the user to select their preferred method of interaction, offering options to ask questions, use buttons, or try ArthurGPT.",
+    "parameters": [
+      {
+        "name": "interaction_method",
+        "description": "Represents the method of interaction the user prefers (e.g., preguntas, botones, ArthurGPT).",
+        "options": [
+          "ArthurGPT",
+          "botones",
+          "preguntas"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "confirm_instagram_assistant_interest",
+    "description": "The chatbot confirms the availability and benefits of having an assistant for Instagram once the user expresses interest.",
+    "parameters": [
+      {
+        "name": "interest_in_instagram_assistant",
+        "description": "Indicates whether the user is interested in implementing an Instagram assistant for their business.",
+        "options": [
+          "Yes",
+          "No"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_automation_information",
+    "description": "The chatbot provides detailed information about how the Botslovers platform can automate customer service and sales processes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "automation_features_list",
+        "description": "Details of the automation features offered"
+      },
+      {
+        "category": "customer_support_options",
+        "description": "Information on additional support options like LiveChat."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_access_to_whatsapp_api",
+    "description": "The chatbot informs the user that details regarding accessing the WhatsApp API should be consulted elsewhere, while offering help with Botslovers and customer automation queries.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "suggest_most_consulted_options",
+    "description": "The chatbot informs the user that they can obtain what they are looking for by pressing a button to see the most consulted options.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "revisit_human_expert_dialogue",
+    "description": "The chatbot allows the user to request to talk with an expert again.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_demo_channel_selection",
+    "description": "The chatbot presents the user with available channels for the demo of bots, allowing them to select a specific platform.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "channel_options",
+        "description": "Options include 'Instagram,' 'WhatsApp,' 'Facebook,' and 'Web.'"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_ia_benefits_in_customer_service",
+    "description": "The chatbot outlines the benefits of using AI generativa in customer service, detailing how it can optimize customer interactions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "ia_benefits",
+        "description": "Benefits including 'Automatización de Conversaciones,' 'Respuestas Personalizadas,' 'Disponibilidad Multicanal,' 'Atención Proactiva,' and 'Ahorro en Costos y Tiempo.'"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_feedback_on_response",
+    "description": "The chatbot asks the user to confirm whether the provided information was helpful and prompts for feedback.",
+    "parameters": [
+      {
+        "name": "feedback",
+        "description": "indicates if the user found the information useful.",
+        "options": [
+          "👍",
+          "👎"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_additional_assistance",
+    "description": "Prompts the user to indicate if they need any further assistance or have additional questions.",
+    "parameters": [
+      {
+        "name": "further_assistance",
+        "description": "Indicates whether the user needs any further assistance or wants to conclude the conversation.",
+        "options": [
+          "No",
+          "No necesito nada más",
+          "Sí"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "inquire_agent_response_time",
+    "description": "Allows the user to inquire about the agent's response times and notification preferences.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_integration_instructions WhatsApp",
+    "description": "The chatbot provides instructions on how to integrate with the WhatsApp channel using Botslovers' platform.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "integration_information",
+        "description": "Details on integration process with WhatsApp and relevance of AI Agent for automation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integration",
+    "children": []
+  },
+  {
+    "name": "provide_fallback_support_contact",
+    "description": "The chatbot recommends contacting support for questions regarding the demo or integration that it cannot answer.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "support_contact_information",
+        "description": "Offers the email address for contacting Botslovers support for personalized assistance."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_facebook_channel_overview",
+    "description": "The chatbot mentions that it does not have specific details about the Facebook channel but indicates it allows for customer interaction automation.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "facebook_channel_overview",
+        "description": "General information about Facebook channel capabilities for customer service automation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "explain_analytics_features",
+    "description": "The chatbot explains how analytics work on the Botslovers platform, detailing the insights and reports available to optimize chatbot performance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "analytics_insights",
+        "description": "Overview of the insights offered by the analytics tool, including interaction quality, frequency analysis, and historical comparisons for improvement."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Analytics",
+    "children": []
+  },
+  {
+    "name": "prompt_for_most_consulted_topic",
+    "description": "Prompts the user to specify the topic of their inquiry from the most consulted options provided by the chatbot.",
+    "parameters": [
+      {
+        "name": "selected_topic",
+        "description": "The specific topic the user is interested in from the consultation options provided by the chatbot (e.g., implementación de chatbots, beneficios de automatizar la atención al cliente, cómo mejorar las ventas utilizando tecnología avanzada).",
+        "options": []
+      }
+    ],
+    "outputs": [
+      {
+        "category": "topic_options",
+        "description": "Options include topics related to services."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_resources_for_chatbot_implementation",
+    "description": "The chatbot provides the user with resources to learn more about implementing chatbots and related technologies.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "resource_link",
+        "description": "Link to relevant blog articles on chatbot implementation and automation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_sales_improvement_info",
+    "description": "The chatbot details how technology can improve sales through various automated solutions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sales_technology_features",
+        "description": "List of features that aid in improving sales through technology (e.g., automation of conversations, notifications, integrations, analytics)."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sales",
+    "children": []
+  },
+  {
+    "name": "provide_integration_information",
+    "description": "Offers information about available integration options and capabilities with various tools and platforms to enhance customer management.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "integration_capabilities",
+        "description": "A summary of integration capabilities with various platforms including Salesforce, Hubspot, Zendesk, Intercom, WhatsApp, Instagram, and Facebook, emphasizing flexibility in connecting with virtually any system."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integration",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_nlp_capabilities",
+    "description": "Explains the role of Natural Language Processing (NLP) in enabling human-like communication between machines and users. Highlights that Botslovers' bots utilize NLP technology to respond naturally and simply.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_interaction_analysis_tools_information",
+    "description": "Describes the analytical tools available in Botslovers for assessing the performance of virtual assistants. It includes details on analyzing interactions, comparing conversations, and identifying areas for improvement.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "category_name",
+        "description": "detailed_analysis_tools_info"
+      },
+      {
+        "category": "category_name",
+        "description": "improvement_identification_logic"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Analytics",
+    "children": []
+  },
+  {
+    "name": "suggest_help_options",
+    "description": "The chatbot suggests alternative ways to obtain information if the user is hesitant to share their email.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_detailed_feedback",
+    "description": "The chatbot asks the user to rephrase their feedback or provide additional details if the previous response was not helpful.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Feedback",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_customer_service_automation",
+    "description": "The chatbot provides information on how to automate customer service using AI technology, outlining its benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "benefits_of_ai_automation",
+        "description": "Lists advantages such as 24/7 availability, cost reduction, scalability, and personalization."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "present_common_queries_options",
+    "description": "The chatbot offers the user options to view commonly consulted topics or speak with an expert.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "options_list",
+        "description": "Available options include 'Otras consultas' and 'Hablar con un experto'."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_user_query",
+    "description": "Prompts the user to specify their question or choose from available options for assistance.",
+    "parameters": [
+      {
+        "name": "query_type",
+        "description": "specifies the type of query the user has regarding services.",
+        "options": [
+          "opciones de servicio",
+          "otra"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_data_on_response_personalization",
+    "description": "The chatbot explains how responses are personalized in customer service using generative AI by detailing information integration.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "personalization_process",
+        "description": "Describes methods for customization including database uploads and FAQ creation"
+      },
+      {
+        "category": "integration_channels",
+        "description": "Lists integration capabilities with platforms like WhatsApp, Instagram, Facebook, etc."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_whatsapp_integration_bots",
+    "description": "The chatbot provides details on how WhatsApp integration enhances automation for customer service and sales, including relevant capabilities and integration options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "automation_capabilities_summary",
+        "description": "Details on integrating WhatsApp for customer service and sales automation"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integration",
+    "children": []
+  },
+  {
+    "name": "provide_integration_support_information",
+    "description": "The chatbot provides users with contact information and guidance for reaching support regarding integration-related issues.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "support_email",
+        "description": "Provides the support email address for personalized assistance with integration issues, which is hola@botslovers.com."
+      },
+      {
+        "category": "integration_assistance",
+        "description": "Informs the user about the available help options for integration issues."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integration",
+    "children": []
+  },
+  {
+    "name": "confirm_email_confirmation",
+    "description": "Prompts the user to confirm their email address to proceed with connecting them to support or further assistance.",
+    "parameters": [
+      {
+        "name": "email_address",
+        "description": "The email address provided by the user for confirmation.",
+        "options": []
+      },
+      {
+        "name": "confirmation_choice",
+        "description": "Option for the user to confirm or deny the provided email address.",
+        "options": [
+          "No",
+          "Yes"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "transfer_conversation_to_assistance",
+    "description": "Transfers the user's conversation to a support agent or expert for further assistance.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  }
+]

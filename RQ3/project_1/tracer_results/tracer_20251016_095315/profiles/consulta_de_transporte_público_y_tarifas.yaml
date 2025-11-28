@@ -1,0 +1,141 @@
+test_name: Consulta de Transporte Público y Tarifas
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que necesita información sobre transporte público, incluyendo cómo llegar a su destino y las tarifas aplicables.
+  context:
+  - Estás planeando un viaje en transporte público para visitar a un amigo en otra parte de la ciudad y necesitas asegurarte de que llegarás a tiempo.
+  - Quieres conocer las tarifas para tu trayecto y también estar al tanto de las opciones de transporte disponibles, considerando tu grupo de edad.
+  - Además, deseas verificar el estado del metro para evitar cualquier inconveniente en tu ruta.
+  goals:
+  - Seleccionar el idioma preferido para comunicarme con el chatbot.
+  - Aceptar la política de privacidad para continuar recibiendo información sobre transporte público.
+  - Preguntar por las tarifas recomendadas para mi viaje desde la estación {{zona_salida}} hasta la estación {{zona_destino}}, especificando que estoy en el grupo de edad {{grupo_edad}}.
+  - Consultar los próximos trenes disponibles en la estación {{nombre_estacion}} y su dirección.
+  - Solicitar información sobre el estado actual de la red de metro y si hay incidentes que debo tener en cuenta.
+  - grupo_edad:
+      function: forward()
+      type: string
+      data:
+      - Entre 15 y 25 años
+      - Entre 26 y 64 años
+      - Entre 4 y 6 años
+      - Entre 7 y 14 años
+      - Menor de 4 años
+      - Más de 65 años
+      - Desde el nacimiento hasta 3 años
+  - nombre_estacion:
+      function: forward()
+      type: string
+      data:
+      - Estación Atocha
+      - Estación de Francia
+      - Estación Barranca del Río
+      - Estación Santa Justa
+      - Estación de Autobuses de Málaga
+  - zona_destino:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - No lo sé
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - unknown
+      - Zona D
+  - zona_salida:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - No lo sé
+      - Zona D
+chatbot:
+  is_starter: false
+  fallback: Este canal está destinado a cuestiones relacionadas con el servicio y atención al cliente de Metro de Madrid.\n\nPara otros asuntos, visita nuestra web:\n🌐  www.metromadrid.es\n\n¿Hay algo más en lo que pueda ayudarte? 👇
+  output:
+  - selected_language:
+      type: string
+      description: Idioma preferido del usuario
+  - privacy_policy_acceptance:
+      type: string
+      description: Aceptación de la política de privacidad
+  - fare_recommendation:
+      type: money
+      description: Tarifas recomendadas para el viaje
+  - next_train_info:
+      type: string
+      description: Información de próximo tren disponible
+  - metro_network_status:
+      type: string
+      description: Estado actual de la red de metro
+  - current_station:
+      type: string
+      description: Nombre de la estación actual del usuario
+  - destination_station:
+      type: string
+      description: Nombre de la estación de destino del usuario
+  - line_options:
+      type: string
+      description: Opciones de líneas de metro disponibles
+  - metro_incidents:
+      type: string
+      description: Detalles sobre incidentes en la red de metro
+  - alternative_services:
+      type: string
+      description: Servicios alternativos disponibles
+  - travel_duration:
+      type: float
+      description: Duración estimada del viaje
+  - route_map_link:
+      type: string
+      description: Enlace al mapa interactivo de la ruta
+  - transfers_information:
+      type: string
+      description: Información sobre transferencias requeridas
+  - upcoming_trains_info:
+      type: string
+      description: Información sobre trenes próximos a la estación
+  - selected_line:
+      type: string
+      description: Línea de metro seleccionada por el usuario
+  - station_address:
+      type: string
+      description: Dirección de la estación consultada
+  - incident_details:
+      type: string
+      description: Información sobre detalles de interrupciones
+  - service_status:
+      type: string
+      description: Estado de servicio en líneas afectadas
+conversation:
+  number: 19
+  max_cost: 2.85
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

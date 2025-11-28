@@ -1,0 +1,51 @@
+test_name: Soporte e Integración de Plataforma
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que necesita asistencia en la integración de plataformas y en la búsqueda de soporte.
+  context:
+  - Estás trabajando en la integración de varias plataformas digitales para mejorar la comunicación de tu equipo.
+  - A medida que surgen dudas técnicas sobre el acceso a APIs y soporte, necesitas obtener información clara y rápida para avanzar en el proyecto.
+  - La eficiencia en la resolución de problemas es clave para mantener el ritmo de trabajo y cumplir con los plazos establecidos.
+  goals:
+  - Consultar información sobre el acceso a la API de WhatsApp para la automatización.
+  - Preguntar sobre cómo contactar con soporte para resolver dudas sobre la integración.
+  - Solicitar información de contacto para soporte técnico en temas de integración, como el correo electrónico.
+  - Preguntar si el chatbot puede transferir la conversación a un agente de soporte para más asistencia.
+  - Indagar si el chatbot puede preguntar si se necesita asistencia adicional después de resolver una consulta.
+chatbot:
+  is_starter: false
+  fallback: Parece que has escrito un texto aleatorio, ¿hay algo específico en lo que te pueda ayudar? Si necesitas información sobre la plataforma de Botslovers o temas relacionados con inteligencia artificial generativa, ¡estaré encantado de asistirte!
+  output:
+  - api_access_info:
+      type: string
+      description: Información sobre el acceso a la API de WhatsApp
+  - contact_support_info:
+      type: string
+      description: Información para contactar soporte
+  - email_contact_support:
+      type: string
+      description: Correo electrónico de soporte técnico
+  - transfer_to_agent:
+      type: string
+      description: Confirmación de transferencia a un agente
+  - additional_assistance_query:
+      type: string
+      description: Pregunta sobre asistencia adicional después
+  - integration_support_info:
+      type: string
+      description: Orientación sobre soporte de integración
+  - response_to_demo_questions:
+      type: string
+      description: Respuesta sobre preguntas de demostración
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 24
+  interaction_style:
+  - single question

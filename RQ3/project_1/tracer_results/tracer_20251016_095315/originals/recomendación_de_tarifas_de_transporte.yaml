@@ -1,0 +1,167 @@
+test_name: Recomendación de Tarifas de Transporte
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca información específica sobre las tarifas de transporte público y los tipos de tarjetas disponibles.
+  context:
+  - 'personality: personalities/impatient-user'
+  - Necesitas información sobre las tarifas de transporte público ya que planeas realizar un viaje a diferentes zonas de la ciudad.
+  - Como visitante, quieres asegurarte de conocer las mejores opciones y tipos de tarjetas disponibles para tu trayecto.
+  - Además, te interesa saber más sobre el billete sencillo para facilitar tu desplazamiento durante la estadía.
+  goals:
+  - Preguntar acerca de las tarifas de transporte recomendadas para un viaje y proporcionar mi grupo de edad como {{grupo_de_edad}}.
+  - Indicar la zona de inicio para mi trayecto como {{zona_inicio}} y seleccionar la zona de destino como {{zona_destino}}.
+  - Confirmar si soy visitante o usuario habitual y seleccionar la opción {{tipo_usuario}} para obtener la mejor recomendación de tarifas.
+  - Preguntar sobre las diferentes opciones de tarjetas de transporte disponibles y seleccionar la opción {{tipo_tarjeta}} para más información.
+  - Solicitar detalles sobre el billete sencillo, incluyendo opciones y requisitos, tras seleccionar la tarifa recomendada.
+  - grupo_de_edad:
+      function: forward()
+      type: string
+      data:
+      - Entre 15 y 25 años
+      - Entre 26 y 64 años
+      - Entre 4 y 6 años
+      - Entre 7 y 14 años
+      - Menor de 4 años
+      - Más de 65 años
+      - Entre 0 y 3 años
+  - tipo_tarjeta:
+      function: forward()
+      type: string
+      data:
+      - Tarjeta Azul
+      - Tarjeta Infantil
+      - Tarjeta Multi
+      - Tarjeta Personal
+      - Tarjeta Familiar
+  - tipo_usuario:
+      function: forward()
+      type: string
+      data:
+      - Estoy de visita
+      - Usuario habitual
+      - visitor
+      - Usuario ocasional
+  - zona_destino:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - No lo sé
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - unknown
+      - Zona D
+  - zona_inicio:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - No lo sé
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - Zona D
+chatbot:
+  is_starter: false
+  fallback: Este canal está destinado a cuestiones relacionadas con el servicio y atención al cliente de Metro de Madrid.\n\nPara otros asuntos, visita nuestra web:\n🌐  www.metromadrid.es\n\n¿Hay algo más en lo que pueda ayudarte? 👇
+  output:
+  - grupo_de_edad:
+      type: string
+      description: Grupo de edad del usuario
+  - zona_inicio:
+      type: string
+      description: Zona de inicio del trayecto
+  - zona_destino:
+      type: string
+      description: Zona de destino del trayecto
+  - tipo_usuario:
+      type: string
+      description: Tipo de usuario del servicio
+  - tipo_tarjeta:
+      type: string
+      description: Tipo de tarjeta de transporte seleccionada
+  - tarifa_recomendada:
+      type: money
+      description: Tarifa recomendada para el viaje
+  - opciones_tarifa:
+      type: string
+      description: Opciones de tarifas disponibles
+  - detalles_billete_sencillo:
+      type: string
+      description: Información sobre el billete sencillo
+  - opciones_tarjetas_transporte:
+      type: string
+      description: Tipos de tarjetas de transporte disponibles
+  - precio_billete_sencillo:
+      type: money
+      description: Precio del billete sencillo
+  - precio_tarjeta_multi:
+      type: money
+      description: Precio de la tarjeta Multi
+  - precio_tarjeta_azul:
+      type: money
+      description: Precio de la tarjeta Azul
+  - precio_tarjeta_infantil:
+      type: money
+      description: Precio de la tarjeta Infantil
+  - detalles_tarjeta_turistica:
+      type: string
+      description: Información sobre el billete turístico
+  - zonas_disponibles:
+      type: string
+      description: Zonas de tarifas disponibles para selección
+  - costo_10_viajes:
+      type: money
+      description: Costo del billete de 10 viajes
+  - validez_billete_turistico:
+      type: string
+      description: Periodos de validez del billete turístico
+  - usuario_habitual:
+      type: string
+      description: Confirmación de usuario habitual
+  - consulta_adicional:
+      type: string
+      description: Pregunta adicional sobre tarifas o opciones
+  - confirmacion_zona_inicio:
+      type: string
+      description: Confirmación de zona de inicio seleccionada
+  - confirmacion_zona_destino:
+      type: string
+      description: Confirmación de zona de destino seleccionada
+conversation:
+  number: 19
+  max_cost: 2.85
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

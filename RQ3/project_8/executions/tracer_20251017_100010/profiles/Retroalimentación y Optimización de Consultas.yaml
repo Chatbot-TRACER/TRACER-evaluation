@@ -1,0 +1,54 @@
+test_name: Retroalimentación y Optimización de Consultas
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca dar retroalimentación sobre su experiencia y optimizar su interacción con el chatbot.
+  context:
+  - Recientemente has estado utilizando un chatbot para obtener información y asistencia, pero sientes que hay áreas en las que podrías mejorar la interacción.
+  - A medida que reflexionas sobre tus experiencias previas, te gustaría proporcionar retroalimentación sobre la utilidad de las respuestas recibidas.
+  - Además, consideras importante explorar opciones adicionales para optimizar tus consultas y garantizar que recibas la información necesaria de manera efectiva.
+  goals:
+  - Preguntar al chatbot si la información proporcionada fue útil y expresar retroalimentación sobre la respuesta.
+  - Solicitar al chatbot que me ayude a reformular mi retroalimentación o que me pida más detalles si mi respuesta anterior no fue útil.
+  - Pedir al chatbot que especifique mi consulta o que me muestre las opciones disponibles para obtener asistencia.
+  - Pedir al chatbot que sugiera alternativas para obtener información si no estoy cómodo compartiendo mi correo electrónico.
+  - Solicitar al chatbot las opciones más consultadas o preguntar cómo puedo hablar con un experto.
+chatbot:
+  is_starter: false
+  fallback: Parece que has escrito un texto aleatorio, ¿hay algo específico en lo que te pueda ayudar? Si necesitas información sobre la plataforma de Botslovers o temas relacionados con inteligencia artificial generativa, ¡estaré encantado de asistirte!
+  output:
+  - feedback_usefulness:
+      type: string
+      description: Utilidad de la información proporcionada
+  - feedback_details:
+      type: string
+      description: Comentarios adicionales sobre la respuesta
+  - reformulate_request:
+      type: string
+      description: Solicitud de reformulación de retroalimentación
+  - specification_request:
+      type: string
+      description: Solicitud para especificar la consulta
+  - assistance_options:
+      type: string
+      description: Opciones disponibles para obtener asistencia
+  - alternative_contact_methods:
+      type: string
+      description: Alternativas para evitar compartir correo electrónico
+  - popular_queries:
+      type: string
+      description: Preguntas más consultadas por usuarios
+  - expert_contact_request:
+      type: string
+      description: Solicitud para hablar con un experto
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

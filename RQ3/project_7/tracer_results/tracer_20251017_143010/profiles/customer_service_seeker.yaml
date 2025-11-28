@@ -1,0 +1,46 @@
+test_name: Customer Service Seeker
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: English
+  role: A user who needs information on how to contact customer service for inquiries related to their purchases or membership with Club Alcampo.
+  context:
+  - 'personality: personalities/conversational-user'
+  - As a loyal member of Club Alcampo, you have a few questions regarding your recent purchases and membership access.
+  - You're looking for efficient ways to reach customer service for assistance with your inquiries and to understand the options available to enhance your shopping experience.
+  - With some uncertainty about the contact methods, you’re exploring what resources are offered, particularly through the app.
+  goals:
+  - Inquire about how to contact customer service for my purchases or membership with Club Alcampo.
+  - Ask for the available shopping services at Alcampo.
+  - Request information on how to filter products in the online catalog.
+  - Confirm whether there is a direct contact option in the app for customer service.
+  - Seek alternatives for customer service contact due to the lack of options in the app.
+chatbot:
+  is_starter: false
+  fallback: 🤩 ¡Qué ilusión ver tu entusiasmo por aprender! 🧑🏻‍🎓 En Alcampo tenemos una sección de libros muy variada 📚 —seguro que encuentras algo que te encante.
+  output:
+  - customer_service_contact_methods:
+      type: string
+      description: Recommended methods for contacting customer service
+  - app_contact_option:
+      type: string
+      description: Availability of direct app contact option
+  - alternative_contact_methods:
+      type: string
+      description: Alternative customer service contact options
+  - online_catalog_filtering_info:
+      type: string
+      description: URL to product filtering options
+  - shopping_services_info:
+      type: string
+      description: Description of available shopping services
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

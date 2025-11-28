@@ -1,0 +1,235 @@
+[
+  {
+    "name": "present_moodle_access_information",
+    "description": "Provides information about the requirements for accessing Moodle and the types of environments available.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "moodle_access_requirements",
+        "description": "Information regarding the necessity of having a UAM institutional account (ID UAM)."
+      },
+      {
+        "category": "moodle_environment_types",
+        "description": "Types of Moodle environments including Grado, Postgrado, and Formación."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_virtual_platform_contact_info",
+    "description": "Provides the contact information for the Office of Student Services regarding inquiries about virtual platforms.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "email_contact",
+        "description": "Email address for contact."
+      },
+      {
+        "category": "phone_contact",
+        "description": "Phone number for contact."
+      },
+      {
+        "category": "physical_location",
+        "description": "Address of the Office of Student Services."
+      },
+      {
+        "category": "service_hours",
+        "description": "Hours of operation for the service."
+      },
+      {
+        "category": "faqs_link",
+        "description": "Link to frequently asked questions regarding the service."
+      },
+      {
+        "category": "services_catalog_link",
+        "description": "Link to the catalog of services offered."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_password_change",
+    "description": "Guides the user on the procedure to change their ID-UAM account password when they have forgotten their credentials, providing necessary steps according to the user's status.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "prompt_for_reformulated_question",
+    "description": "The chatbot asks the user to reformulate their question in other words or suggests consulting a catalog of services.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "present_identification_retrieval_options",
+    "description": "Informs the user about methods to retrieve their ID-UAM identifier, including searching by DNI or contacting the support center.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "retrieval_methods",
+        "description": "Options for recovering ID-UAM identifier include searching by DNI and contacting CAU (support)."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "present_id_uam_services_overview",
+    "description": "Provides an overview of the services integrated into the ID-UAM system, including account creation steps for different user types and details on obtaining accounts.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_account_information",
+        "description": "Information on services available for obtaining accounts, including steps for enrollment for new and existing students, staff, as well as non-UAM researchers, guests, and collaborators."
+      },
+      {
+        "category": "existing_student_information",
+        "description": "Information and details specifically for students who have already enrolled."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "prompt_for_password_setup",
+    "description": "Instructs users on how to establish a password for their account for the first time, including steps for obtaining a user identifier and activation code.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "account_creation_steps",
+        "description": "Steps for obtaining an ID-UAM account, including information about welcome messages and activation codes for creating a password."
+      },
+      {
+        "category": "user_support_contact_info",
+        "description": "Contact details for user support (CAU)."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "remind_password_change_frequency",
+    "description": "Reminds the user to change their password periodically to avoid account blocking.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_contact_information_for_support",
+    "description": "Provides users with comprehensive contact information for user support, including email, phone, and physical location, along with operational hours and relevant links for further assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_information",
+        "description": "Email: cau@uam.es; Phone: 914974029; Physical address: Escuela Politécnica Superior, Edificio B, Calle Francisco Tomás y Valiente n° 11, Campus Cantoblanco, 28049 Madrid."
+      },
+      {
+        "category": "support_hours",
+        "description": "Support hours are Monday to Friday, 9:00h to 17:30h (except holidays), with reduced hours during UAM labor suspension periods: Monday to Friday, 9:00h to 14:00h."
+      },
+      {
+        "category": "faq_link",
+        "description": "Link to the frequently asked questions."
+      },
+      {
+        "category": "services_catalog_link",
+        "description": "Link to the services catalog."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "present_service_type_options",
+    "description": "Provides information about the services integrated into the ID-UAM system, including available options for account creation and other services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_services",
+        "description": "Provides a list of services including account creation for students, account setup for new faculty and students, and integrated services in ID-UAM."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "prompt_for_service_ticket_submission",
+    "description": "The chatbot advises the user to open a ticket at the CAU for queries related to IT services, detailing how to do so.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "repeat_contact_information_for_cau",
+    "description": "The chatbot repeats the detailed contact information for the CAU upon user request regarding service catalogs.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_methods",
+        "description": "Email, phone, and physical address of CAU"
+      },
+      {
+        "category": "operational_hours",
+        "description": "Detailed hours of operation for CAU services"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "list_available_services",
+    "description": "Lists the main types of services offered under ID-UAM for students and staff.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_services_list",
+        "description": "Services include account creation for first enrollment, accounts for students who have formalized their enrollment, and other account types for non-UAM researchers and collaborators."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_first_time_enrollment_account_details",
+    "description": "Outlines details regarding obtaining a student account for first-time enrollment, including the need for a NIA and steps to generate a password or contact support if issues arise.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_password_reset_instructions",
+    "description": "Provides detailed instructions for resetting the ID-UAM account password, including obtaining and using an activation code.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "account_instructions",
+        "description": "Instructions for obtaining account details for first-time registration and guidance for existing students, personnel, and other account inquiries along with contact details for assistance."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  }
+]

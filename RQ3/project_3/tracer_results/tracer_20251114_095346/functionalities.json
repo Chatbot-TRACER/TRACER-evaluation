@@ -1,0 +1,775 @@
+[
+  {
+    "name": "provide_health_style_recommendations",
+    "description": "Provides initial recommendations for starting a healthier lifestyle, including dietary and physical activity suggestions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "healthy_lifestyle_tips",
+        "description": "Tips on balanced diet, daily breakfast, physical activity, and hydration"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health & Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_squat_information",
+    "description": "Gives detailed information on squats, including technique and benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "squat_benefits",
+        "description": "Benefits of performing squats"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_jump_squat_information",
+    "description": "Shares details about jump squats, including technique and benefits.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_meditation_techniques",
+    "description": "Recommends meditation techniques suitable for beginners.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "meditation_techniques",
+        "description": "Mindfulness meditation"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_physical_activity_information",
+    "description": "Offers detailed information about various types of physical activities and exercises, along with their associated health benefits, to enhance physical fitness.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "activity_types",
+        "description": "Lists types of physical activities, including aerobic exercises (e.g., walking, running, swimming, cycling), muscle strengthening (e.g., weights, bodyweight exercises), flexibility exercises (e.g., stretching, yoga), balance, coordination, and recreational activities (e.g., dancing, sports)."
+      },
+      {
+        "category": "health_benefits",
+        "description": "Highlights and details the general health benefits of regular physical activity for health and quality of life."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "recommend_strength_training_exercises",
+    "description": "Suggests a list of specific exercises for strengthening muscles along with their basic techniques and effective activities.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "strength_exercise_examples",
+        "description": "Lists recommended exercises for muscular strengthening, including Levantamiento de pesas, Flexiones, Sentadillas, Abdominales, Ejercicios con bandas elásticas, push-ups, squats, planks, and calf raises."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_strength_training_recommendations",
+    "description": "Provides recommendations for starting a muscle strengthening program, including safety tips, scheduling advice, and key strengthening recommendations.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "safety_tips",
+        "description": "Recommendations on consulting a medical professional, goal setting, and listening to one's body."
+      },
+      {
+        "category": "scheduling_tips",
+        "description": "Advice on training frequency and session duration."
+      },
+      {
+        "category": "strength_training_tips",
+        "description": "Key recommendations for muscle strengthening practice."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "discuss_supplement_considerations",
+    "description": "Provides information on supplements that may be beneficial for strength training.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "supplement_options",
+        "description": "Information on protein powders, creatine, and omega-3s, along with advice to consult a professional."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "identify_exercise_discontinuation_symptoms",
+    "description": "Lists symptoms that indicate when to stop exercising.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "symptom_guidance",
+        "description": "Information on symptoms requiring immediate cessation of exercise."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Safety",
+    "children": []
+  },
+  {
+    "name": "provide_push_up_variations_info",
+    "description": "Provides a list of different push-up variations and detailed information on the push-up exercise, including technique.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "push_up_variations",
+        "description": "Descriptions and lists of various push-up variations, including standard, knee push-ups, inclined push-ups, and clapping push-ups."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_exercise_routine",
+    "description": "Suggests a sample workout routine that includes push-ups and other exercises for full-body strengthening.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "exercise_routine",
+        "description": "Example of a workout routine that includes exercises and repetitions"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Planning",
+    "children": []
+  },
+  {
+    "name": "provide_beginners_routine_adjustments",
+    "description": "Offers tips to modify an exercise routine for beginners to ensure safety and effectiveness.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "beginner_routine_tips",
+        "description": "Recommendations for adapting routines to suit beginner fitness levels"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Planning",
+    "children": []
+  },
+  {
+    "name": "provide_warm_up_exercises",
+    "description": "Lists exercises recommended for warming up before a workout routine.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "warm_up_exercises_list",
+        "description": "A collection of effective warm-up exercises to prepare the body"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Preparation",
+    "children": []
+  },
+  {
+    "name": "provide_chest_and_shoulder_stretches",
+    "description": "Provides specific stretches aimed at the chest and shoulder muscles.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "chest_and_shoulder_stretch_examples",
+        "description": "Descriptions of targeted stretches for the chest and shoulder areas"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Preparation",
+    "children": []
+  },
+  {
+    "name": "provide_wall_chest_stretch_instructions",
+    "description": "Offers step-by-step instructions for performing the wall chest stretch correctly.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "wall_chest_stretch_technique",
+        "description": "Detailed guidance on executing the wall chest stretch"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Preparation",
+    "children": []
+  },
+  {
+    "name": "provide_injury_prevention_tips_for_stretching",
+    "description": "Gives recommendations for preventing injuries during stretching exercises.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "injury_prevention_tips",
+        "description": "Guidelines to follow while stretching to avoid injuries"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Safety",
+    "children": []
+  },
+  {
+    "name": "provide_plank_technique_information",
+    "description": "Offers instructions on how to correctly perform a plank exercise.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "technique_steps",
+        "description": "Steps to perform the plank exercise."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_plank_info",
+    "description": "Provides information on plank exercises, including key benefits and techniques for effective performance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "plank_benefits",
+        "description": "Key benefits of doing planks regularly, including the advantages of performing planks."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_inclined_push_up_info",
+    "description": "Offers detailed information on inclined push-ups, including correct technique and key benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "inclined_push_ups_info",
+        "description": "Steps to perform inclined push-ups along with their key benefits."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "advise_on_exercise_duration",
+    "description": "Offers recommendations on how long to spend on each exercise during a training routine.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "exercise_duration_guidelines",
+        "description": "Recommended time durations for different types of exercises."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Planning",
+    "children": []
+  },
+  {
+    "name": "provide_post_workout_stretches",
+    "description": "Suggests a routine of stretches to perform after a workout for recovery and flexibility.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "post_exercise_stretches",
+        "description": "Examples of effective stretches for post-training recovery and muscle recovery."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Recovery",
+    "children": []
+  },
+  {
+    "name": "advise_on_stretching_repetitions",
+    "description": "Offers advice on the recommended number of repetitions for each stretching exercise.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "stretching_repetition_guidelines",
+        "description": "Recommendations for stretching repetition and duration."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Preparation",
+    "children": []
+  },
+  {
+    "name": "list_squat_variations",
+    "description": "Lists and explains different variations of squats that the user can incorporate into their workout routine.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "squat_variations",
+        "description": "A variety of squat types including basic squats, sumo squats, jump squats, front squats, Bulgarian squats, and weighted squats."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_deadlift_information",
+    "description": "Provides details about the deadlift exercise, including its benefits and proper execution technique.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "deadlift_benefits",
+        "description": "Overview of how it strengthens various muscle groups and improves posture"
+      },
+      {
+        "category": "deadlift_technique_steps",
+        "description": "Steps for performing the deadlift correctly"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_bulgarian_squat_information",
+    "description": "Provides information on Bulgarian squats, including technique details and benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "exercise_details",
+        "description": "Steps, precautions, and advantages of performing Bulgarian squats for fitness."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "suggest_complementary_exercises",
+    "description": "Recommends a list of exercises that can be performed alongside a specified primary exercise for a more complete workout.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "complementary_exercises",
+        "description": "A list of suggested exercises to combine with jump squats, including options such as deadlifts, leg press, calf raises, planks, and lunges."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Planning",
+    "children": []
+  },
+  {
+    "name": "provide_motivation_tips",
+    "description": "Shares tips to help users stay motivated in their exercise and healthy lifestyle routines.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "motivation_tips",
+        "description": "A list of strategies for maintaining motivation in fitness, including setting realistic goals."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Motivation",
+    "children": []
+  },
+  {
+    "name": "suggest_diverse_activity_types",
+    "description": "Lists various activities that can be incorporated to vary an exercise routine.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "activity_types_list",
+        "description": "List of different activities to include for variety in exercise routines"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Planning",
+    "children": []
+  },
+  {
+    "name": "provide_nutrition_guidelines_for_exercise",
+    "description": "Shares advice on proper nutrition to support exercise programs.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "nutrition_guidelines",
+        "description": "Key tips for maintaining proper nutrition while exercising"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "recommend_pre_exercise_foods",
+    "description": "Suggests foods that are good to consume before exercising.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pre_exercise_foods_list",
+        "description": "List of recommended foods for pre-workout nutrition"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "suggest_post_exercise_snacks",
+    "description": "Provides examples of healthy snacks that can be consumed after exercising.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "post_exercise_snacks_list",
+        "description": "List of suggested snacks to eat post-workout"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "recommend_post_exercise_hydration_options",
+    "description": "Suggests beverages that are suitable for hydration after exercise.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hydration_recommendations",
+        "description": "List of drinks for proper hydration after workouts"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_plank_variations",
+    "description": "Lists variations of the plank exercise that can be added to the routine, including different types such as side plank, shoulder tap plank, and elevated leg plank.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "plank_variations",
+        "description": "A comprehensive list of plank variations including frontal plank, lateral plank, elevated leg plank, shoulder tap plank, knee to chest plank, side plank, plank with leg lift, rotational plank, knee on floor plank, swiss ball plank, movement plank, and mountain climber plank."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_lunch_recipe_options",
+    "description": "Suggests a variety of healthy lunch recipe options based on user requests, including additional ideas if needed.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "lunch_recipe_options",
+        "description": "Suggestions for a variety of lunch recipes including Ensalada de arroz, dátiles y gambas, Fideuà de marisco, Empedrado de judías blancas con atún, pimientos y anchoas, Puré de guisantes a la menta, Hamburguesas de calabacín, Pastel de salmón, Zucchini and potato cream, Barqueta de patata con atún y canónigos, Hummus de alubias blancas, Crema fría de zanahoria y mango, Ensalada malagueña, Brocheta de pollo y verduras, Polos de melocotón con chía, Mejillones en vinagreta, and Ensalada de tomates, queso y nueces."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_detailed_recipe",
+    "description": "Supplies detailed instructions and ingredients for a specific recipe requested by the user.",
+    "parameters": [
+      {
+        "name": "recipe_name",
+        "description": "The name of the recipe the user wants more details about.",
+        "options": []
+      }
+    ],
+    "outputs": [
+      {
+        "category": "recipe_details",
+        "description": "Comprehensive instructions and ingredients for the requested recipe."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_quinoa_cooking_instructions",
+    "description": "Gives step-by-step instructions for cooking quinoa, including the necessary ingredients and cooking process.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "quinoa_cooking_guide",
+        "description": "Instructions for how to properly cook quinoa."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_quinoa_salad_recipe",
+    "description": "Shares a detailed recipe for preparing a quinoa salad, including ingredients and preparation steps.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "quinoa_recipe_details",
+        "description": "Ingredients and preparation steps for a quinoa salad recipe."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_chickpea_salad_recipe",
+    "description": "Presents a recipe for a chickpea salad, including all required ingredients and preparation steps.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "chickpea_salad_details",
+        "description": "Ingredients and instructions for making a chickpea salad."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_fruit_salad_recipe",
+    "description": "Delivers a refreshing fruit salad recipe, outlining the ingredients and steps for preparation.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fruit_salad_details",
+        "description": "Ingredients and preparation instructions for a fruit salad."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_fruit_smoothie_recipe",
+    "description": "Supplies a recipe for a fruit smoothie, including instructions for blending ingredients into a tasty beverage.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fruit_smoothie_recipe_details",
+        "description": "Ingredients and instructions for preparing a fruit smoothie."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_stress_management_techniques",
+    "description": "Suggests various strategies and techniques for managing stress, including relaxation methods, to help reduce anxiety in daily life.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "stress_management_techniques",
+        "description": "A comprehensive list of techniques for managing stress, including relaxation practices such as yoga, Tai Chi, deep breathing, engaging in physical activity, listening to relaxing music, establishing routines, taking breaks, and practicing meditation or mindfulness."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_yoga_starting_tips",
+    "description": "Offers advice on how to start practicing yoga.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "yoga_starting_tips",
+        "description": "Advice on choosing a style, finding a class, starting slowly, and practicing regularly."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "recommend_yoga_styles_for_beginners",
+    "description": "Suggests yoga styles that are suitable for beginners.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "beginner_yoga_styles",
+        "description": "Recommendations for Hatha Yoga, Vinyasa Yoga, Yin Yoga, and Restorative Yoga."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "recommend_yoga_resources",
+    "description": "Provides online resources for learning yoga.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "online_yoga_resources",
+        "description": "Recommendations such as YouTube channels, yoga apps, and online course platforms."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_health_habits_recommendations",
+    "description": "Offers various recommendations on healthy habits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_habits_list",
+        "description": "Suggestions include maintaining a balanced diet, getting regular exercise, ensuring quality sleep, and practicing stress management techniques."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health & Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_meditation_starting_steps",
+    "description": "Gives steps to start practicing meditation.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "meditation_starting_steps_list",
+        "description": "Steps include finding a quiet space, setting a routine, adopting a comfortable posture, focusing on breathing, and managing distractions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_specific_meditation_techniques",
+    "description": "Lists specific meditation techniques that can be practiced.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "meditation_techniques_list",
+        "description": "Techniques include mindfulness meditation, guided meditation, loving-kindness meditation, and transcendental meditation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_guided_meditation_resources",
+    "description": "Offers resources for finding guided meditation recordings.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "guided_meditation_resources_list",
+        "description": "Resources include mobile apps like Headspace and Calm, YouTube channels, streaming service playlists, and mindfulness websites."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_sleep_quality_tips",
+    "description": "Offers recommendations and tips to improve the quality of sleep.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sleep_quality_tips",
+        "description": "Recommendations for improving sleep quality, including establishing a regular sleep schedule, creating a conducive environment, limiting electronic use before bed, and engaging in relaxing activities before sleep."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health & Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_relaxing_activities_before_sleep",
+    "description": "Suggests relaxing activities to perform before sleeping.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "relaxing_activities_list",
+        "description": "Suggestions include reading, meditation, listening to soft music, taking a warm bath, doing gentle stretches, and journaling."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "provide_journaling_tips",
+    "description": "Offers tips for starting and maintaining a journal.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "journaling_tips_list",
+        "description": "Tips include choosing a format, establishing a writing routine, writing freely without judgment, detailing thoughts and emotions, and being consistent in writing."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Mental Wellness",
+    "children": []
+  },
+  {
+    "name": "list_flexibility_exercises",
+    "description": "Provides a list of effective flexibility exercises to improve mobility.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "flexibility_exercises",
+        "description": "A list of exercises including neck stretches, shoulder stretches, back stretches, and yoga, specifically aimed at enhancing flexibility."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "recommend_balance_exercises",
+    "description": "Recommends a variety of exercises aimed at improving balance and preventing falls, suitable for various user groups.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "balance_exercise_examples",
+        "description": "Lists exercises designed to help prevent falls and improve balance, including activities such as standing on one leg, walking in a straight line, Tai Chi, Yoga, squats, heel raises, and dancing."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Information",
+    "children": []
+  },
+  {
+    "name": "provide_beginner_activity_recommendations",
+    "description": "Offers a variety of beginner-friendly activities and exercises, including low-intensity options, to support users starting their exercise journey.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "beginner_exercise_guidance",
+        "description": "Tips and recommended exercises for beginners, including suggestions for low-intensity activities such as walking, yoga, and swimming, along with advice on establishing a regular exercise schedule."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Exercise Planning",
+    "children": []
+  }
+]

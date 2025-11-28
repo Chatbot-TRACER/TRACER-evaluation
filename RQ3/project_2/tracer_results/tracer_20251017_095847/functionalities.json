@@ -1,0 +1,301 @@
+[
+  {
+    "name": "provide_faq_link",
+    "description": "The chatbot directs the user to the frequently asked questions section regarding the CAU.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "FAQ_resource",
+        "description": "Link or reference to the frequently asked questions for user assistance"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_contact_information",
+    "description": "Provides users with various methods to contact the Centro de Atención a Usuarios (CAU) for assistance, including email, phone number, physical address, and operational hours.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_info",
+        "description": "Contact details for CAU support, including email, phone number, and physical address."
+      },
+      {
+        "category": "operational_hours",
+        "description": "Standard operational hours for assistance, which are Monday to Friday, excluding holidays, from 9:00h to 17:30h, and details on operational hours during suspension."
+      },
+      {
+        "category": "faqs_link",
+        "description": "Link to frequently asked questions."
+      },
+      {
+        "category": "services_catalog_link",
+        "description": "Link to the catalog of services offered."
+      },
+      {
+        "category": "contact_methods",
+        "description": "Methods to contact CAU via email, phone, or in person."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "provide_service_catalogue_reference",
+    "description": "Directs the user to the service catalogue offered by the Centre for User Attention (CAU) and provides contact information and service hours for further inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_methods",
+        "description": "Various ways to contact the CAU, including email, phone, and in-person."
+      },
+      {
+        "category": "service_hours",
+        "description": "Information about the operational hours for contacting the CAU."
+      },
+      {
+        "category": "service_catalogue",
+        "description": "Reference to the catalogue of services offered by the CAU."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  },
+  {
+    "name": "provide_initial_information",
+    "description": "The chatbot provides initial instructions on how to obtain help with UAM virtual platforms and Moodle functionalities.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_password_change",
+    "description": "Guides the user through the steps to change their password if they have forgotten it, including obtaining any necessary codes.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_service_information",
+    "description": "The chatbot provides information about obtaining accounts for external users and integrated services in the ID-UAM system.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_services_list",
+        "description": "Obtaining a student account for first enrollment"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  },
+  {
+    "name": "remind_password_change_frequency",
+    "description": "The chatbot reminds the user to change their password periodically to avoid account locking.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_nia_obtainment",
+    "description": "The chatbot details the process of obtaining an academic identification number (NIA) for new students.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "nia_obtainment_info",
+        "description": "Information on obtaining a NIA and related account access steps."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_welcome_day_info",
+    "description": "The chatbot provides information about the Welcome Day event and its relevance for new students.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "welcome_day_link",
+        "description": "URL with details about the Welcome Day."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_future_students_info",
+    "description": "The chatbot presents information aimed at future students, including available courses and degrees.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "future_students_link",
+        "description": "URL with resources for prospective students."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_admission_to_grados_info",
+    "description": "The chatbot provides information related to the admission process for degrees (grados) at UAM.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "admission_to_grados_link",
+        "description": "URL with details about admission processes."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_waitlist_info",
+    "description": "The chatbot provides information about the waitlist processes for degree admissions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "waitlist_info_link",
+        "description": "URL with details regarding admission waitlists."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_service_detail_type",
+    "description": "Prompts the user to specify the type of detail they would like about integrated services, including options for features or pricing.",
+    "parameters": [
+      {
+        "name": "detail_requested",
+        "description": "Represents whether the user wants to know about features or pricing of the services.",
+        "options": [
+          "features",
+          "pricing"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  },
+  {
+    "name": "provide_moodle_access_information",
+    "description": "Explains the requirements for accessing Moodle, including the need for an institutional account and outlines the available environments.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "access_requirements",
+        "description": "Information regarding the necessity of holding an institutional account to access Moodle."
+      },
+      {
+        "category": "available_environments",
+        "description": "Details on the two Moodle environments: Grado/Postgrado and Formación."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "suggest_contact_for_support",
+    "description": "Suggests the user contact the Oficina de Atención al Estudiante for issues related to virtual platforms at UAM.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "list_available_buttons",
+    "description": "Presents a list of buttons available for the user to click on for further assistance related to Moodle access.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "button_texts",
+        "description": "Descriptions of the available buttons related to Moodle access issues."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_user_id_retrieval_support",
+    "description": "Guides the user on how to retrieve their student ID (ID-UAM) if forgotten, including options for further assistance through the CAU.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_information",
+        "description": "Email and options for CAU assistance, including retrieving an ID."
+      },
+      {
+        "category": "activation_code_retrieval",
+        "description": "Instructions for obtaining an activation code."
+      },
+      {
+        "category": "password_management",
+        "description": "Steps for changing the password and suggestions for periodic password changes."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_password_setup_information",
+    "description": "Provides information and steps for setting up a password for the first time after user registration, including instructions for obtaining an activation code and establishing the password.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "password_setup_link",
+        "description": "URL for password establishment steps."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_activation_code_instructions",
+    "description": "Instructs the user on how to obtain or generate an activation code for changing their password.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "present_available_service_options",
+    "description": "Offers links to resources and services related to ID-UAM, including obtaining identifiers, account setup, and password change procedures.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_service_options",
+        "description": "Links to services include identifier retrieval, integrated services, steps for obtaining student and staff accounts, service information, and password change procedures."
+      },
+      {
+        "category": "support_contact",
+        "description": "Support contact details for issues related to account setup."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Information",
+    "children": []
+  }
+]

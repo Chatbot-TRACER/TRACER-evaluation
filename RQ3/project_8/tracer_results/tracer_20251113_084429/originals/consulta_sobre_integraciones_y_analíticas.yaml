@@ -1,0 +1,60 @@
+test_name: Consulta sobre Integraciones y Analíticas
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca información sobre las integraciones disponibles en la plataforma Botslovers y las características analíticas.
+  context:
+  - Estás explorando las funcionalidades de la plataforma Botslovers para mejorar la atención al cliente en tu empresa.
+  - Tu objetivo es identificar las integraciones y herramientas analíticas que pueden optimizar el rendimiento de los chatbots y facilitar la conexión con otros sistemas.
+  - Además, necesitas asegurarte de que estas soluciones sean compatibles con las herramientas que ya utilizas, como Salesforce y WhatsApp.
+  goals:
+  - Preguntar sobre las integraciones disponibles en la plataforma de Botslovers.
+  - Solicitar que se me proporcionen detalles sobre las analíticas que ofrece la plataforma.
+  - Pedir información sobre las capacidades de integración con Salesforce.
+  - Indagar sobre cómo funcionan las integraciones con WhatsApp.
+  - Consultar sobre las características analíticas que permiten optimizar el rendimiento de los chatbots.
+chatbot:
+  is_starter: false
+  fallback: Parece que tu mensaje no se entendió o es un error. Si tienes alguna pregunta sobre la plataforma de Botslovers o deseas saber más sobre cómo podemos ayudarte con la inteligencia artificial generativa, por favor, házmelo saber. Estoy aquí para ayudarte. 😊 Pero puedes hacer clic en el siguiente botón para obtener ayuda 👇
+  output:
+  - integration_details:
+      type: string
+      description: Información sobre integraciones disponibles
+  - analytics_features:
+      type: string
+      description: Características analíticas de la plataforma
+  - salesforce_integration:
+      type: string
+      description: Detalles de integración con Salesforce
+  - whatsapp_integration:
+      type: string
+      description: Información sobre integración con WhatsApp
+  - optimization_analytics:
+      type: string
+      description: Analíticas para optimizar rendimiento de chatbots
+  - communication_channels:
+      type: string
+      description: Canales de comunicación integrables
+  - advanced_analytics:
+      type: string
+      description: Integraciones analíticas avanzadas disponibles
+  - platform_capabilities:
+      type: string
+      description: Capacidades de integración de la plataforma
+  - bot_performance_monitoring:
+      type: string
+      description: Monitoreo del rendimiento de chatbots
+  - example_integration_platforms:
+      type: string
+      description: Ejemplos de plataformas integrables
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

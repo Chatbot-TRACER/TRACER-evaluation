@@ -1,0 +1,64 @@
+test_name: Fortalecimiento Muscular y Ejercicios
+llm:
+  temperature: 1.0
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en comenzar un programa de fortalecimiento muscular y ejercicios efectivos.
+  context:
+  - 'personality: personalities/conversational-user'
+  - Te has decidido a mejorar tu estado físico y aumentar tu fuerza a través de un programa de entrenamiento muscular, pero no estás seguro de por dónde empezar.
+  - Estás buscando consejos sobre cómo estructurar un programa efectivo y asegurar que realizas los ejercicios de forma segura y eficiente.
+  - Además, te interesa conocer ejercicios específicos y rutinas que te ayuden a fortalecer todo el cuerpo.
+  goals:
+  - Pedir recomendaciones para iniciar un programa de fortalecimiento muscular y cómo asegurar la seguridad durante los ejercicios.
+  - Solicitar una lista de ejercicios de fortalecimiento muscular específicos y sus técnicas básicas.
+  - Pedir información sobre suplementos que son beneficiosos para el entrenamiento de fuerza.
+  - Solicitar ejemplos de rutinas de entrenamiento que incluyan varios ejercicios para fortalecer todo el cuerpo.
+  - Preguntar sobre recomendaciones de tiempo para pasar en cada ejercicio durante la rutina.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - program_safety_tips:
+      type: string
+      description: Recomendaciones sobre seguridad en ejercicios
+  - training_frequency:
+      type: int
+      description: Frecuencia de sesiones de entrenamiento
+  - session_duration:
+      type: float
+      description: Duración de cada sesión de entrenamiento
+  - muscle_strengthening_tips:
+      type: string
+      description: Recomendaciones clave para fortalecer músculos
+  - strength_exercise_list:
+      type: string
+      description: Lista de ejercicios de fortalecimiento muscular
+  - exercise_techniques:
+      type: string
+      description: Técnicas básicas de ejercicios
+  - supplement_options:
+      type: string
+      description: Información sobre suplementos beneficiosos
+  - exercise_routine_example:
+      type: string
+      description: Ejemplo de rutina de entrenamiento completo
+  - exercise_duration_guidelines:
+      type: string
+      description: Recomendaciones de duración por ejercicio
+  - warm_up_exercises:
+      type: string
+      description: Lista de ejercicios de calentamiento
+  - squat_variations:
+      type: string
+      description: Variaciones de sentadillas para rutinas
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

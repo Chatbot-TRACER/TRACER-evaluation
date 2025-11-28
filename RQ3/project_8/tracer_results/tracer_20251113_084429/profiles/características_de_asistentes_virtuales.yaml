@@ -1,0 +1,48 @@
+test_name: Características de Asistentes Virtuales
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea entender las capacidades y características de los asistentes virtuales en la plataforma Botslovers.
+  context:
+  - Estás explorando cómo los asistentes virtuales pueden mejorar la eficiencia de tu negocio en línea y estás interesado en la plataforma Botslovers.
+  - Quieres comprender mejor las capacidades y características de estas herramientas para tomar decisiones informadas sobre su implementación.
+  - Además, te gustaría conocer los beneficios que la automatización puede aportar tanto a la atención al cliente como a las ventas.
+  goals:
+  - Pedir un resumen de las capacidades de los asistentes virtuales en la plataforma Botslovers.
+  - Solicitar información sobre cómo el Procesamiento de Lenguaje Natural (NLP) mejora la comunicación entre usuarios y chatbots.
+  - Preguntar sobre las opciones de personalización disponibles para los asistentes virtuales en Botslovers.
+  - Pedir ejemplos de cómo se utiliza la automatización en la atención al cliente con la plataforma.
+  - Solicitar información sobre los beneficios de la automatización en la atención al cliente y las ventas.
+chatbot:
+  is_starter: false
+  fallback: Parece que tu mensaje no se entendió o es un error. Si tienes alguna pregunta sobre la plataforma de Botslovers o deseas saber más sobre cómo podemos ayudarte con la inteligencia artificial generativa, por favor, házmelo saber. Estoy aquí para ayudarte. 😊 Pero puedes hacer clic en el siguiente botón para obtener ayuda 👇
+  output:
+  - virtual_assistant_capabilities:
+      type: string
+      description: Capacidades de los asistentes virtuales
+  - nlp_role:
+      type: string
+      description: Rol del Procesamiento de Lenguaje Natural
+  - customization_options:
+      type: string
+      description: Opciones de personalización disponibles
+  - automation_examples:
+      type: string
+      description: Ejemplos de automatización en atención al cliente
+  - automation_benefits:
+      type: string
+      description: Beneficios de la automatización en atención al cliente
+  - user_feedback:
+      type: string
+      description: Retroalimentación sobre la utilidad de la respuesta
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 22
+  interaction_style:
+  - single question

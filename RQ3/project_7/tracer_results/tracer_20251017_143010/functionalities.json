@@ -1,0 +1,177 @@
+[
+  {
+    "name": "prompt_for_category_browser",
+    "description": "The chatbot provides information on specific categories within the online catalog that the user can browse.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "category_options",
+        "description": "List of available categories such as fresh products, groceries, electronics, etc."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Catalog",
+    "children": []
+  },
+  {
+    "name": "provide_product_filtering_info",
+    "description": "The chatbot directs the user to the Alcampo website for detailed information about filtering products in the online catalog, as no specific filtering capabilities are confirmed.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "filtering_info_page_link",
+        "description": "URL to the product filtering options on Alcampo's website"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Catalog",
+    "children": []
+  },
+  {
+    "name": "present_service_options",
+    "description": "The chatbot provides an overview of available shopping options and services to enhance the user's shopping experience, including online shopping, home delivery, in-store pickup, and special features.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "shopping_services",
+        "description": "Overview of shopping services including online orders, physical stores, and types of items available such as groceries, household items, and electronics."
+      },
+      {
+        "category": "delivery_options",
+        "description": "Home delivery and click & collect services."
+      },
+      {
+        "category": "membership_and_services",
+        "description": "Details about the recipe section 'La Cocina de Alcampo' and membership benefits of Club Alcampo."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Shopping Services",
+    "children": []
+  },
+  {
+    "name": "list_popular_recipes",
+    "description": "The chatbot provides examples of popular recipes available in “La Cocina de Alcampo,” including specific items and their preparation methods.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "popular_recipe_options",
+        "description": "List of available recipes such as croquettes and pintxos with descriptions of each."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipe Information",
+    "children": []
+  },
+  {
+    "name": "confirm_seasonal_recipe_view",
+    "description": "The chatbot confirms that users can filter and view recipes by season within the “La Cocina de Alcampo” section.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "seasonal_recipe_filtering",
+        "description": "Indicates the ability to find recipes categorized by season and ingredient type."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipe Information",
+    "children": []
+  },
+  {
+    "name": "provide_promotional_information",
+    "description": "Shares a link to the page where users can find ongoing promotions and discounts.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "promotions_page_link",
+        "description": "URL for the official Alcampo promotions page with current offers and discounts."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions & Discounts",
+    "children": []
+  },
+  {
+    "name": "suggest_club_alcampo_app_link",
+    "description": "Suggests ways to find the Club Alcampo app since the chatbot does not have a direct link.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "App Information",
+    "children": []
+  },
+  {
+    "name": "present_product_info",
+    "description": "The chatbot informs the user about the variety of products available in Alcampo's online catalog and provides additional details like categories and total product count.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "product_categories",
+        "description": "A list of various product categories including fresh, frozen, beverages, hygiene, electronics, and more."
+      },
+      {
+        "category": "total_product_count",
+        "description": "Total number of products available (over 40,000)."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Catalog",
+    "children": []
+  },
+  {
+    "name": "provide_cocina_alcampo_info",
+    "description": "Describes the 'La Cocina de Alcampo' feature, which helps users choose ingredients based on recipes tailored to their preferences and needs.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cocina_alcampo_feature_overview",
+        "description": "Overview of how 'La Cocina de Alcampo' helps in selecting recipes and ingredients, improving the shopping experience."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipe Information",
+    "children": []
+  },
+  {
+    "name": "guide_to_access_recipe_section",
+    "description": "Instructs the user on how to access the recipe section 'La Cocina de Alcampo' through the website or app, including navigation instructions and the convenience of adding ingredients to the shopping cart.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "access_details",
+        "description": "Information on how to find and use 'La Cocina de Alcampo', including navigation instructions on the website and app, as well as instructions on accessing the recipe section and utilizing the feature to add ingredients directly to the cart."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipe Information",
+    "children": []
+  },
+  {
+    "name": "list_cocina_alcampo_recipe_types",
+    "description": "Provides details on the types of recipes available in 'La Cocina de Alcampo', organized by product families and seasonal availability.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_categories",
+        "description": "Categories of recipes such as meats, fish, vegetables, and seasonal options"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipe Information",
+    "children": []
+  },
+  {
+    "name": "clarify_contact_customer_service_options",
+    "description": "The chatbot informs the user about how to contact customer service for Club Alcampo, detailing the lack of direct app contact options and providing alternative methods.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_contact_methods",
+        "description": "Recommended methods for contacting customer service including the phone number and in-store information points."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Service",
+    "children": []
+  }
+]

@@ -1,0 +1,55 @@
+test_name: Proceso de Aplicación y Pagos Fiscales
+llm:
+  temperature: 0.3
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea solicitar una licencia de construcción y necesita información sobre el proceso y el pago de impuestos relacionados.
+  context:
+  - 'personality: personalities/formal-user'
+  - Necesitas obtener una licencia de construcción para un proyecto que planeas iniciar pronto y te gustaría asegurar que cumples con todos los requisitos fiscales.
+  - Estás interesado en comprender el proceso de pago del impuesto ICIO y las opciones disponibles para realizarlo de manera eficiente.
+  - Además, deseas tener a la mano los contactos necesarios para resolver cualquier duda que pueda surgir durante este proceso.
+  goals:
+  - Solicitar información sobre cómo pagar el impuesto ICIO y los métodos de pago disponibles.
+  - Pedir el enlace a la Oficina Virtual Tributaria para realizar el pago en línea.
+  - Consultar los números de contacto para hacer citas y preguntar sobre el pago del ICIO.
+  - Preguntar cómo cambiar mis datos personales accediendo a 'MI CUENTA'.
+  - Solicitar el correo electrónico y números de contacto de la Oficina de Recaudación para consultas sobre impuestos.
+chatbot:
+  is_starter: false
+  fallback: ¿Disculpa?
+  output:
+  - payment_instructions:
+      type: string
+      description: Instrucciones para pago del impuesto ICIO
+  - payment_methods:
+      type: string
+      description: Métodos de pago disponibles
+  - office_virtual_tributaria_link:
+      type: string
+      description: Enlace a la Oficina Virtual Tributaria
+  - appointment_contact:
+      type: string
+      description: Número de contacto para citas
+  - payment_contact:
+      type: string
+      description: Número de contacto para consultas de pagos
+  - personal_data_change_instructions:
+      type: string
+      description: Instrucciones para cambiar datos personales
+  - contact_phone_numbers:
+      type: string
+      description: Números de contacto de la Oficina de Recaudación
+  - contact_email:
+      type: string
+      description: Correo electrónico de soporte para consultas
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

@@ -1,0 +1,238 @@
+[
+  {
+    "name": "list_frequently_asked_questions",
+    "description": "The chatbot indicates the availability of frequently asked questions related to the CAU.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_service_catalog_and_contact_info",
+    "description": "Offers users access to the service catalog of the Centro de Atención a Usuarios along with contact details, operating hours, and links to frequently asked questions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "email_contact",
+        "description": "Email contact for Centro de Atención a Usuarios at cau@uam.es for inquiries."
+      },
+      {
+        "category": "phone_contact",
+        "description": "Phone contact at 914974029 for Centro de Atención a Usuarios inquiries."
+      },
+      {
+        "category": "physical_address",
+        "description": "Physical address at Escuela Politécnica Superior, Edificio B, Calle Francisco Tomás y Valiente n° 11, Campus Cantoblanco, 28049 Madrid for in-person contact."
+      },
+      {
+        "category": "operating_hours",
+        "description": "Regular operating hours from Monday to Friday, 9:00h to 17:30h (excluding holidays) and reduced hours from Monday to Friday, 9:00h to 14:00h during non-working periods."
+      },
+      {
+        "category": "service_catalog_link",
+        "description": "Consult the CATÁLOGO DE SERVICIOS OFRECIDOS, including the link to the catalog of IT services."
+      },
+      {
+        "category": "faq_link",
+        "description": "Link to frequently asked questions (preguntas frecuentes) regarding Centro de Atención a Usuarios."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_student_support_service_info",
+    "description": "Provides information about available student counseling and support services offered at the university, including the Centro de Psicología Aplicada and other related units.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_details",
+        "description": "Information about the Centro de Psicología Aplicada (CPA) and associated services, including details on student support and consultations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_password_change",
+    "description": "Provides step-by-step instructions for changing the password, including obtaining an activation code if necessary.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "prompt_for_first_time_password_setup",
+    "description": "Guides the user through the process of establishing their password for the first time, including necessary steps and requirements.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_account_and_services_information",
+    "description": "Offers comprehensive details about account setup options and integrated services within ID-UAM for students, staff, and external users.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "services_description",
+        "description": "Details the services available through ID-UAM, such as account creation and support options for new students and staff."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_virtual_platforms",
+    "description": "Provides information about contacting the Oficina de Atención al Estudiante for inquiries related to virtual platforms and directs the user to relevant resources.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_university_information",
+    "description": "Provides general information about the Universidad Autónoma de Madrid, covering its commitment to student education and details on available programs and faculties.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "university_offerings",
+        "description": "An overview of the university's offerings, including degrees, programs available, and the university's commitment to student training."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "present_options_for_future_students",
+    "description": "Lists options and relevant links for future students considering the university.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "future_student_options",
+        "description": "Includes links for DÍA DE BIENVENIDA, Grados Universitarios, and Vida Universitaria."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_préstamo_info",
+    "description": "Informs the user about the availability and process for borrowing laptops from the university libraries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "préstamo_info",
+        "description": "Details on where and how to access laptop loans."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_library_access_info",
+    "description": "Provides information on accessing library resources and necessary user identification for accessing services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "library_access_info",
+        "description": "Guidelines on accessing library resources remotely, including the requirement for VPN."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "present_vpn_setup_options",
+    "description": "Offers options and links for installing and configuring VPN for remote access to university services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vpn_setup_options",
+        "description": "Lists different guides available for setting up VPN on various operating systems."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Network & Connectivity",
+    "children": []
+  },
+  {
+    "name": "provide_vpn_installation_guide",
+    "description": "Provides detailed instructions for installing and configuring the GlobalProtect VPN client based on the user's device operating system.",
+    "parameters": [
+      {
+        "name": "selected_os",
+        "description": "Represents the operating system the user will use for VPN installation.",
+        "options": [
+          "Windows",
+          "MacOS",
+          "IOS",
+          "Android",
+          "Linux"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "category": "installation_guides",
+        "description": "Links to specific installation guides for each operating system."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Network & Connectivity",
+    "children": []
+  },
+  {
+    "name": "present_faculty_and_programs_overview",
+    "description": "Presents an overview of the faculties and schools available at the university along with information on programs and degrees offered.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_faculties_overview",
+        "description": "Overview of faculties and educational programs offered at the university."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_admission_and_registration_info",
+    "description": "Informs the user about the registration process and directs them to the appropriate school's or faculty's official webpage for detailed information.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "admission_info",
+        "description": "General information on the admission process and registration for programs."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "guide_on_moodle_access",
+    "description": "Informs the user about the need for an institutional account to access Moodle and outlines the different Moodle environments available.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "moodle_environment_options",
+        "description": "Describes the different Moodle environments available, including Grado, Postgrado, and Formación."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  }
+]

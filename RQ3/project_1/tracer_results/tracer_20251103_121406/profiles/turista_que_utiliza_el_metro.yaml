@@ -1,0 +1,110 @@
+test_name: Turista que Utiliza el Metro
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Turista que necesita asistencia para navegar el sistema de metro y obtener tarifas adecuadas.
+  context:
+  - Como turista en una nueva ciudad, necesitas utilizar el metro para explorar diferentes zonas de interés.
+  - Al no estar familiarizado con el sistema de transporte, buscas información sobre tarifas y validación de billetes, así como asistencia en tu idioma preferido.
+  - Además, es esencial que tengas en cuenta tu grupo de edad para obtener las tarifas adecuadas y planificar tu recorrido entre las distintas zonas.
+  goals:
+  - Seleccionar mi idioma preferido para continuar la conversación, eligiendo entre Español o Inglés.
+  - Aceptar la política de privacidad para poder recibir asistencia sobre mis consultas.
+  - Identificar mi relación con el sistema de metro, indicando que soy turista.
+  - Proporcionar información sobre la validación del billete turístico, incluyendo mi grupo de edad como {{grupo_de_edad}}.
+  - Solicitar una recomendación de tarifas basadas en mi información, especificando mi zona de partida como {{zona_inicio}} y mi zona de destino como {{zona_destino}}.
+  - grupo_de_edad:
+      function: forward()
+      type: string
+      data:
+      - 15 to 25
+      - 15 y 25
+      - 26 to 64
+      - 26 y 64
+      - 4 to 6
+      - 4 y 6
+      - 7 to 14
+      - 7 y 14
+      - Menor de 4 años
+      - Más de 65 años
+      - mayores_de_65
+      - menores_de_4
+      - Entre 2 y 3 años
+  - zona_destino:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - Zona D
+  - zona_inicio:
+      function: forward()
+      type: string
+      data:
+      - Centro
+      - Noroeste
+      - Suroeste
+      - Este
+      - Noreste
+chatbot:
+  is_starter: false
+  fallback: Lo siento, este es *un canal de información de servicio y de atención al cliente* de Metro de Madrid.\n \nPara cualquier otro tipo de información puedes consultar nuestra página web:\n🌐 www.metromadrid.es\n \n¿Con qué otra duda podría ayudarte? 👇
+  output:
+  - preferred_language:
+      type: string
+      description: Idioma seleccionado por el usuario
+  - privacy_policy_accepted:
+      type: string
+      description: Confirmación de aceptación de política de privacidad
+  - user_relation:
+      type: string
+      description: Relación del usuario con el sistema de metro
+  - age_group:
+      type: string
+      description: Grupo de edad del usuario
+  - start_zone:
+      type: string
+      description: Zona de partida del usuario
+  - destination_zone:
+      type: string
+      description: Zona de destino del usuario
+  - ticket_validation_info:
+      type: string
+      description: Información sobre validación del billete turístico
+  - fare_recommendation:
+      type: money
+      description: Monto recomendado para tarifas
+  - recharge_options:
+      type: string
+      description: Opciones de recarga de tarjeta de transporte
+  - transport_card_type:
+      type: string
+      description: Tipo de tarjeta de transporte seleccionada
+  - official_app_link:
+      type: string
+      description: Enlace a la aplicación oficial para más información
+conversation:
+  number: 17
+  max_cost: 2.55
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

@@ -1,0 +1,88 @@
+test_name: Atención a la Salud Alimentaria
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en mejorar su alimentación de manera saludable y buscar recetas nutritivas.
+  context:
+  - 'personality: personalities/disorganized-user'
+  - Te encuentras en un periodo de transición hacia una alimentación más saludable y buscas información que te ayude a lograrlo.
+  - Estás interesado en incorporar más opciones de proteínas vegetales en tu dieta y en encontrar recetas que sean nutritivas y sencillas de preparar.
+  - Además, quieres asegurarte de que tu alimentación incluya suficientes frutas y verduras para mantener un equilibrio en tu nutrición diaria.
+  goals:
+  - Preguntar al chatbot sobre los consejos para una alimentación saludable.
+  - Solicitar una lista de las mejores fuentes de proteínas vegetales.
+  - Pedir detalles sobre cómo planificar una dieta equilibrada utilizando proteínas vegetales.
+  - Solicitar una receta para hamburguesas de lentejas y sus acompañamientos adecuados.
+  - Pedir al chatbot recomendaciones sobre cómo incrementar el consumo de frutas y verduras en la dieta.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - user_name:
+      type: string
+      description: Nombre del usuario
+  - user_interest:
+      type: string
+      description: Área de interés del usuario
+  - health_tips_request:
+      type: string
+      description: Solicitud de consejos de alimentación saludable
+  - protein_sources_request:
+      type: string
+      description: Solicitud de fuentes de proteínas vegetales
+  - diet_plan_request:
+      type: string
+      description: Solicitud de planificación de dieta equilibrada
+  - lentil_burger_recipe_request:
+      type: string
+      description: Solicitud de receta para hamburguesas de lentejas
+  - meal_pairings_request:
+      type: string
+      description: Solicitud de acompañamientos para hamburguesas de lentejas
+  - fruit_vegetable_increase_request:
+      type: string
+      description: Solicitud de recomendaciones para incrementar frutas y verduras
+  - protein_sources_list:
+      type: string
+      description: Lista de fuentes de proteínas vegetales
+  - diet_plan_steps:
+      type: string
+      description: Pasos para planificar una dieta equilibrada
+  - lentil_burger_ingredients:
+      type: string
+      description: Ingredientes para la receta de hamburguesas de lentejas
+  - lentil_burger_instructions:
+      type: string
+      description: Instrucciones para la receta de hamburguesas de lentejas
+  - meal_pairings_suggestions:
+      type: string
+      description: Sugerencias de acompañamientos saludables
+  - hummus_recipe_request:
+      type: string
+      description: Solicitud de receta para hummus
+  - quinoa_recipe_request:
+      type: string
+      description: Solicitud de recetas que incluyen quinua
+  - preparation_time:
+      type: float
+      description: Tiempo estimado de preparación para la receta
+  - plant_based_meal_options:
+      type: string
+      description: Opciones de comidas basadas en plantas
+  - quick_health_recipes:
+      type: string
+      description: Ideas rápidas y saludables de recetas
+  - legumes_recipe_requests:
+      type: string
+      description: Solicitudes de recetas que incluyen legumbres
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

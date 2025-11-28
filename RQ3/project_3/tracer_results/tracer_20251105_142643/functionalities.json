@@ -1,0 +1,785 @@
+[
+  {
+    "name": "prompt_for_health_wellness_questions",
+    "description": "The chatbot initiates the conversation by asking the user if they have a specific question or topic in mind related to health and wellness.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "provide_health_eating_tips",
+    "description": "The chatbot shares tips for healthy eating when the user requests advice on that topic.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "healthy_eating_tips",
+        "description": "Tips for increasing fruit and vegetable intake, including legumes and nuts, choosing whole foods, reducing red and processed meats, monitoring salt and sugar, and staying hydrated."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "suggest_plant_based_diet_planning",
+    "description": "Outlines steps for planning a balanced diet using diverse plant-based protein sources, encouraging the inclusion of various foods and the consultation with a nutrition professional.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "diet_planning_steps",
+        "description": "Steps for including legumes, combining cereals, adding nuts and seeds, considering soy products, varying food sources, and distributing meals."
+      },
+      {
+        "category": "nutrition_consultation_advice",
+        "description": "Encourages consulting with a nutrition professional for personalized advice."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "present_health_wellness_topics",
+    "description": "Provides a list of specific health and wellness topics covered by the chatbot.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_wellness_topics",
+        "description": "Topics related to health and wellness including children's health, oral health, addiction prevention, sleep hygiene, and health concerns for women and seniors."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_plant_protein_sources",
+    "description": "The chatbot lists the best plant-based protein sources, including legumes, nuts, seeds, soy products, and whole grains, in response to user inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "plant_protein_sources",
+        "description": "A list of best plant-based protein sources including legumes, nuts, seeds, soy products, and whole grains that are rich in protein."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_hummus_accompaniments",
+    "description": "The chatbot suggests ideas for accompaniments that pair well with hummus when the user requests more information.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hummus_accompaniments",
+        "description": "List of suggestions for what to serve with hummus."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_recipe_details",
+    "description": "Provides detailed recipe information, including ingredients and step-by-step preparation instructions for the requested recipe.",
+    "parameters": [
+      {
+        "name": "recipe_name",
+        "description": "Represents the name of the recipe the user wants more details about (e.g., \"Bowl de quinoa y verduras\" or \"Hamburguesas de calabacín\").",
+        "options": []
+      }
+    ],
+    "outputs": [
+      {
+        "category": "recipe_details",
+        "description": "Comprehensive ingredients and step-by-step preparation instructions for making the requested recipe."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_lentil_burger_recipe",
+    "description": "The chatbot provides a recipe for lentil burgers when the user requests more details about them.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "lentil_burger_recipe_details",
+        "description": "Ingredients and step-by-step instructions for preparing lentil burgers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_lentil_burger_accompaniments",
+    "description": "The chatbot suggests suitable accompaniments for lentil burgers upon user inquiry.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "lentil_burger_accompaniments",
+        "description": "List of suggestions for what to serve alongside lentil burgers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_pea_recipes",
+    "description": "The chatbot lists recipes that include peas when the user asks for ideas.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pea_recipes",
+        "description": "Collection of recipes featuring peas, such as pea puree and soups."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_hummus_recipe",
+    "description": "Offers a detailed recipe for making hummus, including ingredients and step-by-step instructions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hummus_recipe_details",
+        "description": "Ingredients and step-by-step instructions for preparing hummus."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "suggest_recipes_with_quinoa",
+    "description": "Lists various recipes that can be made with quinoa.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "quinoa_recipes_list",
+        "description": "Provides options for quinoa salad, curry, burgers, and quinoa with spinach and tofu"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_recipe_preparation_time",
+    "description": "Supplies the estimated preparation time for a specific recipe when the user inquires about it.",
+    "parameters": [
+      {
+        "name": "recipe_name",
+        "description": "The name of the recipe the user is inquiring about (e.g., \"Bowl de quinoa y verduras\").",
+        "options": []
+      }
+    ],
+    "outputs": [
+      {
+        "category": "preparation_time",
+        "description": "Estimated time required to prepare the recipe."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "suggest_plant_based_meal_ideas",
+    "description": "The chatbot provides a variety of plant-based meal and recipe suggestions incorporating protein sources when the user requests meal options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "plant_based_recipe_suggestions",
+        "description": "A variety of suggested plant-based recipes and meal options, including additional suggestions and their main ingredients, such as chickpea salad, lentils with spinach and brown rice, and tofu stir-fry."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_marisco_recommendations",
+    "description": "The chatbot offers recommendations for the best mariscos to use in fideuá.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recommended_mariscos_list",
+        "description": "Gambas, Mejillones, Calamares, Almejas, Pescados como el rape"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_postre_ideas",
+    "description": "The chatbot shares dessert ideas that complement a meal of fideuá.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recommended_postres_list",
+        "description": "Flan de huevo, Arroz con leche, Tarta de queso, Macedonia de frutas, Helado"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "suggest_quick_healthy_recipes",
+    "description": "Provides a list of quick and healthy recipe ideas when the user requests more suggestions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "quick_healthy_recipes",
+        "description": "A list of quick healthy meal ideas featuring simple ingredients and preparations, including recipes such as Hamburguesas de calabacín and Pastel de salmón."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "suggest_legume_recipes_and_dishes",
+    "description": "Suggests a variety of recipes and dishes that include legumes based on user interest.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "legume_recipes",
+        "description": "A collection of various recipes and dishes featuring legumes, including stews, burgers, chickpeas, lentils, and beans, such as Garbanzos al curry."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_child_nutrition",
+    "description": "Delivers key points about child nutrition for specific age groups, emphasizing healthy dietary practices.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "age_group_nutrition_summary",
+        "description": "Overview of dietary recommendations for different age groups including infants, toddlers, school-aged children, and adolescents."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_physical_activity_tips_for_adolescents",
+    "description": "Delivers advice and strategies to encourage healthy physical activity habits among adolescents.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "physical_activity_strategies",
+        "description": "Effective suggestions for improving physical activity engagement among teenagers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_nutritional_benefits_of_fruits_and_vegetables",
+    "description": "Outlines the health and nutritional benefits associated with a diet rich in fruits and vegetables for children and school-aged individuals.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "children_health_benefits",
+        "description": "An overview of how fruits and vegetables support children's health and development, including benefits related to vitamin/mineral contributions, immune support, weight management, digestive health, and long-term dietary habits."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_importance_of_breastfeeding",
+    "description": "Explains the significance of breastfeeding in the early months of a child's life, detailing its health benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_benefits",
+        "description": "Nutrients and antibodies"
+      },
+      {
+        "category": "disease_risk_reduction",
+        "description": "Reduces risk of infections"
+      },
+      {
+        "category": "emotional_bonding",
+        "description": "Facilitates bonding between mother and baby"
+      },
+      {
+        "category": "economic_and_environmental_benefits",
+        "description": "Cost-effective and sustainable option"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "suggest_complementary_foods_for_babies",
+    "description": "Offers guidance on what foods can be introduced after the initial breastfeeding period.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "complementary_foods",
+        "description": "List of suggested foods (cereals, vegetables, fruits, meats, legumes)"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_food_allergy_detection_tips",
+    "description": "Provides recommendations for detecting food allergies when introducing new foods.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "allergy_detection_methods",
+        "description": "List of practices to identify allergic reactions"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_preschool_nutrition_recommendations",
+    "description": "Offers tailored nutrition recommendations for preschool children, including types of foods to incorporate and healthy eating habits to establish.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "preschool_nutrition_guidelines",
+        "description": "General recommendations for preschool nutrition including types of foods, meal patterns, and specific recommendations for fruits, vegetables, whole grains, dairy, proteins, while cautioning against processed foods."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "outline_risks_of_excess_sugar",
+    "description": "Discusses the dangers associated with high sugar intake in preschool children.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sugar_intake_risks",
+        "description": "Health risks linked to too much sugar, including obesity, dental issues, and behavioral effects."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "highlight_consequences_of_poor_nutrition",
+    "description": "Describes the long-term health effects of poor nutrition in childhood.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "long_term_nutrition_consequences",
+        "description": "Potential health consequences such as obesity, chronic diseases, and nutritional deficiencies."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "explain_risks_of_processed_foods",
+    "description": "Describes the potential dangers of highly processed foods for children, focusing on health risks.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_risks_list",
+        "description": "Details the health risks associated with ultraprocessed foods including obesity, cognitive development, gastrointestinal issues, and nutrient deficiencies."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_tips_for_adolescent_nutrition",
+    "description": "Offers practical advice for promoting healthy eating habits among adolescents.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "nutrition_tips",
+        "description": "Tips for a balanced diet including breakfast, meals, education, kitchen involvement, and physical activity."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Child Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_hamburger_benefits",
+    "description": "Outlines the health benefits of zucchini hamburgers to inform the user about their nutritional value.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_benefits",
+        "description": "Benefits including low calorie content, nutrient richness, high fiber content, versatility, and ease of preparation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "detail_carrot_mango_cream_recipe",
+    "description": "Shares detailed instructions on how to prepare a carrot and mango cream dish.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "carrot_mango_cream_recipe_details",
+        "description": "Ingredients and step-by-step preparation instructions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "suggest_vegetable_recipes",
+    "description": "Recommends various recipes that include vegetables as primary ingredients.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vegetable_recipes_list",
+        "description": "A list of recipes featuring vegetables such as zucchini burgers, spinach salmon pie, white bean hummus, vegetable skewers, and malagueña salad."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "detail_pea_mint_puree_recipe",
+    "description": "Provides detailed instructions for preparing a pea and mint puree.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pea_mint_puree_recipe_details",
+        "description": "Ingredients and step-by-step preparation instructions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_fish_recipe",
+    "description": "Shares a specific recipe that includes fish.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recipe_details",
+        "description": "Step-by-step instructions and ingredients for the suggested fish recipe."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipes",
+    "children": []
+  },
+  {
+    "name": "provide_tea_and_infusion_recommendations",
+    "description": "Suggests types of teas and infusions that can assist with hydration.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "infusion_recommendations",
+        "description": "Recommendations for herbal teas and infusions, including benefits and considerations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Nutrition",
+    "children": []
+  },
+  {
+    "name": "provide_addiction_prevention_guidelines",
+    "description": "Shares guidelines for preventing addictions across various settings, including family, education, community, and leisure activities.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "education_and_prevention_guidelines",
+        "description": "Comprehensive guidelines on educational programs about drug risks, communication within families regarding substance use, and community activities that promote cohesion and healthy leisure alternatives."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "list_common_stis",
+    "description": "Provides a list of the most common sexually transmitted infections (STIs).",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "common_stis_list",
+        "description": "VIH, Sífilis, Gonorrea, Clamidia, Herpes genital, Virus del papiloma humano (VPH), Hepatitis B, Tricomoniasis, Candidiasis, Mpox"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_symptoms_for_vih",
+    "description": "Provides information regarding the symptoms associated with HIV infection at different stages.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vih_symptoms",
+        "description": "symptoms during the acute phase and chronic phase of HIV infection."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_treatment_options_for_vih",
+    "description": "Provides information on the treatment methods available for HIV.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "treatment_methods",
+        "description": "Details on antiretroviral therapy (TAR) and its benefits."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_vph",
+    "description": "Provides detailed information about the human papillomavirus (HPV), including transmission, symptoms, and prevention.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "vph_details",
+        "description": "Information about HPV types, symptoms, and preventive measures."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_hepatitis_b",
+    "description": "Provides detailed information about hepatitis B, including transmission, symptoms, and prevention.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "hepatitis_b_details",
+        "description": "Information regarding symptoms and prevention of hepatitis B."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "recommend_tests_for_stis",
+    "description": "Recommends specific tests for detecting sexually transmitted infections (STIs) and provides information about testing availability.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "recommended_tests",
+        "description": "Includes recommended tests such as VIH rapid test, syphilis test, gonorrhea test, chlamydia test, genital herpes test, and VPH."
+      },
+      {
+        "category": "testing_information",
+        "description": "Information regarding availability of free and confidential testing in health centers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_support_groups",
+    "description": "The chatbot provides information about resources and support groups available for individuals with a positive STI diagnosis.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "support_resources_summary",
+        "description": "Details about patient associations and support groups."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "offer_immediate_support_contact_information",
+    "description": "The chatbot provides immediate assistance contact numbers for users in need of emotional support.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "emergency_support_numbers",
+        "description": "Lists available hotline numbers, including the Teléfono de la Esperanza and Teléfono de la Salud Mental."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_details_on_teléfono_de_la_esperanza",
+    "description": "The chatbot provides specific information about the Teléfono de la Esperanza service, including its purpose and availability.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "telephone_service_details",
+        "description": "Information about service offerings, confidentiality, and availability."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "describe_teléfono_de_la_esperanza_intervention_services",
+    "description": "The chatbot describes the types of services provided by the Teléfono de la Esperanza, distinguishing between active support and professional intervention.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "intervention_services_summary",
+        "description": "Explains services available, including listening support and professional guidance."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_violence_support_resources",
+    "description": "The chatbot lists available resources and helplines for individuals facing situations of gender violence.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "violence_support_resources_summary",
+        "description": "Includes contact information for services such as the Teléfono 016 and SUMMA 112."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_resource_information_for_violence_victims",
+    "description": "The chatbot informs users that the Teléfono 016 provides information about legal resources for victims of gender violence.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "legal_support_summary",
+        "description": "Overview of legal resources and assistance offered through the service."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_sti_symptoms",
+    "description": "Outlines common symptoms associated with various sexually transmitted infections (STIs).",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sti_symptoms",
+        "description": "Common symptoms of sexually transmitted infections (STIs) include itching or irritation in the genitals, inflammation of genital organs, burning sensation while urinating, menstrual disorders, abdominal pain, ulcers in contact areas, abnormal vaginal discharge, pus-like discharge from the urethra. Additional symptoms related to specific STIs such as VIH, sífilis, gonorrea, clamidia, herpes genital, VPH, hepatitis B, and tricomoniasis."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_syphilis_prevention_recommendations",
+    "description": "Provides recommendations for the prevention of syphilis.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "prevention_recommendations",
+        "description": "Contains guidelines such as consistent condom use, regular STI testing, and informing sexual partners."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_gonorrhea_prevention_recommendations",
+    "description": "Lists recommendations to prevent gonorrhea.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "prevention_recommendations",
+        "description": "Guidance includes proper condom use, limit sexual partners, and regular testing."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_gonorrhea_treatment_information",
+    "description": "Provides information on the recommended treatment for gonorrhea.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "treatment_information",
+        "description": "Details that antibiotics are commonly used, mentioning specific medications."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_genital_herpes_treatment_information",
+    "description": "Provides information on the treatment methods for genital herpes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "treatment_information",
+        "description": "Discusses the use of antivirals and symptomatic treatments for managing herpes outbreaks."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  },
+  {
+    "name": "provide_genital_herpes_prevention_recommendations",
+    "description": "Offers preventive measures for genital herpes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "prevention_recommendations",
+        "description": "Recommendations consist of condom use, avoiding sexual contact during outbreaks, and informing partners about the condition."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Health Information",
+    "children": []
+  }
+]

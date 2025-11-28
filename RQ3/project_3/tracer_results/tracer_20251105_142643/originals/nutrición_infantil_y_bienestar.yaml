@@ -1,0 +1,60 @@
+test_name: Nutrición Infantil y Bienestar
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Padre o cuidador que busca información sobre la nutrición y el bienestar de los niños.
+  context:
+  - Como padre preocupado por el bienestar de su hijo, está intentando mejorar su alimentación y asegurarse de que incluya más opciones saludables.
+  - Ha notado que su hijo muestra preferencia por ciertos alimentos y busca información sobre cómo equilibrar su dieta con frutas y verduras.
+  - Además, desea estar informado sobre los posibles riesgos alimentarios para tomar decisiones más seguras al introducir nuevos alimentos.
+  goals:
+  - Preguntar al chatbot sobre los beneficios de una dieta rica en frutas y verduras para niños.
+  - Solicitar recomendaciones específicas para la nutrición de niños en edad preescolar.
+  - Pedir al chatbot que proporcione ejemplos de tentempiés saludables adecuados para niños.
+  - Consultar sobre los riesgos asociados con el alto consumo de azúcar en niños en edad preescolar.
+  - Preguntar cómo se pueden detectar alergias alimentarias al introducir nuevos alimentos en la dieta de los niños.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - diet_benefits:
+      type: string
+      description: Beneficios de una dieta rica en frutas y verduras
+  - preschool_nutrition_recommendations:
+      type: string
+      description: Recomendaciones de nutrición para niños en edad preescolar
+  - healthy_snacks_examples:
+      type: string
+      description: Ejemplos de tentempiés saludables para niños
+  - sugar_risks:
+      type: string
+      description: Riesgos del alto consumo de azúcar en niños
+  - allergy_detection_methods:
+      type: string
+      description: Métodos para detectar alergias alimentarias
+  - healthy_habits_importance:
+      type: string
+      description: Importancia de establecer hábitos saludables
+  - long_term_nutrition_effects:
+      type: string
+      description: Efectos a largo plazo de mala nutrición
+  - breastfeeding_importance:
+      type: string
+      description: Importancia de la lactancia materna
+  - post_breastfeeding_foods:
+      type: string
+      description: Alimentos para introducir después de la lactancia
+  - preschool_food_types:
+      type: string
+      description: Tipos de alimentos para niños en edad preescolar
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

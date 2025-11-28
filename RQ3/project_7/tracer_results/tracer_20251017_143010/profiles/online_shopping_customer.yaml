@@ -1,0 +1,65 @@
+test_name: Online Shopping Customer
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: English
+  role: A user interested in exploring the available shopping options, services, product categories, and ongoing promotions at Alcampo for an enhanced shopping experience.
+  context:
+  - 'personality: personalities/conversational-user'
+  - As a regular shopper looking to streamline your online purchasing experience, you're curious about the variety of options available at Alcampo.
+  - You want to ensure you're aware of all product categories and current promotions to make informed decisions that suit your needs.
+  - Finding useful services and an extensive catalog will help you enjoy a more efficient shopping journey.
+  goals:
+  - Ask for the available shopping options and services at Alcampo.
+  - Inquire about the specific product categories available in the online catalog.
+  - Request the total product count in Alcampo's online catalog.
+  - Ask for the link to view ongoing promotions and discounts.
+  - Explore details about a specific category by selecting {{chosen_category}} from the list provided.
+  - chosen_category:
+      function: forward()
+      type: string
+      data:
+      - Electronics
+      - Groceries
+      - Clothing
+      - Home and Garden
+      - Health and Beauty
+      - Sports Equipment
+chatbot:
+  is_starter: false
+  fallback: 🤩 ¡Qué ilusión ver tu entusiasmo por aprender! 🧑🏻‍🎓 En Alcampo tenemos una sección de libros muy variada 📚 —seguro que encuentras algo que te encante.
+  output:
+  - shopping_options:
+      type: string
+      description: Available shopping options at Alcampo
+  - shopping_services:
+      type: string
+      description: Overview of shopping services
+  - delivery_options:
+      type: string
+      description: Options for delivery services
+  - membership_and_services:
+      type: string
+      description: Details on membership benefits
+  - product_categories:
+      type: string
+      description: List of product categories available
+  - total_product_count:
+      type: int
+      description: Total number of products available
+  - promotions_page_link:
+      type: string
+      description: URL for promotions and discounts
+  - chosen_category:
+      type: string
+      description: Selected product category by user
+conversation:
+  number: 6
+  max_cost: 0.9
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

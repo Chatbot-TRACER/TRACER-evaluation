@@ -1,0 +1,46 @@
+test_name: Recipe Enthusiast
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: English
+  role: A user looking to discover new recipes and learn how to access cooking resources available through Alcampo.
+  context:
+  - 'personality: personalities/elderly-user'
+  - You're eager to explore new culinary experiences and experiment with recipes using fresh ingredients available at local supermarkets.
+  - With changing seasons, you're particularly interested in seasonal recipes that highlight the best produce.
+  - You're looking for a convenient way to access organized recipe resources that align with your cooking preferences and ingredient availability.
+  goals:
+  - Ask the chatbot for examples of popular recipes available in 'La Cocina de Alcampo'.
+  - Confirm with the chatbot whether users can filter and view recipes by season in 'La Cocina de Alcampo'.
+  - Inquire about the feature 'La Cocina de Alcampo' and how it helps in choosing ingredients based on recipes tailored to preferences.
+  - Request instructions on how to access the recipe section 'La Cocina de Alcampo' through the website or app.
+  - Ask the chatbot to list the types of recipes available in 'La Cocina de Alcampo', organized by product families and seasonal availability.
+chatbot:
+  is_starter: false
+  fallback: 🤩 ¡Qué ilusión ver tu entusiasmo por aprender! 🧑🏻‍🎓 En Alcampo tenemos una sección de libros muy variada 📚 —seguro que encuentras algo que te encante.
+  output:
+  - popular_recipe_options:
+      type: string
+      description: List of popular recipes available
+  - seasonal_recipe_filtering:
+      type: string
+      description: Confirmation of seasonal recipe filtering
+  - cocina_alcampo_feature_overview:
+      type: string
+      description: Overview of 'La Cocina de Alcampo' feature
+  - access_details:
+      type: string
+      description: Instructions to access recipe section
+  - recipe_categories:
+      type: string
+      description: Types of recipes organized by category
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

@@ -1,0 +1,85 @@
+test_name: Estrategias de Bienestar y Relajación
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca técnicas de manejo del estrés y ayuda para incorporar el bienestar en su vida diaria.
+  context:
+  - 'personality: personalities/elderly-user'
+  - Te sientes abrumado por las responsabilidades diarias y estás buscando formas de incorporar el bienestar en tu rutina.
+  - Has oído hablar de la importancia de la relajación y el manejo del estrés, y te gustaría explorar diferentes técnicas para mejorar tu calidad de vida.
+  - Además, consideras que el yoga podría ser una buena opción para ti, pero no sabes por dónde empezar.
+  goals:
+  - Preguntar por diferentes estrategias y técnicas para manejar el estrés y obtener recomendaciones específicas.
+  - Solicitar consejos sobre cómo empezar a practicar yoga y recibir pasos claros para iniciarse.
+  - Pedir recomendaciones sobre estilos de yoga que sean adecuados para principiantes.
+  - Buscar recursos en línea para aprender yoga, como canales de YouTube o aplicaciones.
+  - Solicitar consejos para mejorar la calidad del sueño, incluyendo actividades relajantes para realizar antes de dormir.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - stress_management_techniques:
+      type: string
+      description: Lista de técnicas para manejar el estrés
+  - yoga_starting_tips:
+      type: string
+      description: Consejos para comenzar a practicar yoga
+  - beginner_yoga_styles:
+      type: string
+      description: Estilos de yoga recomendados para principiantes
+  - online_yoga_resources:
+      type: string
+      description: Recursos en línea para aprender yoga
+  - meditation_starting_steps_list:
+      type: string
+      description: Pasos para iniciar la práctica de meditación
+  - sleep_quality_tips:
+      type: string
+      description: Recomendaciones para mejorar la calidad del sueño
+  - relaxing_activities_list:
+      type: string
+      description: Actividades relajantes antes de dormir
+  - journaling_tips_list:
+      type: string
+      description: Consejos para comenzar y mantener un diario
+  - yoga_class_location:
+      type: string
+      description: Ubicación de la clase de yoga
+  - yoga_practice_frequency:
+      type: int
+      description: Frecuencia de práctica de yoga por semana
+  - sleep_schedule:
+      type: string
+      description: Horario regular de sueño
+  - relaxation_activity_duration:
+      type: float
+      description: Duración de actividades relajantes en horas
+  - meditation_duration:
+      type: float
+      description: Duración de la meditación en minutos
+  - quality_of_sleep_rating:
+      type: int
+      description: Calificación de la calidad del sueño del 1 al 10
+  - journal_entry_frequency:
+      type: int
+      description: Frecuencia de entradas en el diario por semana
+  - yoga_style_selection:
+      type: string
+      description: Estilo de yoga seleccionado para practicar
+  - stress_reduction_method:
+      type: string
+      description: Método específico para reducir el estrés
+  - calming_music_sources:
+      type: string
+      description: Fuentes de música relajante recomendadas
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

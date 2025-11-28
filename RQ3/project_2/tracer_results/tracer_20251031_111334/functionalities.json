@@ -1,0 +1,194 @@
+[
+  {
+    "name": "provide_contact_information",
+    "description": "The chatbot provides the contact information for the Centro de Atención a Usuarios (CAU) upon request, including email, phone, physical address, service hours, and relevant links.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_email",
+        "description": "Email address for CAU."
+      },
+      {
+        "category": "contact_phone",
+        "description": "Phone number for CAU."
+      },
+      {
+        "category": "contact_address",
+        "description": "Physical address of CAU."
+      },
+      {
+        "category": "service_hours",
+        "description": "Normal and special operating hours for CAU."
+      },
+      {
+        "category": "frequently_asked_questions_link",
+        "description": "Link to frequently asked questions."
+      },
+      {
+        "category": "services_catalog_link",
+        "description": "Link to the catalog of services provided."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_services_catalog_access",
+    "description": "Prompts the user to access the catalog of services offered by CAU.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "services_catalog_link",
+        "description": "Link to the catalog of services provided"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_frequently_asked_questions_info",
+    "description": "Prompts the user to consult frequently asked questions about CAU services, providing relevant contact information and easy access to FAQs.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_information",
+        "description": "Contact methods including email, phone number, and physical address for CAU."
+      },
+      {
+        "category": "service_hours",
+        "description": "Details on operational hours for CAU services."
+      },
+      {
+        "category": "faq_links",
+        "description": "Links to frequently asked questions and the catalog of services offered by CAU."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_initial_information_on_virtual_platforms",
+    "description": "Provides information on where to find help regarding UAM's virtual platforms and Moodle.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_moodle_access_issue",
+    "description": "Asks the user for clarification on the specific access issue related to Moodle.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_password_change",
+    "description": "Guides the user through options and steps to change their account password, including instructions for those who have forgotten their user ID or possess a valid activation code.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "password_change_instructions",
+        "description": "Instructions on obtaining an activation code and changing the password, including steps to generate and use the activation code based on user status."
+      },
+      {
+        "category": "contact_information",
+        "description": "Details for contacting the CAU for further assistance, including email and phone number for user support."
+      },
+      {
+        "category": "password_change_reminder",
+        "description": "Reminder to change the password periodically."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "provide_moodle_access_requirements",
+    "description": "Provides information about the requirements needed to access Moodle, including the need for an institutional account and details about the available Moodle environments.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "access_requirements",
+        "description": "Information about needing an institutional account and details about Moodle environments."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_password_change_instructions",
+    "description": "Provides detailed instructions for changing the password and acquiring the activation code for the user's account.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "prompt_for_identifier_recovery",
+    "description": "Prompts the user for assistance in recovering their identifier if they have forgotten it, including providing further instructions.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "prompt_for_password_setup",
+    "description": "Prompts the user with guidelines and steps to establish a password for the first time during student enrollment or personnel incorporation, including contact information for support.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "password_establishment",
+        "description": "Steps to establish a password for first-time enrollment or for existing students."
+      },
+      {
+        "category": "contact_information",
+        "description": "Email and contact number for user support (CAU)."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "list_services_integrated_in_id_uam",
+    "description": "Lists and describes the services available under the ID-UAM system for students and personnel, including account creation, account information, and related assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "account_services",
+        "description": "Services related to user accounts, including account creation for new students, obtaining accounts for already enrolled students, password recovery, activation codes, and access for staff and other personnel. This also includes information on obtaining accounts for students, staff, non-UAM personnel, or external collaborators."
+      },
+      {
+        "category": "contact_information",
+        "description": "Details on how to contact CAU for further assistance, including email and contact number for user support."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "prompt_for_services_integrated_in_id_uam",
+    "description": "Provides links and information about the services integrated into ID-UAM, prompting users to explore further.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "services_list",
+        "description": "Services offered include obtaining student accounts for initial enrollment, accounts for existing students and new UAM staff, and various other types of accounts, along with links to information about integrated services available through ID-UAM."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  }
+]

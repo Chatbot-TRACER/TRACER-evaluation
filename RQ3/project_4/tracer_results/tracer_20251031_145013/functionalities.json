@@ -1,0 +1,168 @@
+[
+  {
+    "__type__": "FunctionalityNode",
+    "name": "provide_public_attention_hours",
+    "description": "States the usual public attention hours for the Ayuntamiento and notes variations for holiday periods.",
+    "parameters": [],
+    "outputs": [],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "provide_cita_sac_information",
+    "description": "Provides specific information on how to book an appointment with the SAC, including multiple methods.",
+    "parameters": [],
+    "outputs": [],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "prompt_for_cita_selection",
+    "description": "\"Prompts the user to select an appointment type from available options for scheduling with different departments.\"",
+    "parameters": [
+      {
+        "name": "selected_cita",
+        "description": "User's choice of appointment type.",
+        "options": [
+          "cita_con_el_alcalde",
+          "cita_con_urbanismo",
+          "cita_con_el_sac"
+        ]
+      }
+    ],
+    "outputs": [],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "provide_cita_con_urbanismo_information",
+    "description": "Provides details on how to schedule an appointment with the Urbanism department including contact methods.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_buttons",
+        "description": "Options for scheduling appointments presented as buttons."
+      }
+    ],
+    "children": [
+      {
+        "__type__": "FunctionalityNode",
+        "name": "provide_urbanism_appointment_information",
+        "description": "Supplies the user with details on how to schedule an appointment with the Urbanism department, including electronic, phone, and in-person methods.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "appointment_methods",
+            "description": "Methods to schedule an appointment include the electronic headquarters, phone, and in-person visit details."
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_services_information`",
+    "description": "\"Provides information about the services offered by the Ayuntamiento de Morón de la Frontera, including details on how to contact specific departments and request appointments.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "urbanism_appointment_info",
+        "description": "Information on how to request an appointment with urbanism technicians."
+      },
+      {
+        "category": "citizen_attention_service_info",
+        "description": "Details on the hours and methods of contacting the citizen attention service."
+      },
+      {
+        "category": "urban_transport_service_info",
+        "description": "Information about the urban transport service, including details for pensioners."
+      },
+      {
+        "category": "social_services_contact_info",
+        "description": "Information on how to contact the Department of Social Services, including phone number for appointment booking."
+      },
+      {
+        "category": "social_services_specific_info",
+        "description": "Details about the registration of domestic partnerships as a specific service within the Department of Social Services."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`access_electronic_headquarters`",
+    "description": "\"Provides the user with access to the electronic headquarters for scheduling appointments.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "electronic_headquarters_link",
+        "description": "Link to the Ayuntamiento's electronic headquarters for scheduling appointments: https://morondelafrontera.sedelectronica.es/."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`provide_electronic_identification_link`",
+    "description": "\"Provides the user with a link to access the electronic identification process for scheduling appointments.\"",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "electronic_identification_link",
+        "description": "URL for accessing the electronic identification process."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "prompt_for_alternate_question_rephrasing",
+    "description": "Asks the user to rephrase their question if not understood clearly.",
+    "parameters": [],
+    "outputs": [],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "provide_service_department_contact_info",
+    "description": "Provides information on how to contact specific departments and the service hours for in-person and telephone assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_contact_details",
+        "description": "Information on contacting departments for specific inquiries and their operating hours."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "`introduce_chatbot_services`",
+    "description": "\"Informs the user that the chatbot is part of the citizen service team and invites queries related to their needs.\"",
+    "parameters": [],
+    "outputs": [],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "present_service_type_options",
+    "description": "Provides the user with distinct service options available from the Ayuntamiento.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_type_options",
+        "description": "Available services include in-person appointments, service hours, and contact numbers."
+      }
+    ],
+    "children": []
+  },
+  {
+    "__type__": "FunctionalityNode",
+    "name": "provide_service_details_for_appointment",
+    "description": "Responds with information regarding the availability and schedule for in-person appointments at the Ayuntamiento.",
+    "parameters": [],
+    "outputs": [],
+    "children": []
+  }
+]

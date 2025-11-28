@@ -1,0 +1,49 @@
+test_name: Automatización del Servicio al Cliente
+llm:
+  temperature: 0.4
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca información sobre cómo automatizar su servicio al cliente y mejorar la eficiencia y personalización usando tecnología.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Estás explorando soluciones tecnológicas para mejorar la atención al cliente en tu empresa y aumentar su eficiencia.
+  - Te interesa particularmente cómo los chatbots pueden personalizar la interacción con los clientes y facilitar la gestión de ventas.
+  - A medida que investigas, buscas recursos y herramientas que te ayuden a implementar y evaluar estos sistemas de manera efectiva.
+  goals:
+  - Pedir un resumen de las capacidades del chatbot para automatizar el servicio al cliente y ventas.
+  - Solicitar información sobre cómo integrar el canal de WhatsApp utilizando la plataforma de Botslovers.
+  - Preguntar sobre las herramientas analíticas disponibles en Botslovers para evaluar el rendimiento de los asistentes virtuales.
+  - Pedir recursos para aprender más sobre la implementación de chatbots y tecnologías relacionadas.
+  - Solicitar detalles sobre cómo la tecnología puede mejorar las ventas a través de soluciones automatizadas.
+chatbot:
+  is_starter: false
+  fallback: Parece que has escrito un texto aleatorio, ¿hay algo específico en lo que te pueda ayudar? Si necesitas información sobre la plataforma de Botslovers o temas relacionados con inteligencia artificial generativa, ¡estaré encantado de asistirte!
+  output:
+  - chatbot_capabilities_summary:
+      type: string
+      description: Resumen de las capacidades del chatbot
+  - whatsapp_integration_instructions:
+      type: string
+      description: Instrucciones para integrar WhatsApp
+  - analytical_tools_description:
+      type: string
+      description: Descripción de herramientas analíticas
+  - learning_resources:
+      type: string
+      description: Recursos para aprender sobre chatbots
+  - sales_improvement_details:
+      type: string
+      description: Detalles sobre mejora de ventas automatizadas
+  - generative_ai_benefits:
+      type: string
+      description: Beneficios de usar IA generativa
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 22
+  interaction_style:
+  - single question

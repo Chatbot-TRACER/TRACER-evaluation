@@ -1,0 +1,57 @@
+test_name: Consulta sobre gestión de tributos
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que necesita información sobre los tributos gestionados y cómo acceder a los recursos y servicios relacionados.
+  context:
+  - Estás gestionando tus obligaciones fiscales y necesitas asegurarte de que cumples con todos los requisitos necesarios.
+  - Quieres conocer los diferentes tributos que maneja la Diputación y los recursos disponibles para facilitar tu proceso de pago.
+  - Además, necesitas información sobre horarios de atención y accesos a servicios en línea para poder realizar tus gestiones de manera eficiente.
+  goals:
+  - Solicitar información sobre los diferentes tipos de tributos que gestiona la Diputación.
+  - Pedir el enlace al calendario fiscal para conocer los plazos de pago de impuestos.
+  - Solicitar información sobre los métodos de pago disponibles para los recibos de impuestos.
+  - Preguntar sobre los horarios de atención en las diferentes oficinas del Servicio de Gestión Tributaria.
+  - Solicitar asistencia sobre cómo acceder a la Oficina Virtual Tributaria, incluyendo un número de contacto para más información.
+chatbot:
+  is_starter: false
+  fallback: Disculpa, pero... ¿Me lo puedes repetir con otras palabras? Respondo a preguntas sobre la <b>gestión de tributos</b>.
+  output:
+  - tipos_tributos:
+      type: string
+      description: Tipos de tributos gestionados por la Diputación
+  - calendario_fiscal_enlace:
+      type: string
+      description: Enlace al calendario fiscal
+  - plazo_pago_impuestos:
+      type: string
+      description: Plazos de pago de impuestos
+  - metodos_pago:
+      type: string
+      description: Métodos de pago disponibles
+  - horarios_atencion_oficinas:
+      type: string
+      description: Horarios de atención de las oficinas
+  - oficina_virtual_info:
+      type: string
+      description: Información de acceso a la Oficina Virtual Tributaria
+  - numero_contacto_asistencia:
+      type: string
+      description: Número de contacto para asistencia
+  - ubicaciones_oficinas:
+      type: string
+      description: Ubicaciones de las oficinas del Servicio de Gestión Tributaria
+  - enlace_detalles_oficina:
+      type: string
+      description: Enlace a detalles de ubicación de oficina
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 28
+  interaction_style:
+  - single question

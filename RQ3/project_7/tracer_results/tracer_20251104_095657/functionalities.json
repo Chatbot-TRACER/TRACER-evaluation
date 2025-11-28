@@ -1,0 +1,849 @@
+[
+  {
+    "name": "provide_promotions_info",
+    "description": "Offers users information about current promotions, discounts, and special offers at Alcampo, including a link to access the promotions page for detailed offers.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "promotions_info",
+        "description": "A URL to access the latest promotions and offers at Alcampo, along with details and examples of current promotions and discounts."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions & Discounts",
+    "children": []
+  },
+  {
+    "name": "confirm_gift_card_usage",
+    "description": "The chatbot confirms that the Alcampo Gift Card can be used for online purchases.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Payment Methods",
+    "children": []
+  },
+  {
+    "name": "list_main_services_overview",
+    "description": "Provides an overview of the main functions and services offered by Alcampo, including product categories, club membership benefits, and other services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_offerings",
+        "description": "A variety of services including hypermarkets, supermarkets, online shopping, Club Alcampo, local store services, fuel stations, brochures, and promotions, along with a commitment to sustainability."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Services Overview",
+    "children": []
+  },
+  {
+    "name": "provide_club_de_socios_benefits_info",
+    "description": "States the benefits associated with membership in the Club de Socios, suggesting to check the website for detailed information.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Loyalty Programs",
+    "children": []
+  },
+  {
+    "name": "provide_dairy_product_options",
+    "description": "Explains the types of dairy products available in the fresh category with a focus on quality and ecological options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "dairy_product_options",
+        "description": "fresh milk, cheeses, yogurts, lactose-free options"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "confirm_lactose_free_dairy_product_availability",
+    "description": "Confirms the availability of lactose-free dairy products at Alcampo.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Availability",
+    "children": []
+  },
+  {
+    "name": "provide_special_promotions_for_lactose_free_dairy",
+    "description": "States that there are currently no specific promotions for lactose-free dairy products while encouraging the user to check for offers.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Promotions & Discounts",
+    "children": []
+  },
+  {
+    "name": "list_products_and_services_available",
+    "description": "Provides information about the variety of products and services available at Alcampo, including food, technology, and online shopping options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_product_categories",
+        "description": "Describes categories like food, beverages, personal hygiene, technology, home care, and more."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Offerings",
+    "children": []
+  },
+  {
+    "name": "explain_online_shopping_service_details",
+    "description": "Explains how the online shopping service works, including account registration, product selection, delivery options, and additional app functionalities.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "product_selection",
+        "description": "A wide range of over 40,000 products including fresh food, electronics, and household items."
+      },
+      {
+        "category": "delivery_options",
+        "description": "Home delivery or store pickup available."
+      },
+      {
+        "category": "app_functionalities",
+        "description": "Additional features available through the shopping app including recipe selection."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Online Shopping",
+    "children": []
+  },
+  {
+    "name": "list_product_categories",
+    "description": "Lists the types of product categories available in Alcampo's online store.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "product_categories",
+        "description": "Includes fresh foods, frozen goods, groceries, beverages, personal hygiene products, baby care, home entertainment, toys, pet food, electronics, small appliances, and more."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Categories",
+    "children": []
+  },
+  {
+    "name": "provide_product_details",
+    "description": "Provides detailed information about a specific product, including its description and usage benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "product_details",
+        "description": "Detailed description of the product being inquired about."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "recommend_skincare_products_with_niacinamide_or_hyaluronic_acid",
+    "description": "Recommends checking for skincare products containing niacinamide or hyaluronic acid at Alcampo, while mentioning a highlighted product.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "highlighted_product",
+        "description": "Information about a recommended skincare product that contains the ingredients."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Recommendations",
+    "children": []
+  },
+  {
+    "name": "explain_return_policy",
+    "description": "Explains the return policy for products purchased online, including conditions for returns and refunds.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "return_policy_details",
+        "description": "Details about the conditions and process for returning or exchanging products."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Return Policies",
+    "children": []
+  },
+  {
+    "name": "list_non_returnable_products",
+    "description": "Lists specific types of products that are non-returnable due to hygiene, safety, or freshness reasons.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "non_returnable_product_types",
+        "description": "Describes categories of products that cannot be returned."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Return Policies",
+    "children": []
+  },
+  {
+    "name": "guide_on_damaged_or_faulty_products",
+    "description": "Advises the user on the procedure to follow if they receive a damaged or faulty product, including contacting customer service.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_registration_link",
+    "description": "Provides the user with the link to register for Club Alcampo to facilitate easy access to the signup process.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "club_alcampo_registration_link",
+        "description": "URL for joining Club Alcampo."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Loyalty Programs",
+    "children": []
+  },
+  {
+    "name": "provide_app_download_guidance",
+    "description": "Assists the user by outlining the steps required to download the Club Alcampo app, facilitating registration and access to benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "app_download_steps",
+        "description": "Detailed instructions for downloading the Club Alcampo app from app stores."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Information",
+    "children": []
+  },
+  {
+    "name": "explain_and_provide_promotions",
+    "description": "Explains the Alcampo Más subscription service and provides information about ongoing promotions, including benefits for home delivery and links for more details.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "alcampo_mas_service_overview",
+        "description": "Overview of the Alcampo Más service, including subscription details."
+      },
+      {
+        "category": "alcampo_mas_info_link",
+        "description": "Link to more details about Alcampo Más and its offerings."
+      },
+      {
+        "category": "alcampo_mas_promotions",
+        "description": "Details of ongoing promotions and offers related to the Alcampo Más subscription service."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions & Discounts",
+    "children": []
+  },
+  {
+    "name": "confirm_subscription_process",
+    "description": "The chatbot confirms that a user can subscribe to Alcampo Más directly through the website and provides a link for the subscription process.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "subscription_link",
+        "description": "Page link with subscription process and details"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Subscription Information",
+    "children": []
+  },
+  {
+    "name": "describe_order_pickup_options",
+    "description": "Describes and lists the available options for order pickup, including details about Pickup Points and External Lockers.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "pickup_location_details",
+        "description": "Description and information on Pickup Points and External Lockers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Order Pickup Information",
+    "children": []
+  },
+  {
+    "name": "suggest_pickup_requirements",
+    "description": "The chatbot suggests that the user usually needs to bring a valid ID and order confirmation for a smooth pickup process but advises confirming with official sources.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Order Pickup Information",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_offer_details",
+    "description": "The chatbot supplies specific information about the Club Alcampo offer regarding discounts associated with a product.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "club_alcampo_offer_details",
+        "description": "Information about the offer for Lindt Excellence dark chocolate and its benefits"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Loyalty Programs",
+    "children": []
+  },
+  {
+    "name": "prompt_for_club_alcampo_registration_info",
+    "description": "The chatbot informs the user that it currently cannot provide specific registration information for Club Alcampo and directs them to seek official pages or customer service.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Loyalty Programs",
+    "children": []
+  },
+  {
+    "name": "provide_contact_customer_service",
+    "description": "Provides the user with contact information for customer service for general inquiries, including assistance with order-related issues or gift card balances.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "clarify_customer_service_assistance_scope",
+    "description": "Indicates that the specific services offered by Alcampo customer service are not detailed and suggests contacting them for more information.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "detail_online_order_assistance",
+    "description": "Lists various types of assistance available for online orders, including tracking, delivery options, and resolving issues.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_types",
+        "description": "Details about assistance categories such as tracking, delivery modes, changes, and returns."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Online Shopping",
+    "children": []
+  },
+  {
+    "name": "allow_delivery_date_change",
+    "description": "Confirms that users can change the delivery date and time of their online order if done before the order is prepared.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Order Management",
+    "children": []
+  },
+  {
+    "name": "inquire_about_in_store_pickup",
+    "description": "Informs the user that there is no specific information available regarding in-store pickup for online orders.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Order Pickup Information",
+    "children": []
+  },
+  {
+    "name": "suggest_contact_for_refund_assistance",
+    "description": "Recommends contacting customer service for assistance with the refund process and timing following a return.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_order_tracking_instructions",
+    "description": "Instructs the user on how to track their orders after they have been placed through their account.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Order Tracking",
+    "children": []
+  },
+  {
+    "name": "provide_account_creation_steps",
+    "description": "The chatbot outlines the specific steps for creating an account on Alcampo's website.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "offer_registration_assistance",
+    "description": "The chatbot offers further guidance on the registration process upon user request.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "advise_on_email_and_password",
+    "description": "The chatbot provides advice on selecting a valid email address and creating a strong password during registration.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "explain_password_reset_process",
+    "description": "The chatbot explains how to reset a forgotten password for the account.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Account & Access",
+    "children": []
+  },
+  {
+    "name": "suggest_contacting_customer_service_hours",
+    "description": "The chatbot recommends calling customer service for information about their hours of operation, as it lacks this specific information.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_alcampo_website_link",
+    "description": "The chatbot provides the URL to Alcampo's official website for the user to visit.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Website & Navigation",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_info",
+    "description": "Provides information about the Club Alcampo loyalty program, including its benefits and registration process.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "loyalty_program_details",
+        "description": "Overview of how the program works, including point accumulation and benefits, although specific joining process details are not provided."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Loyalty Programs",
+    "children": []
+  },
+  {
+    "name": "summarize_other_services",
+    "description": "Attempts to provide information on other services offered by Alcampo besides online shopping.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Services Overview",
+    "children": []
+  },
+  {
+    "name": "list_delivery_options",
+    "description": "Provides information about available delivery options for online orders, including home delivery and pickup.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "delivery_options",
+        "description": "Home delivery and pickup options, including delivery to home or pickup at hypermarkets and refrigerated lockers."
+      },
+      {
+        "category": "product_variety",
+        "description": "Wide variety of fresh products available for order."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Delivery Information",
+    "children": []
+  },
+  {
+    "name": "provide_delivery_cost_information",
+    "description": "Informs the user about delivery costs for home delivery and store pickup, explaining factors affecting costs and providing recommendations for checking specific prices on the website.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "delivery_cost_information",
+        "description": "Detailed explanation of factors affecting delivery costs, alongside recommendations for checking specific delivery costs based on location and order, including information about different delivery methods such as Home Delivery and Order Pickup and their associated costs."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Delivery Information",
+    "children": []
+  },
+  {
+    "name": "schedule_delivery_time_selection",
+    "description": "Allows the user to choose and confirm a specific delivery time for their online order, informing them about the scheduling process and options available.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "delivery_time_schedule_info",
+        "description": "Details on choosing a delivery date and time as well as same-day delivery possibilities."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Order Management",
+    "children": []
+  },
+  {
+    "name": "provide_order_modification_info",
+    "description": "Informs the user that there is no specific information on changing an order after it has been placed and recommends contacting customer service for assistance.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Order Management",
+    "children": []
+  },
+  {
+    "name": "guide_on_incorrect_delivery_items",
+    "description": "Informs the user about the procedure to follow if incorrect items are received in their delivery.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "return_policy_info",
+        "description": "Steps for returning incorrect items received in delivery."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Order Issues",
+    "children": []
+  },
+  {
+    "name": "inform_minimum_order_amount",
+    "description": "Informs the user about the minimum order amount required for delivery.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "minimum_order_amount_info",
+        "description": "Specifies the minimum order amount for home delivery."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Delivery Information",
+    "children": []
+  },
+  {
+    "name": "confirm_brand_selection_for_perishable_items",
+    "description": "Confirms that the user can choose specific brands for perishable items available on Alcampo's online store.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "brand_selection_info",
+        "description": "Information regarding selecting brands for perishable items."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "list_payment_methods",
+    "description": "Provides information about the payment methods accepted for online shopping and orders at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "payment_methods",
+        "description": "Accepted payment methods include Alcampo Dúia card, major credit and debit cards (Visa, Visa Electron, Eurocard, Mastercard, 4B, Maestro), and PayPal."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment Methods",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_discounts_info",
+    "description": "Informs the user about the discounts and benefits available as a member of the Club Alcampo, including direct discounts, point accumulation, and partnership offers.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Loyalty Programs",
+    "children": []
+  },
+  {
+    "name": "provide_customer_service_info",
+    "description": "Outlines the different customer service options available at Alcampo, including phone support, in-store information points, and online contact methods.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_contact_methods",
+        "description": "Description of contact methods available."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_website_contact_form_info",
+    "description": "Confirms that users can receive support through the website contact form and provides the link for access.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "website_contact_form_link",
+        "description": "URL to the contact form for inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_how_to_activate_club_alcampo_card_info",
+    "description": "Explains that activation of the Club Alcampo card can typically be done via the app, in-store, or online and encourages contacting customer service for precise instructions.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Loyalty Programs",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_app_features",
+    "description": "Lists the features available in the Club Alcampo app that enhance the user's shopping experience, including registration, managing points, and accessing coupons.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "app_features",
+        "description": "Description of the capabilities and benefits available in the Club Alcampo app."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "App Information",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_app_download_info",
+    "description": "Advises that the Club Alcampo app is available for download on both iOS and Android devices and suggests visiting the app store for links.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "App Information",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_app_usage_info",
+    "description": "Directs users to the help section or FAQs within the Club Alcampo app or the Alcampo website for detailed information on app usage.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "App Information",
+    "children": []
+  },
+  {
+    "name": "provide_fresh_category_product_details",
+    "description": "Offers a detailed overview of the fresh category products available, including types, quality practices, and options such as local and ecological products.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fresh_products_list",
+        "description": "Overview of available fresh products, including fruits, vegetables, meats, fish, cheeses, and dairy products, along with local and ecological options."
+      },
+      {
+        "category": "quality_assurance_info",
+        "description": "Description of sourcing practices, sustainability efforts, and freshness guarantees."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_cultivamos_lo_bueno_details",
+    "description": "Provides information about the 'Cultivamos lo Bueno' brand, including the variety and certification of products offered under this label.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cultivos_lo_bueno_products_list",
+        "description": "Description of products included in 'Cultivamos lo Bueno', such as meats, fish, dairy, and prepared products"
+      },
+      {
+        "category": "sustainability_info",
+        "description": "Details on environmental practices, local sourcing, and animal welfare certifications."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_club_alcampo_discount_details",
+    "description": "Describes the discounts and promotions available for 'Cultivamos lo Bueno' products for Club Alcampo members.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "club_discount_info",
+        "description": "Information on current promotions available for Club Alcampo members, including percentage discounts on specific products."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions & Discounts",
+    "children": []
+  },
+  {
+    "name": "provide_fresh_products_web_link",
+    "description": "Directs the user to the section for fresh products on the Alcampo website.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fresh_products_page_link",
+        "description": "Direct URL to the fresh products section on Alcampo's online store."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Website & Navigation",
+    "children": []
+  },
+  {
+    "name": "provide_sourcing_practices_info",
+    "description": "Offers information about the sourcing practices for fresh vegetables at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sourcing_practices_info",
+        "description": "Description of sourcing from local producers and focus on seasonal and organic practices."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_other_organic_produce_info",
+    "description": "Shares information about other types of organic produce available at Alcampo besides vegetables, emphasizing sustainability.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "organic_produce_list",
+        "description": "Overview of organic fruits, legumes, and other organic grocery items"
+      },
+      {
+        "category": "organic_product_source_info",
+        "description": "Information on sourcing organic products directly from local cooperatives."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "list_meat_options_in_fresh_category",
+    "description": "Describes the types of meat available in the fresh category at Alcampo, including details about quality and types.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_meat_types",
+        "description": "Types of available meat products including Pork (IGP Cerdo de Teruel), Beef (Angus), Lamb (various types), and Chicken (fresh)."
+      },
+      {
+        "category": "meat_quality_assurance",
+        "description": "Descriptions of quality assurances for meat products."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "list_prepared_meat_options",
+    "description": "Provides information about various prepared meat options available at Alcampo, such as types of burger meats.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_prepared_meat_types",
+        "description": "Chicken, Pork, Beef (Galician matured, Wagyu)"
+      },
+      {
+        "category": "packaging_options",
+        "description": "Details regarding pack sizes available for prepared meats."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "list_vegetarian_and_vegan_burger_options",
+    "description": "Provides a list of available vegetarian and vegan burger options at Alcampo, including specific brands and types.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_vegetarian_burger_brands",
+        "description": "SOJASUN, CAMPOFRÍO Vegalia, GERBLÉ BIO, FINDUS"
+      },
+      {
+        "category": "available_vegan_burger_brands",
+        "description": "REVOLU GREEN!, GARDEN GOURMET, HEÜRA."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "list_plant_based_burger_flavors",
+    "description": "Lists the various flavors available for plant-based burgers offered at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_flavors",
+        "description": "Wheat and lupin, Spinach, Cheddar style, Pea protein, Eggplant and zucchini, Chicken flavor"
+      },
+      {
+        "category": "flavor_variety",
+        "description": "Descriptions of the main flavor bases for plant-based burgers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "describe_plant_based_burger_packaging",
+    "description": "Explains how plant-based burgers are packaged for sale at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "packaging_details",
+        "description": "General information about packaging types (multipacks, plastic"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "advise_on_nutritional_values",
+    "description": "Suggests the user check the product descriptions for detailed nutritional values of the plant-based burgers available.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "nutritional_information_source",
+        "description": "Recommendation to check product details on the online store for nutritional content."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_special_offers_info_for_fresh_meat",
+    "description": "Informs the user about the absence of specific promotions for fresh meat products and provides a link to check for current offers.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "offer_link",
+        "description": "Link to check for current promotions on fresh meat products."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions & Discounts",
+    "children": []
+  },
+  {
+    "name": "provide_dairy_alternatives_options",
+    "description": "Offers information about plant-based dairy alternatives available for users looking for non-dairy options, specifically highlighting soy products.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "dairy_alternatives_options",
+        "description": "Information on the variety of dairy alternatives including Alpro soy yogurts and organic soy drinks."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  }
+]

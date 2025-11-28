@@ -1,0 +1,60 @@
+test_name: Solicitud de Comunicación Previa para Obras
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que requiere solicitar la documentación necesaria y los pasos para realizar una comunicación previa de obras.
+  context:
+  - Recientemente has decidido llevar a cabo algunas reformas en tu propiedad y necesitas entender mejor el proceso para informarlo correctamente al Ayuntamiento.
+  - Te preocupa cumplir con todos los requisitos legales, por lo que buscas información detallada sobre la documentación necesaria y los pasos a seguir para la comunicación previa de obras.
+  - Además, necesitas asegurarte de conocer las opciones para realizar la solicitud de manera electrónica y cómo gestionar el pago de las tasas correspondientes.
+  goals:
+  - Solicitar información sobre los documentos necesarios para presentar una solicitud de comunicación previa de obras.
+  - Preguntar cómo se puede realizar la solicitud de comunicación previa electrónicamente.
+  - Solicitar detalles sobre el proceso de pago del ICIO y los métodos de pago disponibles.
+  - Pedir una cita previa en el servicio de urbanismo y especificar la referencia catastral del inmueble.
+  - Obtener el enlace para acceder a la Sede Electrónica del Ayuntamiento de Arucas.
+chatbot:
+  is_starter: false
+  fallback: ¿Decías?
+  output:
+  - required_documents:
+      type: string
+      description: Documentación necesaria para la solicitud
+  - electronic_submission_guidelines:
+      type: string
+      description: Instrucciones para presentación electrónica
+  - payment_process_details:
+      type: string
+      description: Información sobre el proceso de pago
+  - appointment_reference:
+      type: string
+      description: Referencia catastral del inmueble
+  - scheduled_appointment_date:
+      type: date
+      description: Fecha de la cita previa solicitada
+  - payment_methods:
+      type: string
+      description: Métodos de pago disponibles
+  - electronic_office_link:
+      type: string
+      description: Enlace a la Sede Electrónica
+  - communication_request_model:
+      type: string
+      description: Modelo de comunicación previa requerido
+  - user_contact_number:
+      type: string
+      description: Número de contacto del usuario
+  - submission_deadline:
+      type: date
+      description: Fecha límite para la presentación
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

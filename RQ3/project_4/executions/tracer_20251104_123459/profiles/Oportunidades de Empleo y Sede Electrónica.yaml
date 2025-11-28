@@ -1,0 +1,45 @@
+test_name: Oportunidades de Empleo y Sede Electrónica
+llm:
+  temperature: 0.3
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario en búsqueda de oportunidades de empleo y acceso a la plataforma electrónica del Ayuntamiento.
+  context:
+  - Estás buscando oportunidades laborales en el Ayuntamiento de Morón de la Frontera para mejorar tu situación económica.
+  - Además, necesitas acceder a la Sede Electrónica del Ayuntamiento para realizar algunos trámites necesarios en tu proceso de búsqueda de empleo.
+  - Te gustaría informarte sobre diferentes canales de contacto para resolver dudas que puedan surgir sobre las ofertas y servicios disponibles.
+  goals:
+  - Consultar sobre las oportunidades laborales disponibles en el Ayuntamiento de Morón de la Frontera.
+  - Pedir información sobre cómo acceder a las ofertas de empleo y detalles de la solicitud.
+  - Solicitar acceso a la Sede Electrónica del Ayuntamiento para realizar trámites.
+  - Preguntar qué métodos alternativos de contacto existen para información que no está disponible en el chatbot.
+  - Obtener información sobre el área de Servicios Sociales y cómo contactar con ellos para consultas sobre programas disponibles.
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - job_opportunities_info:
+      type: string
+      description: Información sobre ofertas laborales disponibles
+  - application_details:
+      type: string
+      description: Detalles sobre el proceso de solicitud
+  - electronic_office_link:
+      type: string
+      description: Enlace a la Sede Electrónica del Ayuntamiento
+  - contact_info:
+      type: string
+      description: Número de contacto para consultas adicionales
+  - social_services_contact:
+      type: string
+      description: Información de contacto para Servicios Sociales
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

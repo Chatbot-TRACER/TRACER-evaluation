@@ -1,0 +1,60 @@
+test_name: Registro Civil y Matrimonios
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que está interesado en iniciar un proceso de matrimonio o necesita información sobre el Registro Civil.
+  context:
+  - 'personality: personalities/rude-user'
+  - Estás planificando tu matrimonio y necesitas información clara sobre los procesos involucrados en el Registro Civil.
+  - Tienes algunas preguntas sobre los documentos necesarios y los pasos a seguir para iniciar el trámite.
+  - Además, te gustaría conocer la ubicación y el contacto del Registro Civil para programar una cita.
+  goals:
+  - Solicitar la información sobre la ubicación y contacto del Registro Civil.
+  - Pedir detalles sobre los pasos necesarios para iniciar un matrimonio civil.
+  - Solicitar el número de teléfono y dirección del Registro Civil para hacer una cita.
+  - Consultar qué documentos son necesarios para tramitar el expediente de matrimonio en el Registro Civil.
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - civil_registry_location:
+      type: string
+      description: Ubicación de la oficina del Registro Civil
+  - civil_registry_phone:
+      type: string
+      description: Número de teléfono del Registro Civil
+  - marriage_process_steps:
+      type: string
+      description: Pasos para iniciar un matrimonio civil
+  - marriage_documents_required:
+      type: string
+      description: Documentos necesarios para el matrimonio
+  - appointment_contact:
+      type: string
+      description: Contacto para hacer cita en Registro Civil
+  - civil_registry_email:
+      type: string
+      description: Correo electrónico del Registro Civil
+  - municipal_office_contact:
+      type: string
+      description: Contacto de la oficina municipal para la ceremonia
+  - ceremony_arrangements_info:
+      type: string
+      description: Información sobre arreglos para la ceremonia
+  - appointment_hours:
+      type: string
+      description: Horarios de atención para citas en Registro Civil
+  - office_website:
+      type: string
+      description: Página web del Registro Civil
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 28
+  interaction_style:
+  - single question

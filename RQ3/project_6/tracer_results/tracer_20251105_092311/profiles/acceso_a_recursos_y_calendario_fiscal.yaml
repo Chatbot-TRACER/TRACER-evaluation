@@ -1,0 +1,47 @@
+test_name: Acceso a Recursos y Calendario Fiscal
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que necesita información sobre el acceso al calendario fiscal y métodos de pago de impuestos.
+  context:
+  - Estás organizando tus finanzas personales y necesitas asegurarte de cumplir con tus obligaciones fiscales en tiempo y forma.
+  - Te preocupa no tener toda la información necesaria sobre el calendario fiscal y los métodos de pago disponibles en la Oficina Virtual Tributaria.
+  - Además, quieres saber más sobre las oficinas del Servicio de Gestión Tributaria para poder acudir a la que te resulte más conveniente.
+  goals:
+  - Preguntar sobre las opciones para acceder al calendario fiscal y cómo se puede realizar el pago de impuestos a través de la Oficina Virtual Tributaria.
+  - Solicitar la información sobre las diferentes oficinas del Servicio de Gestión Tributaria, incluyendo sus ubicaciones geográficas y horarios de operación.
+  - Pedir el catálogo de procedimientos fiscales disponibles para consultar más adelante, aunque la solicitud no fuese directamente respondida con el enlace.
+  - Repetir la información sobre cómo encontrar las oficinas geográficas del Servicio de Gestión Tributaria y asegurarse de recibir el enlace correspondiente.
+chatbot:
+  is_starter: false
+  fallback: Por favor, ¿me lo puedes decir con otras palabras? Te puedo informar acerca de la <b>gestión de tributos</b>.
+  output:
+  - tax_payment_access_methods:
+      type: string
+      description: Métodos para acceder a pago de impuestos
+  - tax_support_contact_information:
+      type: string
+      description: Número de teléfono de soporte tributario
+  - tax_calendar_link:
+      type: string
+      description: Enlace al calendario fiscal
+  - tax_procedures_catalog_link:
+      type: string
+      description: URL del catálogo de procedimientos fiscales
+  - office_location_information:
+      type: string
+      description: Información de ubicaciones de oficinas fiscales
+  - office_information_link:
+      type: string
+      description: Enlace a oficinas y horarios de operación
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

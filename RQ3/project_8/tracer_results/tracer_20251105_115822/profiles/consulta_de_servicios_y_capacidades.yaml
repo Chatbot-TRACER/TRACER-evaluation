@@ -1,0 +1,64 @@
+test_name: Consulta de Servicios y Capacidades
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en conocer los servicios y capacidades de la plataforma de automatización de atención al cliente.
+  context:
+  - 'personality: personalities/conversational-user'
+  - Buscas mejorar la atención al cliente de tu empresa mediante la automatización de procesos para ofrecer una respuesta más rápida y eficiente.
+  - Te interesa entender qué servicios y capacidades ofrece la plataforma para integrar esta tecnología en tu estrategia actual.
+  - Además, deseas conocer opciones específicas para personalizar la experiencia del cliente y optimizar la comunicación a través de diferentes canales.
+  goals:
+  - Solicitar una visión general de los servicios que ofrece la plataforma de automatización de atención al cliente.
+  - Preguntar sobre las capacidades que tiene la plataforma para automatizar conversaciones.
+  - Consultar qué tipos de integraciones están disponibles para conectar con otras herramientas.
+  - Pedir información específica sobre cómo enviar notificaciones proactivas a través de WhatsApp.
+  - Solicitar ejemplos de personalización de la experiencia del cliente a través de las integraciones.
+chatbot:
+  is_starter: false
+  fallback: Si tienes una pregunta específica sobre Botslovers o la inteligencia artificial, estaré encantado de ayudarte.
+  output:
+  - services_overview:
+      type: string
+      description: Descripción de los servicios ofrecidos
+  - ease_of_use:
+      type: string
+      description: Naturaleza amigable de la solución
+  - communication_improvement:
+      type: string
+      description: Mejora de la comunicación con los clientes
+  - process_optimization:
+      type: string
+      description: Optimización de procesos de venta
+  - service_capabilities:
+      type: string
+      description: Capacidades del servicio de la plataforma
+  - advanced_features:
+      type: string
+      description: Funcionalidades avanzadas ofrecidas
+  - automation_capabilities:
+      type: string
+      description: Características para automatizar conversaciones
+  - benefits_of_proactive_notifications:
+      type: string
+      description: Beneficios de las notificaciones proactivas
+  - available_integrations:
+      type: string
+      description: Tipos de integraciones disponibles
+  - whatsapp_notifications_info:
+      type: string
+      description: Información sobre enviar notificaciones por WhatsApp
+  - personalization_examples:
+      type: string
+      description: Ejemplos de personalización de la experiencia del cliente
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

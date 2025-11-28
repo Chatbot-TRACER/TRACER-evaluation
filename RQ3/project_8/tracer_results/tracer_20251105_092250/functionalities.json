@@ -1,0 +1,212 @@
+[
+  {
+    "name": "prompt_for_question",
+    "description": "The chatbot invites the user to ask any questions, explaining how it learns and communicates through Natural Language Processing (NLP).",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "prompt_for_support_contact_method",
+    "description": "Prompts the user to inquire about available contact methods for support assistance.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": [
+      {
+        "name": "present_alternative_communication_options",
+        "description": "Presents the user with various options for assistance, including alternative support methods and frequently asked questions.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "support_options",
+            "description": "Options for additional support such as writing a query directly, viewing frequently asked questions, contacting for other inquiries, or speaking with an expert."
+          }
+        ],
+        "parent_names": [
+          "prompt_for_support_contact_method"
+        ],
+        "suggested_category": "Customer Support",
+        "children": [
+          {
+            "name": "provide_contact_information",
+            "description": "The chatbot provides the email address to contact for further assistance.",
+            "parameters": [],
+            "outputs": [
+              {
+                "category": "contact_email_address",
+                "description": "The email address provided as a contact for users seeking help."
+              }
+            ],
+            "parent_names": [
+              "present_alternative_communication_options"
+            ],
+            "suggested_category": "Customer Support",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "present_consulted_topics_options",
+        "description": "Presents a list of the most consulted topics and options available for the user to select and explore further regarding the services provided by Botslovers.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "consulted_topics",
+            "description": "Popular inquiries regarding automating customer service and sales, integrations with tools, multilingual capabilities, personal response generation, and options related to customer service topics for selection."
+          },
+          {
+            "category": "available_options",
+            "description": "Options include 'Lo más consultado.'"
+          }
+        ],
+        "parent_names": [
+          "prompt_for_support_contact_method"
+        ],
+        "suggested_category": "Customer Support",
+        "children": [
+          {
+            "name": "present_client_overview",
+            "description": "The chatbot provides an overview of prominent brands using Botslovers to automate customer service.",
+            "parameters": [],
+            "outputs": [
+              {
+                "category": "client_list",
+                "description": "A list of notable clients using Botslovers, including Netflix, Porsche, and Movistar."
+              }
+            ],
+            "parent_names": [
+              "present_consulted_topics_options"
+            ],
+            "suggested_category": "Customer Support",
+            "children": []
+          },
+          {
+            "name": "prompt_for_consultation_topic",
+            "description": "Requests the user to specify the topic of their consultation after selecting the \"Lo más consultado\" option.",
+            "parameters": [
+              {
+                "name": "consultation_topic",
+                "description": "The specific topic the user is interested in.",
+                "options": []
+              }
+            ],
+            "outputs": [],
+            "parent_names": [
+              "present_consulted_topics_options"
+            ],
+            "suggested_category": "Customer Support",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "prompt_for_live_chat_availability_query",
+    "description": "The chatbot permits the user to ask about the availability of live chat for quick queries.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "prompt_for_email_confirmation",
+    "description": "Prompts the user to confirm or provide their email address, offering options for email confirmation in the process.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": [
+      {
+        "name": "request_email_for_specialist_connection",
+        "description": "Requests the user's email address to connect them with a specialist for further assistance.",
+        "parameters": [
+          {
+            "name": "email_address",
+            "description": "The email address provided by the user for contact and communication with a specialist.",
+            "options": []
+          }
+        ],
+        "outputs": [],
+        "parent_names": [
+          "prompt_for_email_confirmation"
+        ],
+        "suggested_category": "Customer Support",
+        "children": [
+          {
+            "name": "acknowledge_transfer_to_specialist",
+            "description": "The chatbot confirms that the user's conversation is being transferred to a specialist for further assistance.",
+            "parameters": [],
+            "outputs": [],
+            "parent_names": [
+              "request_email_for_specialist_connection"
+            ],
+            "suggested_category": "Customer Support",
+            "children": [
+              {
+                "name": "provide_contact_confirmation",
+                "description": "The chatbot confirms that the user will receive a response from a specialist as soon as possible.",
+                "parameters": [],
+                "outputs": [],
+                "parent_names": [
+                  "acknowledge_transfer_to_specialist"
+                ],
+                "suggested_category": "Customer Support",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "confirm_email_address",
+            "description": "Prompts the user to confirm their provided email address by repeating it back for verification before proceeding.",
+            "parameters": [
+              {
+                "name": "email_address",
+                "description": "The confirmed email address provided by the user for verification.",
+                "options": []
+              }
+            ],
+            "outputs": [],
+            "parent_names": [
+              "request_email_for_specialist_connection"
+            ],
+            "suggested_category": "Customer Support",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "provide_farewell_message",
+    "description": "Delivers a friendly farewell message to the user when they indicate they no longer need assistance.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "confirm_conversation_completion",
+    "description": "Acknowledges the end of the interaction and expresses readiness to assist the user again in the future.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "prompt_for_more_details",
+    "description": "The chatbot asks the user to provide more information or rephrase their request when the previous response was unhelpful.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  }
+]

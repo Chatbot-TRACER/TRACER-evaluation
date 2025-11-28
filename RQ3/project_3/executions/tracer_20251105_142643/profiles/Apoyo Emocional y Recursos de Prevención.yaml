@@ -1,0 +1,60 @@
+test_name: Apoyo Emocional y Recursos de Prevención
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Persona que busca apoyo emocional y recursos ante situaciones de crisis o violencia.
+  context:
+  - 'personality: personalities/disorganized-user'
+  - Te encuentras en un momento difícil y estás buscando maneras de recibir apoyo emocional ante situaciones de crisis que has enfrentado recientemente.
+  - Necesitas información sobre recursos disponibles que te puedan ayudar, así como números de contacto para asistencia inmediata.
+  - Tu prioridad es asegurarte de tener acceso a la información adecuada que te brinde alivio y orientación en estos momentos de angustia.
+  goals:
+  - Solicitar números de contacto de asistencia inmediata para apoyo emocional.
+  - Pedir información sobre los servicios del Teléfono de la Esperanza y su disponibilidad.
+  - Solicitar la lista de recursos y líneas de ayuda disponibles para personas que enfrentan situaciones de violencia de género.
+  - Preguntar sobre el Teléfono 016 y cómo brinda información sobre recursos legales para víctimas de violencia de género.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - contact_number:
+      type: string
+      description: Número de contacto para asistencia inmediata
+  - esperanza_services:
+      type: string
+      description: Información sobre servicios del Teléfono de la Esperanza
+  - esperanza_availability:
+      type: string
+      description: Disponibilidad del Teléfono de la Esperanza
+  - gender_violence_resources:
+      type: string
+      description: Lista de recursos para violencia de género
+  - legal_resources_info:
+      type: string
+      description: Información sobre recursos legales del Teléfono 016
+  - active_support_services:
+      type: string
+      description: Servicios de apoyo activo ofrecidos
+  - professional_intervention_services:
+      type: string
+      description: Servicios de intervención profesional ofrecidos
+  - immediate_assistance_request:
+      type: string
+      description: Solicitud de asistencia inmediata realizada
+  - gender_violence_hotlines:
+      type: string
+      description: Números de líneas de ayuda para violencia de género
+  - crisis_support_resources:
+      type: string
+      description: Recursos de apoyo ante crisis disponibles
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 28
+  interaction_style:
+  - single question

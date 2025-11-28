@@ -1,0 +1,52 @@
+test_name: Programas de salud y prevención
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Ciudadano interesado en programas de salud, promoción y prevención de enfermedades en la Comunidad de Madrid.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Estás interesado en mejorar la salud de los estudiantes en tu comunidad y quieres conocer las iniciativas disponibles en las escuelas de la Comunidad de Madrid.
+  - Te gustaría informarte sobre los diferentes programas de promoción de la salud y los recursos que se ofrecen para apoyar la educación en salud.
+  - Además, estás buscando detalles específicos sobre un programa que fomenta hábitos saludables entre los jóvenes.
+  goals:
+  - Solicitar información sobre los programas de promoción de la salud disponibles en las escuelas.
+  - Preguntar sobre los pasos requeridos para que las escuelas accedan a los programas de educación en salud.
+  - Solicitar una lista de los programas educativos de salud disponibles en las escuelas.
+  - Pedir información sobre el programa 'Saludatuvida' que promueve hábitos saludables entre los estudiantes.
+  - Solicitar información sobre los recursos de salud disponibles en la web de la Comunidad de Madrid.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - programas_escuelas:
+      type: string
+      description: Programas de promoción en escuelas
+  - pasos_acceso:
+      type: string
+      description: Pasos para acceder a programas
+  - lista_programas:
+      type: string
+      description: Lista de programas educativos
+  - informacion_saludatuvida:
+      type: string
+      description: Detalles sobre 'Saludatuvida'
+  - recursos_web:
+      type: string
+      description: Recursos de salud en la web
+  - programas_prevencion:
+      type: string
+      description: Programas de prevención disponibles
+  - servicios_adiccion:
+      type: string
+      description: Apoyo familiar en adicciones
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 24
+  interaction_style:
+  - single question

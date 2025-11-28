@@ -1,0 +1,154 @@
+[
+  {
+    "name": "provide_information_on_events",
+    "description": "Provides information about the services available at the Ayuntamiento de Morón de la Frontera but does not directly answer questions about specific events.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_contact_information",
+    "description": "Provides detailed information on how to contact Social Services and schedule appointments with the Ayuntamiento, including service hours and available contact methods.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_methods",
+        "description": "Information on how to get in touch with Social Services, including options for in-person visits, phone calls, and online appointments with relevant links."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "provide_general_assistance_context",
+    "description": "Introduces the chatbot as part of the municipal citizen service team and prompts the user to indicate their needs for assistance.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "provide_government_information",
+    "description": "Shares information about the municipal government, including details on political parties and representation in the local governing body.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "municipal_government_info",
+        "description": "Information about the political parties, representation in the local government, and governing bodies."
+      },
+      {
+        "category": "available_buttons",
+        "description": "Includes options to access more information about the municipal corporation."
+      },
+      {
+        "category": "municipal_structure_link",
+        "description": "URL to details of the municipal corporation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Government Information",
+    "children": []
+  },
+  {
+    "name": "provide_tax_payment_deadlines",
+    "description": "Provides information on the deadlines for paying municipal taxes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_payment_deadlines",
+        "description": "Dates for the payment of municipal taxes and tax payment periods based on type."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tax Information",
+    "children": []
+  },
+  {
+    "name": "provide_job_opportunities_info",
+    "description": "The chatbot informs the user about job opportunities and how to access job postings and application details.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "job_opportunities_info",
+        "description": "General information about job offers, including where to find them and application requirements."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Employment Information",
+    "children": []
+  },
+  {
+    "name": "access_electronic_office",
+    "description": "Prompts the user to access the Sede Electrónica of the Ayuntamiento by providing a link.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "electronic_office_link",
+        "description": "URL link to the Sede Electrónica for scheduling appointments and the Sede Electrónica of the Ayuntamiento."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Online Services",
+    "children": []
+  },
+  {
+    "name": "provide_civil_registry_contact_info",
+    "description": "Provides the user with the location and contact information for the Civil Registry or Registro Civil office.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "civil_registry_contact",
+        "description": "Address and contact numbers for the Civil Registry."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Civil Registry Information",
+    "children": []
+  },
+  {
+    "name": "provide_civil_marriage_initiation_info",
+    "description": "Provides instructions and necessary contacts for initiating a civil marriage, including steps for registration and arrangements for the ceremony.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "civil_marriage_process",
+        "description": "Steps for filing marriage at the Civil Registry and contacting the municipal office for ceremony arrangements, including phone details."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Marriage Information",
+    "children": []
+  },
+  {
+    "name": "direct_user_to_contact",
+    "description": "Informs the user that specific information is unavailable and directs them to an alternate contact method for further assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "contact_info",
+        "description": "WhatsApp contact number provided for further queries on youth programs."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Contact Information",
+    "children": []
+  },
+  {
+    "name": "suggest_resources_for_tax_payment_help",
+    "description": "Suggests resources and services for individuals facing financial difficulties regarding tax payments, including providing information and contact details for relevant governmental organizations and social services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_contact_info",
+        "description": "Information on available services such as contacting the Servicio Andaluz de Empleo (SAE) and guidance related to Social Services assistance."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Support Services",
+    "children": []
+  }
+]

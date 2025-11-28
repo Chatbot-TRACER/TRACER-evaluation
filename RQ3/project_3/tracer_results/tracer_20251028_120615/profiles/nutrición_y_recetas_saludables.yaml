@@ -1,0 +1,60 @@
+test_name: Nutrición y Recetas Saludables
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca recetas específicas y información sobre alimentos saludables para mejorar su dieta.
+  context:
+  - Estás buscando mejorar tu dieta y has decidido incorporar más alimentos saludables y recetas nutritivas a tus comidas diarias.
+  - Últimamente has estado interesado en platos que incluyan legumbres y atún, ya que quieres diversificar tus opciones y optimizar tu nutrición.
+  - Además, deseas asegurarte de cumplir con las recomendaciones diarias de ciertos grupos alimenticios mientras experimentas en la cocina.
+  goals:
+  - Solicitar una receta detallada para preparar hummus, incluyendo ingredientes e instrucciones.
+  - Pedir ejemplos de comidas nutritivas que se puedan preparar con legumbres.
+  - Solicitar información sobre las cantidades diarias recomendadas para los lácteos y pedir recetas que las incluyan.
+  - Preguntar por las verduras más adecuadas para añadir a una receta de pasta.
+  - Solicitar una receta de ensalada con atún y legumbres, asegurando que incluya todos los ingredientes.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - hummus_recipe_details:
+      type: string
+      description: Detalles de ingredientes e instrucciones para hummus
+  - legume_meal_recipes:
+      type: string
+      description: Ejemplos de comidas con legumbres
+  - dairy_recommendations:
+      type: string
+      description: Cantidades diarias recomendadas para lácteos
+  - pasta_vegetable_recommendations:
+      type: string
+      description: Verduras adecuadas para pasta
+  - tuna_legume_salad_recipe:
+      type: string
+      description: Ingredientes y pasos para ensalada con atún y legumbres
+  - additional_health_recipes:
+      type: string
+      description: Recetas adicionales saludables para preparar
+  - tofu_stir_fry_recipe:
+      type: string
+      description: Ingredientes e instrucciones para salteado de tofu
+  - oatmeal_cookie_recipe:
+      type: string
+      description: Ingredientes e instrucciones para galletas de avena
+  - serving_suggestions:
+      type: string
+      description: Sugerencias para servir hummus
+  - legume_nutritional_benefits:
+      type: string
+      description: Beneficios nutricionales de las legumbres
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

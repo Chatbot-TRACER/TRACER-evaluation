@@ -1,0 +1,246 @@
+[
+  {
+    "name": "prompt_for_initial_question",
+    "description": "Invites the user to ask questions to learn more or get assistance.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "confirm_helpfulness_of_response",
+    "description": "Asks the user for feedback on the usefulness of the provided response.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "present_service_overview",
+    "description": "Provides a comprehensive overview of the platform's services and capabilities, including automation, customer support options, and personalized assistance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_capabilities",
+        "description": "A comprehensive overview of features including automation, natural interactions, personalization, scalability, customer service automation, sales automation, LiveChat assistance, proactive notifications, analytics, integrations, and platform efficiency enhancements."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_about_customer_service_automation",
+    "description": "Offers assistance with inquiries about the Botslovers platform and explains automated customer service capabilities via WhatsApp, including the differences between WhatsApp API and WhatsApp for Business.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_automation",
+        "description": "An overview of how WhatsApp bots can automate customer service, including the distinction between WhatsApp API and WhatsApp for Business and its implications for automation."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Service Automation",
+    "children": []
+  },
+  {
+    "name": "prompt_for_advanced_analytics_integration",
+    "description": "Invites the user to inquire about advanced analytics integration in the Botslovers platform.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "provide_response_about_nlp",
+    "description": "Explains the role of Natural Language Processing (NLP) in facilitating effective communication between users and chatbots, highlighting the ease of creating user experiences without programming.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "nlp_significance",
+        "description": "An explanation of Natural Language Processing (NLP) and its significance in enhancing customer interactions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "NLP Technology",
+    "children": []
+  },
+  {
+    "name": "present_integration_options",
+    "description": "Lists the various channels of communication that can be integrated with Botslovers platform.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "integration_channels",
+        "description": "Available channels include WhatsApp, Instagram, Facebook, Web, X, and a telephone channel with synthetic voices."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integrations",
+    "children": []
+  },
+  {
+    "name": "provide_response_about_sales_automation",
+    "description": "Describes how Botslovers automates sales and customer service using Generative AI and NLP technology, including integration with data sources and management of user queries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sales_automation_process",
+        "description": "Overview of the sales automation process using Botslovers."
+      },
+      {
+        "category": "platform_features",
+        "description": "List of platform features including LiveChat and proactive notifications."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Sales Automation",
+    "children": []
+  },
+  {
+    "name": "list_integrations",
+    "description": "Provides details on various integrations available in the Botslovers platform.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "integrations_list",
+        "description": "Lists available integrations, including Salesforce, Hubspot, Zendesk, Intercom, Prestashop, Wordpress, Woocommerce, Shopify, WhatsApp, Instagram, Facebook, and a new telephone channel."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integrations",
+    "children": []
+  },
+  {
+    "name": "provide_analytics_overview",
+    "description": "Offers insights into the analytics features available on the Botslovers platform to monitor and optimize chatbot performance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "analytics_details",
+        "description": "Describes the types of analytics provided, including performance reports on chatbot stories, interaction frequency analysis, and performance comparisons over different periods."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Analytics",
+    "children": []
+  },
+  {
+    "name": "provide_virtual_assistant_capabilities",
+    "description": "Details the capabilities of the virtual assistants available on the platform, including automation of conversations, real-time assistance, proactive notifications, customization, and multilingual support.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "capabilities_summary",
+        "description": "An overview of the virtual assistant's features, including automation of conversations, real-time assistance, notifications, proactive notifications, analytics and reports, customization, and support for multiple languages."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Virtual Assistants",
+    "children": []
+  },
+  {
+    "name": "provide_integration_capabilities",
+    "description": "Explains the integration capabilities of virtual assistants with other platforms, detailing supported integration types and providing examples of specific platforms.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "integration_details",
+        "description": "Information on supported integration types, including CRM, CMS, and HELPDESK systems, along with examples of specific platforms integrated with the virtual assistants such as Salesforce, Hubspot, Zendesk, Intercom, Prestashop, Wordpress, Woocommerce, and Shopify."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integrations",
+    "children": []
+  },
+  {
+    "name": "prompt_for_email_collection",
+    "description": "Solicits the user to provide their email address to connect with a specialist for further assistance.",
+    "parameters": [
+      {
+        "name": "user_email",
+        "description": "The email address the user needs to provide.",
+        "options": []
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Chatbot Meta",
+    "children": []
+  },
+  {
+    "name": "provide_integration_details_for_whatsapp",
+    "description": "Provides detailed information about how the integration with WhatsApp works.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Integrations",
+    "children": []
+  },
+  {
+    "name": "provide_integration_details_for_salesforce",
+    "description": "Provides detailed information about how the integration with Salesforce works.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Integrations",
+    "children": []
+  },
+  {
+    "name": "provide_integration_details_for_instagram",
+    "description": "Provides detailed information about how the integration with Instagram works.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Integrations",
+    "children": []
+  },
+  {
+    "name": "provide_cost_reduction_information",
+    "description": "Provides information and examples of potential cost reduction benefits from using the platform, detailing how automation can help reduce operational costs.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cost_reduction_benefits",
+        "description": "Describes the various ways automation can reduce operational costs, including labor cost reduction, increased efficiency and productivity, 24/7 availability, elimination of human errors, data analysis capabilities, automation of FAQs, multichannel integration, improved response times, and ongoing operational optimization."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Cost Reduction",
+    "children": []
+  },
+  {
+    "name": "provide_resource_optimization_information",
+    "description": "Explains how the platform optimizes resources by automating customer service and sales functions using generative AI and NLP technology.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Resource Optimization",
+    "children": []
+  },
+  {
+    "name": "provide_customer_service_automation_info",
+    "description": "Provides information about the automation capabilities of customer service through bots, highlighting benefits such as efficiency, personalization, and examples of proactive features.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "case_study_examples",
+        "description": "Examples of brands utilizing the service such as Porsche, Alcampo, Siemens, and Pikolin."
+      },
+      {
+        "category": "benefits_of_automation",
+        "description": "Highlights of improvements in efficiency and customer satisfaction as a result of automation."
+      },
+      {
+        "category": "customer_service_capabilities",
+        "description": "Automated customer service and sales features provided through WhatsApp, including the ability to send proactive notifications to customers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Service Automation",
+    "children": []
+  }
+]

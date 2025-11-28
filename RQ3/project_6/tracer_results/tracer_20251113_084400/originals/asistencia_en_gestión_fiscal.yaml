@@ -1,0 +1,48 @@
+test_name: Asistencia en Gestión Fiscal
+llm:
+  temperature: 0.5
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca asistencia en la gestión y cálculo de sus impuestos y tasas.
+  context:
+  - Estás gestionando tus impuestos y necesitas entender mejor las obligaciones fiscales que tienes con la Diputación.
+  - Además, te preocupa que se te hayan pasado algunos plazos y quieres asegurarte de cumplir con todas tus obligaciones sin incurrir en recargos.
+  - Para ello, buscas información sobre los documentos necesarios y el calendario fiscal para evitar problemas en el futuro.
+  goals:
+  - Preguntar al chatbot qué tipo de tributos gestiona o recauda la Diputación.
+  - Solicitar información sobre el calendario fiscal, es decir, preguntar '¿Cuándo debo pagar mis impuestos y/o tasas?'.
+  - Pedir asistencia sobre cómo obtener un nuevo documento de ingreso, mencionando que es necesario porque ha vencido el plazo de pago.
+  - Confirmar los métodos para obtener un documento nuevo, preguntando '¿Cuáles son los métodos para obtener un nuevo documento de pago?'.
+  - Solicitar información sobre las posibles costas adicionales asociadas a un nuevo documento de ingreso, preguntando '¿Cuáles son los recargos o penalizaciones posibles?
+chatbot:
+  is_starter: false
+  fallback: Disculpa, pero... ¿Me lo puedes repetir con otras palabras? Respondo a preguntas sobre la <b>gestión de tributos</b>.
+  output:
+  - tax_types:
+      type: string
+      description: Tipos de tributos gestionados
+  - fiscal_calendar:
+      type: string
+      description: Información sobre el calendario fiscal
+  - payment_deadline:
+      type: date
+      description: Fecha límite para el pago
+  - new_payment_document_info:
+      type: string
+      description: Asistencia para obtener un nuevo documento de ingreso
+  - document_reissue_methods:
+      type: string
+      description: Métodos para obtener un nuevo documento de pago
+  - additional_costs_info:
+      type: string
+      description: Información sobre recargos o penalizaciones
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 22
+  interaction_style:
+  - single question

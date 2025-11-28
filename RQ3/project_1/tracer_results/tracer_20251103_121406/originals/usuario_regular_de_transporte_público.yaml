@@ -1,0 +1,126 @@
+test_name: Usuario Regular de Transporte Público
+llm:
+  temperature: 0.4
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario habitual que busca información sobre horarios, tarifas y servicios del metro.
+  context:
+  - 'personality: personalities/rude-user'
+  - Como usuario habitual del metro, necesitas planificar tu trayecto para llegar a tiempo a una reunión importante.
+  - Te interesa conocer los próximos trenes y las tarifas disponibles para diferentes grupos de edad, ya que viajas con familiares.
+  - Además, prefieres interactuar en tu idioma nativo para asegurarte de entender toda la información necesaria.
+  goals:
+  - Seleccionar mi idioma preferido para la comunicación.
+  - Aceptar la política de privacidad para continuar.
+  - Solicitar información sobre los próximos trenes en la estación de {{nombre_estacion}}.
+  - Consultar las líneas de tren disponibles en la estación {{nombre_estacion}}.
+  - Proveer información sobre las tarifas recomendadas según mi grupo de edad de {{grupo_edad}} y zona de salida {{zona_salida}}.
+  - grupo_edad:
+      function: forward()
+      type: string
+      data:
+      - 0-4 años
+      - 5-12 años
+      - 13-17 años
+      - 18-25 años
+      - 26-35 años
+      - 36+ años
+  - nombre_estacion:
+      function: forward()
+      type: string
+      data:
+      - Estación Central
+      - Estación del Norte
+      - Estación de Puebla
+      - Estación Atocha
+      - Estación de Sevilla
+      - Estación de Barcelona
+  - zona_salida:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - Zona D
+chatbot:
+  is_starter: false
+  fallback: Lo siento, este es *un canal de información de servicio y de atención al cliente* de Metro de Madrid.\n \nPara cualquier otro tipo de información puedes consultar nuestra página web:\n🌐 www.metromadrid.es\n \n¿Con qué otra duda podría ayudarte? 👇
+  output:
+  - preferred_language:
+      type: string
+      description: Idioma preferido del usuario
+  - privacy_policy_acceptance:
+      type: string
+      description: Confirmación de aceptación de la política de privacidad
+  - requested_station:
+      type: string
+      description: Nombre de la estación solicitada
+  - train_lines_available:
+      type: string
+      description: Líneas de tren disponibles en la estación
+  - age_group:
+      type: string
+      description: Grupo de edad del usuario
+  - departure_zone:
+      type: string
+      description: Zona de tarifa de salida del usuario
+  - next_train_schedule:
+      type: string
+      description: Horario de los próximos trenes
+  - line_selection:
+      type: string
+      description: Línea de tren seleccionada por el usuario
+  - current_station:
+      type: string
+      description: Estación actual del usuario
+  - fare_recommendation:
+      type: money
+      description: Tarifas recomendadas según usuario
+  - incident_status:
+      type: string
+      description: Estado de la red de metro respecto a incidentes
+  - additional_transport_options:
+      type: string
+      description: Opciones de transporte alternativas disponibles
+  - estimated_arrival_time:
+      type: time
+      description: Tiempo estimado de llegada del tren
+  - service_details:
+      type: string
+      description: Detalles adicionales sobre el servicio de tren
+  - line_connections:
+      type: string
+      description: Conexiones de líneas disponibles en la estación
+  - number_of_trains:
+      type: int
+      description: Número de trenes programados para llegar
+  - fare_types:
+      type: string
+      description: Tipos de billetes disponibles para el usuario
+  - selected_fare:
+      type: money
+      description: Costo del billete seleccionado
+conversation:
+  number: 17
+  max_cost: 2.55
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

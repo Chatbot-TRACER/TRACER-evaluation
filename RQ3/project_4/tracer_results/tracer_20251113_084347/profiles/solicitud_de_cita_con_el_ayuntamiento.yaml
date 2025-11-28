@@ -1,0 +1,58 @@
+test_name: Solicitud de Cita con el Ayuntamiento
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea programar una cita para gestionar servicios en el Ayuntamiento de Morón de la Frontera.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Estás planeando realizar diversas gestiones en el Ayuntamiento de Morón de la Frontera y necesitas aclarar qué servicios están disponibles.
+  - Como parte de tu organización, es fundamental programar una cita adecuada para poder atender tus requerimientos administrativos.
+  - También prefieres utilizar la opción de identificación electrónica para facilitar el proceso y ahorrar tiempo en tus trámites.
+  goals:
+  - Preguntar qué servicios principales ofrece el Ayuntamiento de Morón de la Frontera.
+  - Seleccionar un tipo de cita disponible, como 'Cita con el alcalde'.
+  - Solicitar más información sobre cómo programar una cita con el departamento de Urbanismo.
+  - Acceder al proceso de identificación electrónica para hacer citas en línea.
+  - Obtener el enlace para la sede electrónica del Ayuntamiento.
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - service_availability:
+      type: string
+      description: Detalles sobre horas de asistencia
+  - appointment_methods:
+      type: string
+      description: Métodos para agendar citas
+  - selected_appointment_type:
+      type: string
+      description: Tipo de cita seleccionada por el usuario
+  - appointment_options:
+      type: string
+      description: Opciones disponibles para tipos de citas
+  - appointment_request_methods:
+      type: string
+      description: Métodos para solicitar cita con el alcalde
+  - appointment_scheduling_methods:
+      type: string
+      description: Métodos para programar cita con Urbanismo
+  - department_location:
+      type: string
+      description: Dirección del departamento de Urbanismo
+  - identification_process_access:
+      type: string
+      description: URL para acceder a identificación electrónica
+  - electronic_office_link:
+      type: string
+      description: Enlace a la sede electrónica del Ayuntamiento
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 28
+  interaction_style:
+  - single question

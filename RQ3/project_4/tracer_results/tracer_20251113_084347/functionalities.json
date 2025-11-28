@@ -1,0 +1,209 @@
+[
+  {
+    "name": "list_main_services",
+    "description": "Provides information about the main services offered by the Ayuntamiento de Morón de la Frontera, including hours and methods for making appointments.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_availability",
+        "description": "Details on in-person and phone assistance hours"
+      },
+      {
+        "category": "appointment_methods",
+        "description": "Describes methods for scheduling appointments (online, phone, in-person)"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": [
+      {
+        "name": "prompt_for_appointment_selection",
+        "description": "Prompts the user to select a type of appointment from available options.",
+        "parameters": [
+          {
+            "name": "selected_appointment_type",
+            "description": "Represents the choice of appointment the user wants to schedule",
+            "options": [
+              "Cita con el alcalde",
+              "Cita con Urbanismo",
+              "Cita con el SAC"
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "category": "appointment_options",
+            "description": "Options for types of appointments (Cita con el alcalde, Cita con Urbanismo, Cita con el SAC)"
+          }
+        ],
+        "parent_names": [
+          "list_main_services"
+        ],
+        "suggested_category": "Appointment Scheduling",
+        "children": [
+          {
+            "name": "provide_mayor_appointment_info",
+            "description": "Provides information on how to request a mayor's appointment, including available scheduling methods.",
+            "parameters": [],
+            "outputs": [
+              {
+                "category": "appointment_request_methods",
+                "description": "Includes options for requesting appointments either online through the electronic headquarters or in person at the Citizen Attention Service (SAC)."
+              }
+            ],
+            "parent_names": [
+              "prompt_for_appointment_selection"
+            ],
+            "suggested_category": "Appointment Scheduling",
+            "children": [
+              {
+                "name": "prompt_for_identification_access",
+                "description": "Asks the user to access the electronic identification process for making online appointments by directing them to the relevant website.",
+                "parameters": [],
+                "outputs": [],
+                "parent_names": [
+                  "provide_mayor_appointment_info"
+                ],
+                "suggested_category": "User Authentication",
+                "children": [
+                  {
+                    "name": "present_electronic_headquarters_link",
+                    "description": "Provides the user with a link to access the electronic headquarters or office of the Ayuntamiento.",
+                    "parameters": [],
+                    "outputs": [
+                      {
+                        "category": "electronic_office_link",
+                        "description": "URL to the electronic office headquarters site for the Ayuntamiento."
+                      }
+                    ],
+                    "parent_names": [
+                      "prompt_for_identification_access"
+                    ],
+                    "suggested_category": "User Authentication",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "provide_urbanism_appointment_info",
+            "description": "Provides detailed information on how to schedule an appointment with the Urbanism department, including methods and location details.",
+            "parameters": [],
+            "outputs": [
+              {
+                "category": "appointment_scheduling_methods",
+                "description": "Methods for scheduling an appointment, which includes electronic platforms, phone, or in-person visits, along with location details of the Urbanism department."
+              },
+              {
+                "category": "department_location",
+                "description": "The physical address of the Urbanism department for in-person visits: Edificio de las Filipenses, calle Cantarranas, número 33, Morón de la Frontera."
+              }
+            ],
+            "parent_names": [
+              "prompt_for_appointment_selection"
+            ],
+            "suggested_category": "Appointment Scheduling",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "provide_complaint_submission_information",
+    "description": "Informs the user about the process to submit a complaint or claim, including instructions for filling out a General Instance and options for submission methods, both in-person and online.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "submission_methods",
+        "description": "Options for submitting a complaint, including in-person at the Registry and online through the Electronic Headquarters with a digital certificate. Provides instructions and information on how to submit complaints or claims electronically as well as specific requirements."
+      },
+      {
+        "category": "electronic_headquarters_link",
+        "description": "URL for accessing the Electronic Headquarters for submissions."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_municipal_corporation_information",
+    "description": "The chatbot provides information about the current government team and municipal groups represented in the Ayuntamiento.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "municipal_government_info",
+        "description": "Details about the ruling party and other represented groups, along with a link to the municipal corporation information."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_tax_payment_deadlines",
+    "description": "The chatbot informs the user about the deadlines for paying municipal taxes based on different fractions and types of taxes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_payment_deadlines",
+        "description": "Specific dates for tax payments."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_contact_information_for_sae",
+    "description": "Provides details on how to contact the Servicio Andaluz de Empleo (SAE) through various channels, including information on scheduling appointments and service hours.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_hours",
+        "description": "Information about operating hours for in-person and telephone services."
+      },
+      {
+        "category": "appointment_scheduling",
+        "description": "Instructions on how to schedule an appointment, including options via electronic office, phone, in-person, and telephone methods."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_basic_information_about_unemployment_services",
+    "description": "The chatbot provides guidance and information regarding types of assistance available for individuals in unemployment situations and directs them to appropriate services.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "unemployment_assistance_info",
+        "description": "Information about the types of assistance available for unemployed individuals, including guidance on services from the Servicio Andaluz de Empleo and options for evaluating existing circumstances regarding unemployment support."
+      },
+      {
+        "category": "contact_information",
+        "description": "Details on how to contact the SAE and the central office for further assistance."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "present_ayuntamiento_website_link",
+    "description": "Provides a direct link to the Ayuntamiento's website for additional information.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "website_link",
+        "description": "Direct URL to the Ayuntamiento's website."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  }
+]

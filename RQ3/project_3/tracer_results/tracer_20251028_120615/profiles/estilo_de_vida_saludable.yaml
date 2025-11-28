@@ -1,0 +1,86 @@
+test_name: Estilo de Vida Saludable
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca mejorar su salud general a través de la alimentación, la actividad física, la hidratación y el descanso.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Estás comprometido a mejorar tu salud general y has decidido hacer cambios en tu alimentación y rutina diaria.
+  - Buscas información sobre cómo incorporar mejor la actividad física, la hidratación y el descanso en tu estilo de vida.
+  - Te gustaría recibir sugerencias prácticas y recetas que te ayuden a mantener una dieta balanceada y nutritiva.
+  goals:
+  - Pedir recomendaciones iniciales para llevar un estilo de vida más saludable, incluyendo consejos sobre nutrición, actividad física, hidratación y descanso.
+  - Solicitar información detallada sobre nutrición equilibrada y pedir ejemplos de grupos alimenticios.
+  - Preguntar sobre las cantidades diarias recomendadas para cada grupo de alimentos.
+  - 'Pedir una receta saludable que incluya frutas, como gachas de avena con {{frutas}}. '
+  - Preguntar sobre las mejores maneras de incorporar verduras en una dieta diaria.
+  - frutas:
+      function: forward()
+      type: string
+      data:
+      - manzana
+      - naranja
+      - plátano
+      - fresa
+      - kiwi
+      - mango
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - initial_recommendations:
+      type: string
+      description: Consejos iniciales para un estilo de vida saludable
+  - balanced_nutrition_info:
+      type: string
+      description: Información sobre nutrición equilibrada
+  - food_group_recommendations:
+      type: string
+      description: Porciones diarias de grupos alimenticios
+  - daily_recommendations:
+      type: string
+      description: Cantidades diarias recomendadas por grupo
+  - healthy_recipe:
+      type: string
+      description: Receta saludable que incluye frutas
+  - vegetable_incorporation_methods:
+      type: string
+      description: Métodos para incluir verduras en la dieta
+  - hydration_importance:
+      type: string
+      description: Beneficios de la hidratación para la salud
+  - hydration_methods:
+      type: string
+      description: Estrategias para prevenir la deshidratación
+  - fruits_variable:
+      type: string
+      description: Fruta seleccionada para la receta
+  - exercise_recommendations:
+      type: string
+      description: Recomendaciones sobre actividad física
+  - hydration_quantity:
+      type: float
+      description: Litros de agua recomendados diariamente
+  - rest_importance:
+      type: string
+      description: Importancia del descanso para la salud
+  - hydration_tips:
+      type: string
+      description: Consejos prácticos para mantenerse hidratado
+  - balanced_meal_examples:
+      type: string
+      description: Ejemplos de comidas equilibradas
+  - healthy_snack_ideas:
+      type: string
+      description: Ideas de snacks saludables
+conversation:
+  number: 6
+  max_cost: 0.9
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

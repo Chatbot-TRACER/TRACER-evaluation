@@ -1,0 +1,65 @@
+test_name: Configuración y uso de la app My112
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en configurar y utilizar la app My112 para emergencias y alertas públicas.
+  context:
+  - Recientemente has descargado la app My112 tras enterarte de su utilidad para gestionar emergencias y alertas locales.
+  - Quieres asegurarte de que estás configurando correctamente la aplicación para no perder ninguna alerta importante en tu área.
+  - Además, sientes la necesidad de familiarizarte con todos los servicios que ofrece para aprovechar al máximo sus funcionalidades.
+  goals:
+  - Quiero saber qué servicios están disponibles en la app My112.
+  - Proporciona información sobre cómo configurar la app My112 para recibir alertas públicas.
+  - Voy a activar la funcionalidad de seguimiento de ubicación en la app My112.
+  - Me gustaría recibir instrucciones sobre cómo llamar al 112 utilizando la app My112.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - available_services:
+      type: string
+      description: Servicios disponibles en la app My112
+  - setup_instructions:
+      type: string
+      description: Instrucciones para configurar la app My112
+  - location_tracking_activation:
+      type: string
+      description: Proceso para activar el seguimiento de ubicación
+  - call_112_instructions:
+      type: string
+      description: Pasos para llamar al 112 usando la app
+  - app_registration_steps:
+      type: string
+      description: Pasos para registrarse en la app My112
+  - location_accuracy_ensuring:
+      type: string
+      description: Pasos para garantizar precisión de ubicación
+  - app_availability:
+      type: string
+      description: Disponibilidad de la app My112 en Android e iOS
+  - app_download_instructions:
+      type: string
+      description: Instrucciones para descargar la app My112
+  - app_cost:
+      type: money
+      description: Costo de descarga y uso de la app My112
+  - data_charges_info:
+      type: string
+      description: Información sobre posibles cargos de datos
+  - language_support:
+      type: string
+      description: Idiomas disponibles para soporte en la app My112
+  - emergency_alert_functionality:
+      type: string
+      description: Funcionalidades de alerta de emergencia disponibles
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

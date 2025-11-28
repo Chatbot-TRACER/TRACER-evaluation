@@ -1,0 +1,54 @@
+test_name: Consulta sobre Automatización de Servicios
+llm:
+  temperature: 0.7
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en implementar soluciones de automatización de atención al cliente
+  context:
+  - Estás interesado en mejorar la eficiencia de la atención al cliente en tu empresa mediante la implementación de soluciones de automatización.
+  - Has escuchado sobre el potencial del Procesamiento de Lenguaje Natural y quieres entender cómo puede beneficiar a tu equipo.
+  - Además, buscas información sobre las opciones más populares en el mercado y las marcas que utilizan estas tecnologías.
+  goals:
+  - Preguntar cómo funciona el aprendizaje y la comunicación del chatbot a través del Procesamiento de Lenguaje Natural (NLP).
+  - Solicitar información sobre los temas más consultados que ofrece Botslovers.
+  - Seleccionar el tema 'Lo más consultado' para obtener opciones específicas sobre automatización de atención al cliente.
+  - Pedir detalles sobre las marcas que utilizan Botslovers para automatizar el servicio al cliente.
+  - Consultar sobre la disponibilidad de atención en vivo para obtener respuestas rápidas a mis dudas.
+chatbot:
+  is_starter: false
+  fallback: Si necesitas ayuda con temas relacionados con Botslovers o la inteligencia artificial generativa, estaré encantado de asistirte. Puedes hacer clic en el siguiente botón para obtener ayuda 👇
+  output:
+  - nlp_explanation:
+      type: string
+      description: Descripción del aprendizaje del chatbot mediante NLP
+  - consulted_topics:
+      type: string
+      description: Temas populares consultados por usuarios
+  - selected_topic:
+      type: string
+      description: Tema seleccionado por el usuario
+  - client_list:
+      type: string
+      description: Marcas que utilizan Botslovers
+  - live_support_availability:
+      type: string
+      description: Disponibilidad de atención en vivo
+  - user_request_feedback:
+      type: string
+      description: Solicitud de retroalimentación del usuario
+  - user_specified_query:
+      type: string
+      description: Consulta específica proporcionada por el usuario
+  - topic_options:
+      type: string
+      description: Opciones disponibles tras seleccionar 'Lo más consultado'
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

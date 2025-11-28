@@ -1,0 +1,253 @@
+[
+  {
+    "name": "present_services_overview",
+    "description": "The chatbot provides an overview of the services offered, including automation of customer service and sales using generative AI.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "services_overview",
+        "description": "Automation of customer service and sales"
+      },
+      {
+        "category": "ease_of_use",
+        "description": "Describes the user-friendly nature of the solution"
+      },
+      {
+        "category": "communication_improvement",
+        "description": "Information on enhancing customer communications"
+      },
+      {
+        "category": "process_optimization",
+        "description": "Details on optimizing sales processes."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Services Overview",
+    "children": []
+  },
+  {
+    "name": "present_analytics_features",
+    "description": "The chatbot details the analytics features available on the platform, including a main dashboard, agent analytics, and social listening tools.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "analytics_features_list",
+        "description": "Panel Principal, Analíticas de Agentes, Escucha Social"
+      },
+      {
+        "category": "performance_insights",
+        "description": "Information on insights gathered from user interactions and agent performance."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Analytics Features",
+    "children": []
+  },
+  {
+    "name": "present_service_capabilities",
+    "description": "The chatbot lists the service capabilities of the platform, including conversation automation, live chat, proactive notifications, advanced analytics, simple integrations, and multilingual responses.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "service_capabilities",
+        "description": "Includes automation of conversations, LiveChat, proactive notifications, simple integrations, advanced analytics, and multilingual response capabilities."
+      },
+      {
+        "category": "advanced_features",
+        "description": "Mentions of advanced functionalities like analytics and integrations."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Service Capabilities",
+    "children": []
+  },
+  {
+    "name": "present_automation_possibilities",
+    "description": "The chatbot describes the main capabilities for automating conversations, such as 24/7 customer service, natural interaction, personalization, and process integration.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "automation_capabilities",
+        "description": "Describes features such as customer service availability, natural language processing, user personalization, and process integration."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Automation Possibilities",
+    "children": []
+  },
+  {
+    "name": "present_integration_options",
+    "description": "The chatbot presents the available integration options for various communication channels, detailing the ease of connecting the AI Agent and listing the channels available for integration.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_channels",
+        "description": "Channels available for integration include WhatsApp, Instagram, Facebook, web, X (formerly Twitter), and phone services with synthetic voices."
+      },
+      {
+        "category": "phone_service_description",
+        "description": "Information about the new telephony channel incorporating synthetic voices."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Integration Options",
+    "children": []
+  },
+  {
+    "name": "explain_proactive_notifications",
+    "description": "The chatbot explains the feature of sending proactive notifications through WhatsApp as part of customer service automation, detailing its benefits and applications in customer interactions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "benefits_of_proactive_notifications",
+        "description": "Provides information on how proactive notifications improve customer experience and engagement."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Proactive Notifications",
+    "children": []
+  },
+  {
+    "name": "provide_customer_experience_personalization_examples",
+    "description": "Provides examples of how customer experience is personalized through data integrations and generative AI.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "personalization_methods",
+        "description": "Methods that enhance customer experience, such as database integration, multi-channel integration, conversational automation with generative AI, and proactive notifications."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Experience Personalization",
+    "children": []
+  },
+  {
+    "name": "explain_database_integration_steps",
+    "description": "Outlines the steps for connecting internal databases or relevant documents to the platform.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "integration_methods",
+        "description": "Methods include sharing website, uploading documents, connecting external databases, and creating FAQs."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Database Integration",
+    "children": []
+  },
+  {
+    "name": "describe_response_automation_using_ai",
+    "description": "Explains how the platform automates responses to customer inquiries using generative AI.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "automation_details",
+        "description": "Information on how AI utilizes integrated data, frequent updates from databases, and content filtering for accurate responses."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Response Automation",
+    "children": []
+  },
+  {
+    "name": "transfer_to_specialist",
+    "description": "The chatbot indicates that the conversation is being transferred to a specialist for further assistance.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Transfer to Specialist",
+    "children": [
+      {
+        "name": "prompt_for_user_email",
+        "description": "Requests the user to provide their email address for further assistance from a specialist.",
+        "parameters": [
+          {
+            "name": "email_address",
+            "description": "The email address to contact the user.",
+            "options": []
+          }
+        ],
+        "outputs": [],
+        "parent_names": [
+          "transfer_to_specialist"
+        ],
+        "suggested_category": "User Email Prompt",
+        "children": [
+          {
+            "name": "confirm_email_before_agent_transfer",
+            "description": "Informs the user that confirming their email address is necessary before transferring the conversation to an agent and provides options for how they wish to proceed.",
+            "parameters": [],
+            "outputs": [],
+            "parent_names": [
+              "prompt_for_user_email"
+            ],
+            "suggested_category": "Confirm Email",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "suggest_contact_support",
+    "description": "Recommends the user to contact the support team for details on integrating an internal database in the platform.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Contact Support",
+    "children": []
+  },
+  {
+    "name": "suggest_contact_specialist_later",
+    "description": "Advises the user that they can reach out to a specialist when they are ready.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Contact Specialist Later",
+    "children": []
+  },
+  {
+    "name": "prompt_for_most_consulted_options",
+    "description": "Presents the user with an option to explore the most consulted topics or to write their query.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Consulted Options",
+    "children": [
+      {
+        "name": "prompt_for_topic_selection",
+        "description": "Asks the user to specify the topic of their consultation after they choose to see the most consulted options.",
+        "parameters": [],
+        "outputs": [],
+        "parent_names": [
+          "prompt_for_most_consulted_options"
+        ],
+        "suggested_category": "Topic Selection",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "prompt_for_query_input",
+    "description": "Requests the user to write their question related to the platform or generative AI, offering assistance.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Query Input",
+    "children": []
+  },
+  {
+    "name": "explain_channel_integration_process",
+    "description": "Describes how to integrate various communication channels into the platform, including WhatsApp, Facebook, Instagram, and telephonic integration using synthetic voices.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "communication_channel_summary",
+        "description": "Details on how to connect AI Agents to various communication channels, including WhatsApp, Facebook, Instagram, and telephonic integration using synthetic voices."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Channel Integration",
+    "children": []
+  }
+]

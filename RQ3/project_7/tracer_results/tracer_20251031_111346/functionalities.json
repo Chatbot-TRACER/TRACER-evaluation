@@ -1,0 +1,803 @@
+[
+  {
+    "name": "advise_on_payment_methods",
+    "description": "The chatbot informs the user to check the official website for specific details regarding accepted payment methods for online orders.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Payment",
+    "children": [
+      {
+        "name": "provide_customer_service_contact_advice",
+        "description": "The chatbot suggests how the user can find contact options for customer service regarding payment issues by visiting Alcampo's website.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "customer_service_contact_info",
+            "description": "General advice on finding customer service contact information."
+          }
+        ],
+        "parent_names": [
+          "advise_on_payment_methods"
+        ],
+        "suggested_category": "Customer Support",
+        "children": [
+          {
+            "name": "provide_customer_service_contact_methods",
+            "description": "Supplies various ways to contact Alcampo customer service, including phone, email, and an online contact form.",
+            "parameters": [],
+            "outputs": [
+              {
+                "category": "customer_service_contact_methods",
+                "description": "Phone number, email address, and link to online contact form."
+              }
+            ],
+            "parent_names": [
+              "provide_customer_service_contact_advice"
+            ],
+            "suggested_category": "Customer Support",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "provide_cultivamos_lo_bueno_details",
+    "description": "The chatbot supplies information about the 'Cultivamos lo Bueno' label, including its focus on quality and local sourcing.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cultivos_label_details",
+        "description": "Information about the products under the label, including types and sourcing practices."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": [
+      {
+        "name": "provide_organic_fruit_information",
+        "description": "The chatbot informs the user about the availability of organic fruit and vegetable products, including specific examples, in the online store.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "organic_fruit_options",
+            "description": "Describes available organic fruit products, including specific examples like the HIPP Organic fruit pouch."
+          }
+        ],
+        "parent_names": [
+          "provide_cultivamos_lo_bueno_details"
+        ],
+        "suggested_category": "Product Information",
+        "children": [
+          {
+            "name": "suggest_fruit_smoothie_ingredients",
+            "description": "The chatbot recommends specific fresh fruits to use in smoothies, along with the range of fruits available at Alcampo.",
+            "parameters": [],
+            "outputs": [
+              {
+                "category": "smoothie_ingredient_recommendations",
+                "description": "Lists recommended fruits for smoothies such as strawberries, bananas, pineapples, and mangoes."
+              }
+            ],
+            "parent_names": [
+              "provide_organic_fruit_information"
+            ],
+            "suggested_category": "Recipe Suggestions",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "recommend_special_occasion_fresh_products",
+        "description": "The chatbot provides a range of fresh product recommendations suitable for special occasions, including options under the 'Cultivamos lo Bueno' label.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "fresh_product_options",
+            "description": "List of fresh products including meats, fish, cheeses, fruits, and vegetables, along with recommended types suitable for events and offerings under the 'Cultivamos lo Bueno' label."
+          },
+          {
+            "category": "quality_label_info",
+            "description": "Details about the 'Cultivamos lo Bueno' label's focus on quality and sustainability."
+          }
+        ],
+        "parent_names": [
+          "provide_cultivamos_lo_bueno_details"
+        ],
+        "suggested_category": "Product Recommendations",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "provide_best_selling_fresh_fruits_information",
+    "description": "The chatbot indicates that it does not have specific information on best-selling fresh fruits available at Alcampo.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_promotions_info",
+    "description": "Directs the user to the page with current promotions, discounts, and offers available, including categories of available promotions.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "promotions_page_url",
+        "description": "URL to the promotions page where users can find the latest deals and offers."
+      },
+      {
+        "category": "product_categories",
+        "description": "Describes categories of promotions including food, beverages, hygiene products, baby items, electronic appliances, and toys."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "provide_television_price_info",
+    "description": "The chatbot recommends checking the website for the latest prices of televisions.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Pricing",
+    "children": []
+  },
+  {
+    "name": "guide_online_ordering_process",
+    "description": "The chatbot provides a step-by-step guide for placing an order online.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Order Placement",
+    "children": [
+      {
+        "name": "list_delivery_options",
+        "description": "Outlines and explains the available delivery options for online orders, including home delivery and pickup.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "delivery_option_types",
+            "description": "Home Delivery and Pickup Options."
+          }
+        ],
+        "parent_names": [
+          "guide_online_ordering_process"
+        ],
+        "suggested_category": "Delivery Options",
+        "children": [
+          {
+            "name": "describe_home_delivery_costs",
+            "description": "The chatbot provides information on how delivery costs can vary and advises checking for the most accurate information.",
+            "parameters": [],
+            "outputs": [],
+            "parent_names": [
+              "list_delivery_options"
+            ],
+            "suggested_category": "Delivery Options",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "provide_account_creation_steps",
+    "description": "The chatbot outlines the steps required to create an account on the Alcampo website.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Authentication",
+    "children": [
+      {
+        "name": "describe_registration_form_details",
+        "description": "The chatbot gives general information about the typical details needed on the registration form.",
+        "parameters": [],
+        "outputs": [],
+        "parent_names": [
+          "provide_account_creation_steps"
+        ],
+        "suggested_category": "User Authentication",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "advise_on_order_modifications",
+    "description": "The chatbot advises the user to contact customer service regarding changes to their order, such as changing delivery times or canceling the order.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "clarify_payment_method_info",
+    "description": "Informs the user about the lack of specific details regarding payment methods and spending limits, suggesting to check during the payment process or contact customer service for further information.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Payment",
+    "children": []
+  },
+  {
+    "name": "guide_password_recovery",
+    "description": "Guides the user through the steps to recover their password for their account by providing instructions on the recovery process.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "User Authentication",
+    "children": []
+  },
+  {
+    "name": "explain_order_status_without_login",
+    "description": "Informs the user that order status typically requires account login, and there is no official method for checking the status without logging in.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Order Status",
+    "children": []
+  },
+  {
+    "name": "guide_online_contact_form_filling",
+    "description": "Provides instructions on how to fill out Alcampo's online contact form by detailing required fields.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "suggest_message_details_for_customer_service",
+    "description": "Recommends specific details for the user to include in their message when contacting customer service via the online form.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "confirm_final_message_details",
+    "description": "Confirms the final content of the user’s message with included fake order number and email address.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_example_message",
+    "description": "Supplies the user with an example message template for communicating their inquiry regarding an order, including all necessary details.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_store_hours_information",
+    "description": "Recommends checking the official Alcampo website or contacting the specific store to find the exact store hours, along with localized details about typical store hours.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "store_hours_information",
+        "description": "Details about typical store hours including variations by location."
+      },
+      {
+        "category": "local_store_locator",
+        "description": "Link to the Alcampo store locator page for personalized store information."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Store Information",
+    "children": [
+      {
+        "name": "check_store_hours_for_city",
+        "description": "Provides confirmation that the chatbot does not have specific details about store hours in a different city, recommending to check the official website for accurate information.",
+        "parameters": [
+          {
+            "name": "city_name",
+            "description": "The name of the city inquiring about store hours.",
+            "options": []
+          }
+        ],
+        "outputs": [],
+        "parent_names": [
+          "provide_store_hours_information"
+        ],
+        "suggested_category": "Store Information",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "prompt_for_nearest_store_location",
+    "description": "The chatbot directs the user to visit the official Alcampo website to find the nearest store location.",
+    "parameters": [],
+    "outputs": [],
+    "suggested_category": "Store Information",
+    "children": []
+  },
+  {
+    "name": "present_online_store_information",
+    "description": "The chatbot describes the features and offerings of Alcampo’s online store, including the convenience and organization of products.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "online_store_features",
+        "description": "Describes the online shopping experience, including product categories and the convenience of shopping from home."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Online Shopping",
+    "children": [
+      {
+        "name": "prompt_for_product_search",
+        "description": "The chatbot solicits input from the user about products they are looking for within the online store.",
+        "parameters": [
+          {
+            "name": "item_search_query",
+            "description": "This represents the specific product the user is looking for in the online store.",
+            "options": []
+          }
+        ],
+        "outputs": [],
+        "parent_names": [
+          "present_online_store_information"
+        ],
+        "suggested_category": "Product Search",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "provide_return_policy_information",
+    "description": "The chatbot explains Alcampo’s return policy for online purchases, including the time frame and conditions for returns.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "return_policy_details",
+        "description": "Information on the conditions and process for returning products purchased online."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Returns",
+    "children": []
+  },
+  {
+    "name": "provide_order_tracking_information",
+    "description": "Instructs the user on how to track their online order by logging into their account and accessing order details on the official website.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "order_tracking_instructions",
+        "description": "Instructions on the steps to track an online order."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Order Status",
+    "children": []
+  },
+  {
+    "name": "advise_on_order_delay",
+    "description": "The chatbot provides guidance on what the user should do if their online order is delayed, including checking order status and contacting customer service.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "order_delay_advice",
+        "description": "Tips on checking order status and contacting customer service for assistance regarding delays."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Order Status",
+    "children": []
+  },
+  {
+    "name": "recommend_spanish_wine_pairing",
+    "description": "The chatbot recommends types of Spanish wines that typically pair well with Iberian ham.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "wine_pairing_options",
+        "description": "Suggested wines including Rioja and Cava."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Recommendations",
+    "children": []
+  },
+  {
+    "name": "browse_available_wines",
+    "description": "The chatbot provides information about the availability of Spanish wines in the Alcampo online store.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "wine_selection_options",
+        "description": "List of available wines, specifically mentioning Ribera del Duero Crianza and Vinos de la Tierra de Castilla."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_specific_wine_browsing",
+    "description": "The chatbot prompts the user to browse the selection of white and semi-sweet wines available in the Alcampo online store.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "wine_type_options",
+        "description": "Categories of available wines including white and semi-sweet."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Search",
+    "children": []
+  },
+  {
+    "name": "assist_with_specific_bottle_search",
+    "description": "The chatbot offers assistance in finding specific bottles of semi-sweet wine based on user needs.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Search",
+    "children": []
+  },
+  {
+    "name": "describe_other_wine_types_available",
+    "description": "The chatbot provides information about other wine types available in addition to semi-sweet wines.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_wine_types",
+        "description": "List of wine types including red wines with denominations, crianza and reserva classifications."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_eco_friendly_fresh_products",
+    "description": "Describes the range of eco-friendly fresh products offered at Alcampo, emphasizing sustainability and local production.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "eco_friendly_products_list",
+        "description": "Includes eco-friendly fruits, vegetables, organic fruit for babies, and seasonal organic vegetables."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_customer_service_information",
+    "description": "Offers details on customer service options available for inquiries regarding fresh fruits and other products.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_methods",
+        "description": "Contact options include online chat, phone support, and email for queries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_customer_service_phone_number",
+    "description": "Supplies the contact number for customer service related to general inquiries at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_contact_number",
+        "description": "913 687 857 for general inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_customer_service_hours",
+    "description": "Gives information about the hours of operation for customer service regarding the Club Alcampo card and general inquiries.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "customer_service_hours",
+        "description": "Available Monday to Friday from 10:00 AM to 7:00 PM for Club inquiries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Customer Support",
+    "children": []
+  },
+  {
+    "name": "provide_types_of_promotions",
+    "description": "Describes the general types of promotions typically offered on organic products at Alcampo.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "types_of_promotions_info",
+        "description": "Overview of common promotions for organic products."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "provide_recipe_suggestions",
+    "description": "Informs the user that there are no specific recipes available for cooking with organic fruits and vegetables, but suggests general ways to enjoy them.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "cooking_suggestions",
+        "description": "General ideas for enjoying organic fruits and vegetables."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Recipe Suggestions",
+    "children": []
+  },
+  {
+    "name": "provide_health_benefits_info",
+    "description": "Briefly mentions that while no specific health benefits are provided, organic produce is generally known for being grown without synthetic pesticides.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "health_benefits_info",
+        "description": "General understanding of the perceived health benefits of organic produce."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_organic_cheese_info",
+    "description": "Provides details about the types of organic cheeses available at Alcampo, including specific varieties.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "organic_cheese_varieties",
+        "description": "Description of the variety of organic cheeses offered, including their sourcing information."
+      },
+      {
+        "category": "online_shop_link",
+        "description": "URL to explore the full range of organic products."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_banana_from_canary_islands",
+    "description": "The chatbot provides detailed information about the banana from the Canary Islands, including quality guarantees and collaboration with local producers.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_red_banana",
+    "description": "The chatbot gives detailed information on the red banana variety available at Alcampo, highlighting its unique characteristics and qualities.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "guide_to_order_red_banana",
+    "description": "The chatbot guides the user on how to order the red banana from the Alcampo website, providing step-by-step instructions.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Order Placement",
+    "children": []
+  },
+  {
+    "name": "present_fresh_fruits_information",
+    "description": "Provides information about the variety of fresh fruits available at Alcampo, including categories such as seasonal and exotic options, as well as specifics on sourcing and quality.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_fruits",
+        "description": "A list of available fresh fruits including seasonal and exotic options, such as citrus fruits (oranges, mandarins, lemons) and other types like bananas and blueberries."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": [
+      {
+        "name": "provide_seasonal_fruits_information",
+        "description": "Provides information about the current seasonal fruits available, including a list of examples based on the time of year.",
+        "parameters": [],
+        "outputs": [
+          {
+            "category": "seasonal_fruits_list",
+            "description": "A list of common seasonal fruits available at different times of the year, including options like Valencian oranges, mandarins, lemons, Asturian blueberries, berries, and stone fruits."
+          }
+        ],
+        "parent_names": [
+          "present_fresh_fruits_information"
+        ],
+        "suggested_category": "Product Information",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "list_current_promotions",
+    "description": "Provides an overview of current promotions and discounts available on various products, including specific product types.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "current_promotions",
+        "description": "Includes an overview of available promotions and discounts on items such as chocolates, coffee capsules, wines, and more."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Promotions",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_Club_Alcampo",
+    "description": "The chatbot attempts to provide information about Club Alcampo but indicates that current details are unavailable.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Membership Information",
+    "children": []
+  },
+  {
+    "name": "provide_product_overview",
+    "description": "The chatbot provides an overview of the product catalog and categories available at Alcampo, highlighting the variety for easy navigation.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "product_categories",
+        "description": "A comprehensive list of product categories including fresh and frozen foods, groceries, beverages, hygiene products, electronics, clothing, toys, home entertainment, pet food, and more."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Overview",
+    "children": []
+  },
+  {
+    "name": "provide_information_on_frozen_foods",
+    "description": "The chatbot provides an overview of the variety of frozen food products available at Alcampo.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_electronics_options",
+    "description": "The chatbot provides specific information about the available electronics at Alcampo, including categories and examples of products.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "electronics_categories",
+        "description": "A description of the various types of electronics available, including examples such as electronic dart games, smart plugs, vacuum cleaner bags, and electronic figures."
+      },
+      {
+        "category": "product_catalog_link",
+        "description": "A URL to explore the full range of electronics products available online."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_home_appliances_list",
+    "description": "The chatbot provides a list of home appliances available at Alcampo, detailing various types such as refrigerators, dishwashers, and microwaves.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "home_appliances",
+        "description": "List of available home appliances including refrigerators, dishwashers, microwaves, induction cooktops, ovens, and other small and large appliances."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "explain_no_frost_technology",
+    "description": "The chatbot describes the No Frost technology used in refrigerators, emphasizing its benefits for food preservation and maintenance.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "no_frost_benefits",
+        "description": "Benefits of No Frost technology including preventing ice buildup and facilitating cleaning."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "explain_grill_feature_in_microwaves",
+    "description": "The chatbot explains the grill feature in microwaves and its benefits for preparing various dishes.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "grill_feature_benefits",
+        "description": "Information on how the grill feature works and typical power ranges."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_baby_products",
+    "description": "Provides a list of available baby products at Alcampo, inviting the user to explore more details and options.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "baby_product_options",
+        "description": "A list of available baby products including baby wipes, detergents, walkers, dolls, newborn clothing, baby car seats, and diapers."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_disposable_changer_price_info",
+    "description": "The chatbot informs the user about the need to check the website for current prices and availability of disposable baby changers.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Product Pricing",
+    "children": []
+  },
+  {
+    "name": "provide_sustainable_materials_info",
+    "description": "The chatbot informs the user about the sustainable materials used in the construction toys.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "sustainable_materials",
+        "description": "Details on toys made from FSC-certified wood for environmental responsibility."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_fisher_price_learning_book_details",
+    "description": "The chatbot shares details about the Fisher Price Interactive Learning Book for babies, highlighting its educational benefits.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "fisher_price_book_features",
+        "description": "Description of the book's interactive activities and suitability for early learning."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  },
+  {
+    "name": "provide_peppa_pig_tablet_info",
+    "description": "The chatbot provides information about the Peppa Pig Educational Tablet, including its age range and learning activities.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "peppa_pig_tablet_features",
+        "description": "Information on the educational activities integrated into the tablet."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Product Information",
+    "children": []
+  }
+]

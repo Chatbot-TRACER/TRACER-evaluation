@@ -1,0 +1,147 @@
+test_name: Usuario que planea un viaje en metro
+llm:
+  temperature: 0.3
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Un usuario que busca información sobre tarifas, rutas y servicio del metro para su viaje.
+  context:
+  - 'personality: personalities/direct-user'
+  - Estás planeando un viaje en metro a una zona específica de la ciudad y necesitas información sobre tarifas y rutas disponibles.
+  - Además, deseas asegurarte de que la comunicación sea en un idioma en el que te sientas cómodo y conocer las opciones de tarifa según tu grupo de edad.
+  - Es importante para ti tener claridad sobre los detalles de tu trayecto desde la estación de partida elegida hasta tu destino final.
+  goals:
+  - Solicitar el idioma preferido para la comunicación seleccionando {{idioma_preferido}}.
+  - Aceptar la política de privacidad para continuar, eligiendo {{aceptar_privacidad}}.
+  - 'Seleccionar el grupo de edad para recomendaciones de tarifas utilizando {{grupo_edad}}. '
+  - Pedir información sobre recomendaciones de tarifas para el trayecto basándome en la selección de {{grupo_edad}}, {{zona_salida}} y {{zona_destino}}.
+  - Indicar la estación de partida utilizando {{estacion_partida}} para obtener detalles sobre la ruta y duración del viaje.
+  - aceptar_privacidad:
+      function: forward()
+      type: string
+      data:
+      - Aceptar
+      - 'No'
+      - No Aceptar
+      - Sí
+      - 'Yes'
+      - accept
+      - reject
+      - Opt-out
+  - estacion_partida:
+      function: forward()
+      type: string
+      data:
+      - Madrid
+      - Barcelona
+      - Valencia
+      - Sevilla
+      - Bilbao
+      - Malaga
+  - grupo_edad:
+      function: forward()
+      type: string
+      data:
+      - 18-24
+      - 25-34
+      - 35-44
+      - 45-54
+      - 55-64
+      - 65 o más
+  - idioma_preferido:
+      function: forward()
+      type: string
+      data:
+      - Español
+      - Inglés
+      - Francés
+  - zona_destino:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - No lo sé
+      - Unsure
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - Zona D
+  - zona_salida:
+      function: forward()
+      type: string
+      data:
+      - Zona Centro
+      - Zona Norte
+      - Zona Sur
+      - Zona Este
+      - Zona Oeste
+chatbot:
+  is_starter: false
+  fallback: 'Este canal está destinado a cuestiones relacionadas con el servicio y atención al cliente de Metro de Madrid. Para otros temas, consulta nuestra web: 🌐 www.metromadrid.es. ¿Puedo ayudarte en algo más? 👇'
+  output:
+  - idioma_preferido:
+      type: string
+      description: Idioma seleccionado para la comunicación
+  - aceptar_privacidad:
+      type: string
+      description: Confirmación de la aceptación de la política de privacidad
+  - grupo_edad:
+      type: string
+      description: Grupo de edad seleccionado para tarifas
+  - zona_salida:
+      type: string
+      description: Zona de salida para el viaje
+  - zona_destino:
+      type: string
+      description: Zona de destino para el trayecto
+  - estacion_partida:
+      type: string
+      description: Estación de partida especificada por el usuario
+  - tarifas_recomendadas:
+      type: money
+      description: Precio de las tarifas recomendadas
+  - detalles_ruta:
+      type: string
+      description: Información sobre la ruta del viaje
+  - duracion_viaje:
+      type: float
+      description: Duración estimada del trayecto en minutos
+  - tipo_ticket:
+      type: string
+      description: Tipo de boleto seleccionado para el viaje
+  - proximo_tren:
+      type: string
+      description: Información del próximo tren disponible
+  - politica_mascotas:
+      type: string
+      description: Normativa sobre el transporte de mascotas
+  - politica_bicicletas:
+      type: string
+      description: Normativa sobre el transporte de bicicletas
+  - estado_red:
+      type: string
+      description: Información sobre el estado actual de la red de metro
+  - opciones_asistencia:
+      type: string
+      description: Lista de opciones de asistencia disponibles
+conversation:
+  number: 19
+  max_cost: 2.85
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

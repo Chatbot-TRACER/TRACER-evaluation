@@ -1,0 +1,67 @@
+test_name: Asistencia por Correo Electrónico
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea conectarse con un especialista para asistencia personalizada
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Estás buscando asistencia personalizada para resolver un problema específico que has encontrado en un servicio reciente.
+  - Necesitas conectarte rápidamente con un especialista para obtener respuestas precisas y asegurarte de que todo esté en orden.
+  - Al ser consciente de la importancia de un contacto efectivo, deseas verificar los métodos disponibles para comunicarte.
+  goals:
+  - Preguntar sobre los métodos de contacto disponibles para asistencia.
+  - Solicitar la dirección de correo electrónico para contactar con un especialista.
+  - Confirmar mi dirección de correo electrónico como {{user_email}} antes de proceder.
+  - Esperar la confirmación de que mi conversación se está trasladando a un especialista.
+  - Solicitar un mensaje de despedida amigable cuando ya no necesite asistencia.
+  - user_email:
+      function: forward()
+      type: string
+      data:
+      - juan.perez@gmail.com
+      - maria.lopez@hotmail.com
+      - carlos.ramirez@yahoo.com
+      - sofia.martinez@outlook.com
+      - ana.garcia@icloud.com
+chatbot:
+  is_starter: false
+  fallback: Si necesitas ayuda con temas relacionados con Botslovers o la inteligencia artificial generativa, estaré encantado de asistirte. Puedes hacer clic en el siguiente botón para obtener ayuda 👇
+  output:
+  - contact_methods:
+      type: string
+      description: Métodos de contacto disponibles
+  - contact_email_address:
+      type: string
+      description: Dirección de correo electrónico para asistencia
+  - user_email:
+      type: string
+      description: Dirección de correo electrónico proporcionada por el usuario
+  - email_confirmation:
+      type: string
+      description: Confirmación de la dirección de correo electrónico
+  - transfer_to_specialist:
+      type: string
+      description: Confirmación de transferencia a un especialista
+  - response_time:
+      type: string
+      description: Tiempo estimado para respuesta de especialista
+  - farewell_message:
+      type: string
+      description: Mensaje amigable de despedida
+  - support_options:
+      type: string
+      description: Opciones de asistencia adicional disponibles
+  - user_confirmation:
+      type: string
+      description: Confirmación de información proporcionada por el usuario
+conversation:
+  number: 5
+  max_cost: 0.75
+  goal_style:
+    steps: 28
+  interaction_style:
+  - single question

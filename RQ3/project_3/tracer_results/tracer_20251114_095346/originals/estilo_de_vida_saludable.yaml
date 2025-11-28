@@ -1,0 +1,52 @@
+test_name: Estilo de Vida Saludable
+llm:
+  temperature: 1.0
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea mejorar su salud a través de una alimentación equilibrada y actividad física regular.
+  context:
+  - 'personality: personalities/disorganized-user'
+  - Has decidido que es momento de adoptar un estilo de vida más saludable para sentirte mejor y aumentar tu energía diaria.
+  - Estás buscando información sobre cómo comenzar a hacer cambios en tu alimentación y rutina de ejercicios.
+  - Te gustaría recibir recomendaciones sobre alimentos y actividades que te ayuden a alcanzar tus objetivos de salud.
+  goals:
+  - Pregunta cómo empezar un estilo de vida más saludable y solicita recomendaciones iniciales.
+  - Pide información sobre ejercicios específicos para mejorar la condición física, como '¿Cuáles son algunos ejercicios de fortalecimiento muscular?
+  - Solicita recomendaciones de alimentos que son buenos para consumir antes de hacer ejercicio, como '¿Qué debo comer antes de hacer ejercicio?
+  - Pregunta por ejemplos de snacks saludables que se pueden consumir después de hacer ejercicio.
+  - Pide recomendaciones sobre bebidas adecuadas para la hidratación después del ejercicio.
+chatbot:
+  is_starter: false
+  fallback: <p>No tengo información sobre este tema en mis fuentes verificadas. ¿Quieres que busque algo relacionado?</p>
+  output:
+  - healthy_lifestyle_tips:
+      type: string
+      description: Consejos para un estilo de vida saludable
+  - activity_types:
+      type: string
+      description: Tipos de actividades físicas disponibles
+  - health_benefits:
+      type: string
+      description: Beneficios de la actividad física regular
+  - nutrition_guidelines:
+      type: string
+      description: Consejos de nutrición para ejercicio
+  - pre_exercise_foods_list:
+      type: string
+      description: Alimentos recomendados antes de hacer ejercicio
+  - post_exercise_snacks_list:
+      type: string
+      description: Snacks saludables post-ejercicio
+  - hydration_recommendations:
+      type: string
+      description: Bebidas adecuadas para hidratación después del ejercicio
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 24
+  interaction_style:
+  - single question

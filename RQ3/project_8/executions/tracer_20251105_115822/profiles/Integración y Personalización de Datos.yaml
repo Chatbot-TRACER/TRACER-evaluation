@@ -1,0 +1,45 @@
+test_name: Integración y Personalización de Datos
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que busca integrar bases de datos y personalizar la atención al cliente a través de la plataforma.
+  context:
+  - Estás explorando formas de mejorar la atención al cliente en tu empresa mediante la integración de bases de datos y la implementación de inteligencia artificial.
+  - Te gustaría entender mejor cómo estas integraciones pueden personalizar la experiencia del cliente y automatizar las respuestas a sus consultas.
+  - Además, buscas opciones para enviar notificaciones proactivas a través de diferentes canales, como WhatsApp, para mantener a los clientes informados.
+  goals:
+  - Pedir ejemplos de cómo se personaliza la experiencia del cliente a través de integraciones de datos y IA generativa.
+  - Solicitar los pasos necesarios para conectar bases de datos internas a la plataforma.
+  - Preguntar sobre cómo la plataforma automatiza las respuestas a las consultas de los clientes utilizando IA generativa.
+  - Consultar sobre las opciones de integración disponibles para facilitar la atención al cliente en diferentes canales.
+  - Pedir detalles sobre cómo enviar notificaciones proactivas a través de WhatsApp a los clientes.
+chatbot:
+  is_starter: false
+  fallback: Si tienes una pregunta específica sobre Botslovers o la inteligencia artificial, estaré encantado de ayudarte.
+  output:
+  - personalization_methods:
+      type: string
+      description: Métodos que mejoran la experiencia del cliente
+  - integration_methods:
+      type: string
+      description: Métodos para conectar bases de datos
+  - automation_details:
+      type: string
+      description: Información sobre automatización de respuestas
+  - integration_options:
+      type: string
+      description: Opciones de integración multicanal
+  - proactive_notifications:
+      type: string
+      description: Detalles sobre notificaciones proactivas en WhatsApp
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

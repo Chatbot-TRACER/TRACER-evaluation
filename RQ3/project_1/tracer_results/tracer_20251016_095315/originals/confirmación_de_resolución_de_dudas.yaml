@@ -1,0 +1,105 @@
+test_name: Confirmación de Resolución de Dudas
+llm:
+  temperature: 0.9
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea confirmar si su consulta ha sido respondida adecuadamente.
+  context:
+  - Estás organizando un viaje y necesitas confirmar si todas tus dudas sobre el transporte han sido resueltas antes de partir.
+  - Quieres asegurarte de entender las diferentes opciones de tarjetas de transporte disponibles y las tarifas recomendadas que se ajusten a tu grupo de edad y punto de partida.
+  - Además, te gustaría comprobar que la información sobre cómo llegar a tu destino es correcta para evitar inconvenientes durante el viaje.
+  goals:
+  - Preguntar al chatbot si mi consulta ha sido resuelta adecuadamente.
+  - Solicitar la lista de tipos de tarjetas de transporte disponibles.
+  - Seleccionar la opción {{tipo_tarjeta_transporte}} de la lista de tarjetas de transporte.
+  - Preguntar sobre las tarifas recomendadas para mi viaje basado en mi grupo de edad {{grupo_edad}} y la zona de salida {{zona_salida}}.
+  - Confirmar si el chatbot ha comprendido correctamente mi consulta sobre cómo llegar a una estación específica {{destino_estacion}}.
+  - destino_estacion:
+      function: forward()
+      type: string
+      data:
+      - Estación Central
+      - Estación del Norte
+      - Estación de Atocha
+      - Estación de Santa Justa
+      - Estación de Sants
+  - grupo_edad:
+      function: forward()
+      type: string
+      data:
+      - Entre 15 y 25 años
+      - Entre 26 y 64 años
+      - Entre 4 y 6 años
+      - Entre 7 y 14 años
+      - Menor de 4 años
+      - Más de 65 años
+      - Entre 0 y 3 años
+  - tipo_tarjeta_transporte:
+      function: forward()
+      type: string
+      data:
+      - Tarjeta Azul
+      - Tarjeta Infantil
+      - Tarjeta Multi
+      - Tarjeta Personal
+      - Tarjeta Familiar
+  - zona_salida:
+      function: forward()
+      type: string
+      data:
+      - A
+      - B1
+      - B2
+      - B3
+      - C1
+      - C2
+      - E1
+      - E2
+      - No lo sé
+      - Zona A
+      - Zona B1
+      - Zona B2
+      - Zona B3
+      - Zona C1
+      - Zona C2
+      - Zona E1
+      - Zona E2
+      - Zona F
+chatbot:
+  is_starter: false
+  fallback: Este canal está destinado a cuestiones relacionadas con el servicio y atención al cliente de Metro de Madrid.\n\nPara otros asuntos, visita nuestra web:\n🌐  www.metromadrid.es\n\n¿Hay algo más en lo que pueda ayudarte? 👇
+  output:
+  - consultation_resolution:
+      type: string
+      description: Confirmación si la consulta fue resuelta
+  - transport_card_types:
+      type: string
+      description: Tipos de tarjetas de transporte disponibles
+  - selected_transport_card:
+      type: string
+      description: Opción de tarjeta de transporte seleccionada
+  - recommended_fare:
+      type: money
+      description: Tarifas recomendadas para el viaje
+  - age_group:
+      type: string
+      description: Grupo de edad del usuario
+  - departure_zone:
+      type: string
+      description: Zona de salida del viaje
+  - destination_station:
+      type: string
+      description: Estación de destino consultada
+  - confirmation_understanding:
+      type: string
+      description: Verificación de comprensión de la consulta
+conversation:
+  number: 18
+  max_cost: 2.7
+  goal_style:
+    steps: 26
+  interaction_style:
+  - single question

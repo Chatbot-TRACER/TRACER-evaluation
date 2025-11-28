@@ -1,0 +1,67 @@
+test_name: Gestión de Certificados Digitales y Solicitudes con el Consejo
+llm:
+  temperature: 0.4
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que desea obtener un certificado digital y programar citas con concejales o el servicio de empleo.
+  context:
+  - 'personality: personalities/rude-user'
+  - Te encuentras en el proceso de obtener un certificado digital para poder realizar trámites en línea, lo que consideras esencial para gestionar asuntos administrativos de manera más eficiente.
+  - Además, necesitas programar citas con concejales y conocer más sobre los servicios del Ayuntamiento de Arucas para resolver algunas consultas específicas.
+  - Tu objetivo es familiarizarte con el procedimiento adecuado y los recursos disponibles que faciliten estas gestiones.
+  goals:
+  - Preguntar qué es un certificado digital y cómo se puede obtener.
+  - Solicitar información sobre el proceso para agendar una cita para obtener un certificado digital.
+  - Pedir el enlace para acceder a la Sede Electrónica del Ayuntamiento de Arucas.
+  - Solicitar información sobre cómo pedir cita previa con un concejal, incluyendo la documentación necesaria.
+  - Preguntar por los métodos de contacto disponibles con diferentes servicios del Ayuntamiento de Arucas.
+chatbot:
+  is_starter: false
+  fallback: ¿Decías?
+  output:
+  - digital_certificate_description:
+      type: string
+      description: Explicación del certificado digital
+  - digital_certificate_process:
+      type: string
+      description: Proceso para obtener un certificado digital
+  - appointment_link:
+      type: string
+      description: Enlace para agendar cita de certificado
+  - councillor_appointment_info:
+      type: string
+      description: Información para pedir cita con un concejal
+  - required_documentation:
+      type: string
+      description: Documentación necesaria para cita
+  - employment_service_contact:
+      type: string
+      description: Información de contacto del servicio de empleo
+  - library_contact_phone:
+      type: string
+      description: Teléfono de la Biblioteca de Arucas
+  - library_contact_email:
+      type: string
+      description: Correo electrónico de la Biblioteca de Arucas
+  - contact_categories_list:
+      type: string
+      description: Lista de categorías de contacto disponibles
+  - scheduling_time:
+      type: time
+      description: Hora programada para la cita
+  - scheduling_date:
+      type: date
+      description: Fecha para la cita programada
+  - appointment_confirmation:
+      type: string
+      description: Confirmación de cita solicitada
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question

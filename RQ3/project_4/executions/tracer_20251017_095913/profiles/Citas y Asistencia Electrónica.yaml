@@ -1,0 +1,46 @@
+test_name: Citas y Asistencia Electrónica
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario que necesita asistencia para programar citas y acceder a servicios electrónicos del Ayuntamiento.
+  context:
+  - 'personality: personalities/curious-user'
+  - Recientemente has decidido involucrarte más en los asuntos de tu comunidad y deseas programar una cita para hablar directamente con el alcalde.
+  - Para ello, necesitas obtener información sobre los procedimientos de programación de citas y los servicios electrónicos disponibles en el Ayuntamiento.
+  - Además, estás interesado en conocer las opciones de atención al ciudadano y cómo acceder a la identificación electrónica requerida.
+  goals:
+  - Solicitar información sobre cómo programar una cita con el alcalde a través de la sede electrónica.
+  - Pedir información sobre los horarios de atención al ciudadano en persona y por teléfono.
+  - Solicitar el enlace para la identificación electrónica que se necesita para acceder a la sede electrónica.
+  - Preguntar qué opciones de cita están disponibles en el Ayuntamiento.
+  - Elegir la opción 'Cita con el SAC' para obtener más información sobre ese servicio específico.
+chatbot:
+  is_starter: false
+  fallback: Me temo que no tengo la información para poder responder a su pregunta. Por favor, hágala por WhatsApp al número 744 48 12 52. Gracias.
+  output:
+  - appointment_process_info:
+      type: string
+      description: Información sobre cómo programar cita
+  - service_hours_info:
+      type: string
+      description: Horarios de atención al ciudadano
+  - identification_link:
+      type: string
+      description: Enlace para identificación electrónica
+  - available_appointment_options:
+      type: string
+      description: Opciones de cita disponibles en el Ayuntamiento
+  - sac_appointment_info:
+      type: string
+      description: Información sobre la cita con el SAC
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 20
+  interaction_style:
+  - single question

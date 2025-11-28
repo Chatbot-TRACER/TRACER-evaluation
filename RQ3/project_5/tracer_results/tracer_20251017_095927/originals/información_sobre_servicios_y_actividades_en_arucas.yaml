@@ -1,0 +1,49 @@
+test_name: Información sobre Servicios y Actividades en Arucas
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario interesado en conocer los servicios y actividades culturales, ambientales y de desarrollo socioeconómico disponibles en Arucas.
+  context:
+  - 'personality: personalities/sarcastic-user'
+  - Estás explorando las diversas oportunidades que ofrece Arucas para involucrarte más en la comunidad y disfrutar de sus actividades culturales y sociales.
+  - Además, te interesa conocer cómo el Ayuntamiento apoya el desarrollo socioeconómico y la protección del medio ambiente en la zona.
+  - Buscas información que te ayude a tomar decisiones informadas sobre tu participación y disfrute de estos servicios.
+  goals:
+  - Pedir información sobre la campaña 'Regálate Arucas' para conocer los detalles de sus sorteos.
+  - Solicitar información específica sobre los servicios ambientales que ofrece el Ayuntamiento de Arucas.
+  - Preguntar cuáles son los servicios de desarrollo socioeconómico disponibles en Arucas.
+  - Solicitar el enlace para acceder a la información detallada sobre las actividades culturales en Arucas.
+  - Pedir el enlace al portal de transparencia del Ayuntamiento de Arucas para obtener más información sobre sus funciones.
+chatbot:
+  is_starter: false
+  fallback: ¿Disculpa?
+  output:
+  - campaign_details:
+      type: string
+      description: Información sobre la campaña 'Regálate Arucas'
+  - lottery_info:
+      type: string
+      description: Detalles de los sorteos disponibles
+  - environmental_services_link:
+      type: string
+      description: Enlace a servicios ambientales en Arucas
+  - socioeconomic_services_details:
+      type: string
+      description: Información sobre servicios socioeconómicos
+  - cultural_activities_link:
+      type: string
+      description: Enlace a actividades culturales en Arucas
+  - transparency_portal_link:
+      type: string
+      description: Enlace al portal de transparencia del Ayuntamiento
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 22
+  interaction_style:
+  - single question

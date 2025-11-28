@@ -1,0 +1,143 @@
+[
+  {
+    "name": "prompt_for_ayuntamiento_service_inquiry",
+    "description": "Asks the user to specify their inquiry regarding services provided by the Ayuntamiento of Arucas.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_environmental_services_info_link",
+    "description": "Provides a link to detailed information about the environmental services available at the Ayuntamiento of Arucas.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "environmental_service_info",
+        "description": "Provides a URL link to detailed information regarding the environmental services available at the Ayuntamiento of Arucas."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Environmental Services",
+    "children": []
+  },
+  {
+    "name": "present_information_about_arucas",
+    "description": "Provides a brief description of the chatbot's role as an assistant regarding inquiries related to Arucas.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "present_opposition_announcements_info",
+    "description": "Informs the user where to find all announcements for public competitions, mentioning the Boletín Oficial de la Provincia de las Palmas (BOP) and the Portal de Transparencia section.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "category_info",
+        "description": "Describes announcement locations including BOP and Portal de Transparencia."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Public Announcements",
+    "children": []
+  },
+  {
+    "name": "provide_link_to_bop",
+    "description": "Supplies a link to the Boletín Oficial de la Provincia of Las Palmas where all public job announcements can be found.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "link_to_bop",
+        "description": "URL to the Boletín Oficial."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Public Announcements",
+    "children": []
+  },
+  {
+    "name": "handle_repeat_query",
+    "description": "Acknowledges the user's request for repetition of previously stated information without providing new answers.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "solicit_repeat_information",
+    "description": "Requests the user to repeat their previous query when the chatbot does not understand their request.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "present_information_options",
+    "description": "The chatbot lists various types of information regarding subsidies in Arucas and prompts the user to select a topic of interest.",
+    "parameters": [
+      {
+        "name": "selected_option",
+        "description": "Describes the specific type of information regarding subsidies the user can request.",
+        "options": [
+          "Subvenciones públicas activas",
+          "Subvenciones para la promoción del empleo autónomo del Gobierno de Canarias",
+          "Subvenciones de apoyo a autónomos y microempresas del municipio de Arucas por covid-19",
+          "¿Cómo puedo conocer las subvenciones activas de los diferentes organismos públicos?",
+          "¿Qué documentación debe acompañar a la solicitud de subvención?"
+        ]
+      }
+    ],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Subsidies Information",
+    "children": []
+  },
+  {
+    "name": "provide_link_to_active_subsidies",
+    "description": "Provides a link to access all active subsidy calls from public organizations.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "active_subsidies_link",
+        "description": "URL for accessing the list of active subsidy calls."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Subsidies Information",
+    "children": []
+  },
+  {
+    "name": "provide_link_to_public_sector_employment",
+    "description": "Supplies a URL to the public sector employment announcements section of the Portal de Transparencia.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "public_sector_employment_link",
+        "description": "URL linking to the employment announcements and public sector employment section of the Portal de Transparencia."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Public Announcements",
+    "children": []
+  },
+  {
+    "name": "repeat_opposition_announcements_info",
+    "description": "Reiterates the information about where to find opposition announcements when prompted by the user.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "location_info",
+        "description": "Details about where to find opposition announcements, including links to the Boletín Oficial de la Provincia de las Palmas and the Portal de Transparencia."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Public Announcements",
+    "children": []
+  }
+]

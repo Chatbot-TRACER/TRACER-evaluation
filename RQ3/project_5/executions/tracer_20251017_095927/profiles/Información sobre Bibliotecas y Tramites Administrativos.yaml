@@ -1,0 +1,52 @@
+test_name: Información sobre Bibliotecas y Tramites Administrativos
+llm:
+  temperature: 0.8
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario buscando información sobre la Biblioteca de Arucas y cómo realizar trámites administrativos relacionados con comunicaciones previas.
+  context:
+  - 'personality: personalities/rude-user'
+  - Necesitas obtener información sobre la Biblioteca de Arucas y cómo realizar trámites administrativos relacionados con comunicaciones previas para cumplir con un requisito importante.
+  - Estás planificando realizar una solicitud y deseas asegurarte de seguir todos los pasos correctos y cumplir con los requisitos necesarios.
+  - Además, consideras la conveniencia de tener opciones en línea para presentar tu documentación y hacer los pagos correspondientes.
+  goals:
+  - Pedir los datos de contacto de la Biblioteca de Arucas.
+  - Solicitar instrucciones detalladas sobre cómo iniciar el proceso para una solicitud de comunicación previa.
+  - Preguntar sobre los requisitos para la presentación de documentación relacionada con comunicaciones previas.
+  - Solicitar información sobre las ubicaciones físicas donde se pueden realizar estos trámites.
+  - Conocer las opciones de presentación en línea y detalles sobre los pagos relacionados con la comunicación previa.
+chatbot:
+  is_starter: false
+  fallback: ¿Disculpa?
+  output:
+  - contact_phone:
+      type: string
+      description: Número de teléfono de la Biblioteca de Arucas
+  - contact_email:
+      type: string
+      description: Correo electrónico de la Biblioteca de Arucas
+  - process_instructions:
+      type: string
+      description: Instrucciones para solicitud de comunicación previa
+  - physical_locations:
+      type: string
+      description: Ubicaciones físicas para trámites administrativos
+  - online_submission_options:
+      type: string
+      description: Opciones de presentación en línea para trámites
+  - documentation_requirements:
+      type: string
+      description: Requisitos de documentación para comunicaciones previas
+  - payment_details:
+      type: string
+      description: Detalles sobre pagos relacionados con la comunicación previa
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 24
+  interaction_style:
+  - single question

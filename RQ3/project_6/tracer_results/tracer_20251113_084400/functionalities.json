@@ -1,0 +1,105 @@
+[
+  {
+    "name": "access_payment_and_fiscal_information",
+    "description": "Provides users with information on accessing payment schedules and the fiscal calendar for taxes and fees, including methods to check payment due dates and contact options for assistance through the Virtual Tax Office.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "payment_schedule_info",
+        "description": "Explains options for accessing payment schedules, including the Oficina Virtual Tributaria, methods to find out payment dates, and provides the contact number for assistance: 963 00 05 00."
+      },
+      {
+        "category": "telephone_assistance_hours",
+        "description": "Details the available hours for telephone assistance."
+      },
+      {
+        "category": "support_contact_info",
+        "description": "Contact information for support, including phone number and availability."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment & Fiscal Information",
+    "children": []
+  },
+  {
+    "name": "handle_inquiry_transmission",
+    "description": "The chatbot informs the user that it cannot assist with the initial inquiry but will forward the question to the appropriate personnel.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "present_fiscal_calendar_button",
+    "description": "The chatbot presents a button for the user to access the fiscal calendar directly.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "available_buttons",
+        "description": "Link to the fiscal calendar on the official website"
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Navigation & Access",
+    "children": []
+  },
+  {
+    "name": "provide_tax_payment_information",
+    "description": "Provides detailed information on how to request a new tax payment document, including methods for obtaining it and information on potential additional costs associated with the request.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "document_request_methods",
+        "description": "Describes methods to obtain a new tax payment document, including online (via Office Virtual Tributaria), in-person, email, and phone options."
+      },
+      {
+        "category": "potential_costs",
+        "description": "Information on potential additional costs associated with the new document, including penalties, interests, and fees, as well as possible surcharges for late payment."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Payment & Fiscal Information",
+    "children": []
+  },
+  {
+    "name": "prompt_for_tax_management_queries",
+    "description": "Prompts the user to specify what questions or information they need assistance with regarding tax management.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "General Information",
+    "children": []
+  },
+  {
+    "name": "provide_tax_calculation_assistance",
+    "description": "The chatbot offers assistance and information regarding tax calculation and management.",
+    "parameters": [],
+    "outputs": [],
+    "parent_names": [],
+    "suggested_category": "Tax Calculation Assistance",
+    "children": []
+  },
+  {
+    "name": "present_tributo_information",
+    "description": "Provides information about the types of tributes managed by the Diputación and guides how to access them, including access methods and contact information.",
+    "parameters": [],
+    "outputs": [
+      {
+        "category": "tax_types_access_methods",
+        "description": "Information on how to access the Virtual Tax Office and tributes, including options for access with or without a digital certificate."
+      },
+      {
+        "category": "contact_information",
+        "description": "Phone number for assistance (963 00 05 00) and additional inquiry support details including operational hours."
+      },
+      {
+        "category": "managed_municipal_tributos",
+        "description": "Details about the municipalities whose tributes are managed by the Diputación."
+      }
+    ],
+    "parent_names": [],
+    "suggested_category": "Tribute Information",
+    "children": []
+  }
+]

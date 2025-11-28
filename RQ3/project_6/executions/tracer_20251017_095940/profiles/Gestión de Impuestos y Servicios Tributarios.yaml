@@ -1,0 +1,76 @@
+test_name: Gestión de Impuestos y Servicios Tributarios
+llm:
+  temperature: 0.6
+  model: gpt-4o-mini
+  format:
+    type: text
+user:
+  language: Spanish
+  role: Usuario buscando información sobre la gestión de impuestos y servicios relacionados con la Diputación.
+  context:
+  - 'personality: personalities/skeptical-user'
+  - Estás organizando tus finanzas personales y necesitas entender mejor los impuestos y servicios disponibles a través de la Diputación.
+  - Te gustaría asegurarte de cumplir con todas las obligaciones fiscales, así como aprovechar los recursos que faciliten esta gestión.
+  - Además, te interesa saber cómo comunicarte con las oficinas del Servicio de Gestión Tributaria y conocer sus horarios para hacer consultas en persona.
+  goals:
+  - Solicitar información sobre los tipos de impuestos que se pueden gestionar a través de la Diputación.
+  - Pedir el enlace al calendario fiscal o de impuestos.
+  - Consultar sobre los recursos disponibles para gestionar mis impuestos.
+  - Solicitar información sobre cómo obtener detalles sobre embargos tributarios y sus métodos de contacto.
+  - Informar sobre las diferentes oficinas del Servicio de Gestión Tributaria y sus horarios.
+chatbot:
+  is_starter: false
+  fallback: Por favor, ¿me puedes reformular la pregunta con otras palabras? Respondo a cuestiones relativas a la gestión de tributos.
+  output:
+  - tax_services_info:
+      type: string
+      description: Información sobre tipos de impuestos gestionados
+  - fiscal_calendar_link:
+      type: string
+      description: URL del calendario fiscal
+  - phone_assistance_information:
+      type: string
+      description: Número de teléfono para asistencia
+  - resource_submission_info:
+      type: string
+      description: Proceso para presentación de recursos
+  - resource_submission_link:
+      type: string
+      description: URL para presentación de recursos
+  - resource_form_link:
+      type: string
+      description: URL del formulario de recursos
+  - tax_resources:
+      type: string
+      description: Enlaces a la Oficina Virtual Tributaria
+  - contact_methods:
+      type: string
+      description: Métodos de contacto para embargos tributarios
+  - virtual_office_access:
+      type: string
+      description: Acceso a la Oficina Virtual Tributaria
+  - additional_info_links:
+      type: string
+      description: Enlaces sobre retención de embargos
+  - office_information:
+      type: string
+      description: Información de oficinas y horarios
+  - output_links:
+      type: string
+      description: Enlace a la Oficina Virtual Tributaria
+  - fiscal_tax_calendar_link:
+      type: string
+      description: Enlace directo al Calendario Fiscal
+  - available_services_list:
+      type: string
+      description: Servicios de gestión de impuestos disponibles
+  - prompt_for_tax_management_inquiries:
+      type: string
+      description: Solicitud para preguntas sobre gestión de impuestos
+conversation:
+  number: 3
+  max_cost: 0.5
+  goal_style:
+    steps: 30
+  interaction_style:
+  - single question
